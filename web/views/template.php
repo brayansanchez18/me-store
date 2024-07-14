@@ -1,25 +1,83 @@
-<?php $path = TemplateController::path(); ?>
+<?php
+$path = TemplateController::path();
+
+/* -------------------------------------------------------------------------- */
+/*                          SOLICITUD GET DE TEMPLATE                         */
+/* -------------------------------------------------------------------------- */
+
+$url = 'templates?linkTo=active_template&equalTo=ok';
+$method = 'GET';
+$fields = [];
+
+$template = CurlController::request($url, $method, $fields);
+
+if ($template->status == 200) {
+  $template = $template->results[0];
+} else {
+  # code...
+}
+
+/* ------------------------ SOLICITUD GET DE TEMPLATE ----------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                              Datos en Arreglo                              */
+/* -------------------------------------------------------------------------- */
+
+$keywords = $template->keywords_template;
+
+/* -------------------------------------------------------------------------- */
+/*                               Datos en Objeto                              */
+/* -------------------------------------------------------------------------- */
+
+$fontFamily = json_decode($template->fonts_template)->fontFamily;
+$fontBody = json_decode($template->fonts_template)->fontBody;
+$fontSlide = json_decode($template->fonts_template)->fontSlide;
+
+/* -------------------------------------------------------------------------- */
+/*                                Datos en JSON                               */
+/* -------------------------------------------------------------------------- */
+
+$topColor = json_decode($template->colors_template)[0]->top;
+$templateColor = json_decode($template->colors_template)[1]->template;
+?>
 
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Top Navigation + Sidebar</title>
+  <title><?= $template->title_template ?></title>
+
+  <!-- -------------------------------------------------------------------------- */
+  /*                                    ICONO                                   */
+  /* -------------------------------------------------------------------------- -->
+
+  <link rel="icon" href="<?= $path ?>/views/assets/img/template/<?= $template->id_template ?>/<?= $template->icon_template ?>">
+
+  <!-- ---------------------------------- ICONO --------------------------------- -->
 
   <!-- -------------------------------------------------------------------------- */
   /*                                   FUENTES                                  */
   /* -------------------------------------------------------------------------- -->
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <?= urldecode($fontFamily) ?>
 
   <!-- --------------------------------- FUENTES -------------------------------- -->
+
+  <!-- -------------------------------------------------------------------------- */
+  /*                                    METAS                                   */
+  /* -------------------------------------------------------------------------- -->
+
+  <meta name="description" content="<?= $template->description_template ?>">
+  <meta name="keywords" content="<?= $keywords ?>">
+
+  <!-- ---------------------------------- METAS --------------------------------- -->
 
   <!-- -------------------------------------------------------------------------- */
   /*                                 CSS PLUGINS                                */
@@ -38,25 +96,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <style>
     body {
-      font-family: 'Ubuntu', sans-serif;
+      font-family: '<?= $fontBody ?>', sans-serif;
     }
 
     .slideOpt h1,
     .slideOpt h2,
     .slideOpt h3 {
-      font-family: 'Ubuntu Condensed', sans-serif;
+      font-family: '<?= $fontSlide ?>', sans-serif;
     }
 
     .topColor {
-      background: black;
-      color: white;
+      background: <?= $topColor->background ?>;
+      color: <?= $topColor->color ?>;
     }
 
     .templateColor,
     .templateColor:hover,
     a.templateColor {
-      background: #47BAC1 !important;
-      color: white !important;
+      background: <?= $templateColor->background ?> !important;
+      color: <?= $templateColor->color ?> !important;
     }
   </style>
 

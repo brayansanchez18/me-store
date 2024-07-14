@@ -10,7 +10,14 @@ ini_set('error_log', 'C:/xampp/htdocs/me-store/web/php_error_log');
 
 /* ----------------------------- DEPURAR ERRORES ---------------------------- */
 
-require_once 'controllers/cotroller.template.php';
+/* -------------------------------------------------------------------------- */
+/*                                 CONTROLLERS                                */
+/* -------------------------------------------------------------------------- */
+
+require_once 'controllers/template.controller.php';
+require_once 'controllers/curl.controller.php';
+
+/* ------------------------------- CONTROLLERS ------------------------------ */
 
 $index = new TemplateController();
 $index->index();

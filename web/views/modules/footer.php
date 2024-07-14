@@ -135,31 +135,15 @@
     <!-- To the right -->
     <div class="float-end">
       <div class="d-flex justify-content-center" style="line-height:0px">
-        <div class="p-2">
-          <a href="https://facebook.com" target="_blank">
-            <i class="fab fa-facebook-f text-white"></i>
-          </a>
-        </div>
 
-        <div class="p-2">
-          <a href="https://youtube.com" target="_blank">
-            <i class="fab fa-youtube text-white"></i>
-          </a>
-        </div>
+        <?php foreach ($socials as $key => $value) : ?>
+          <div class="p-2">
+            <a href="<?= $value->url_social ?>" target="_blank">
+              <i class="<?= $value->icon_social ?> <?= $value->color_social ?>"></i>
+            </a>
+          </div>
+        <?php endforeach ?>
 
-
-        <div class="p-2">
-          <a href="https://twitter.com" target="_blank">
-            <i class="fab fa-twitter text-white"></i>
-          </a>
-        </div>
-
-
-        <div class="p-2">
-          <a href="https://instagram.com" target="_blank">
-            <i class="fab fa-instagram text-white"></i>
-          </a>
-        </div>
       </div>
     </div>
     <!-- Default to the left -->
