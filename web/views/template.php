@@ -1,5 +1,33 @@
 <?php
+/* -------------------------------------------------------------------------- */
+/*                         INICIAR VARIABLES DE SESION                        */
+/* -------------------------------------------------------------------------- */
+
+ob_start();
+session_start();
+
+/* ----------------------- INICIAR VARIABLES DE SESION ---------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                VARIABLE PATH                               */
+/* -------------------------------------------------------------------------- */
+
 $path = TemplateController::path();
+
+/* ------------------------------ VARIABLE PATH ----------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                           CAPTURAR LAS RUTAS URL                           */
+/* -------------------------------------------------------------------------- */
+
+$routesArray = explode('/', $_SERVER['REQUEST_URI']);
+array_shift($routesArray);
+
+foreach ($routesArray as $key => $value) {
+  $routesArray[$key] = explode('?', $value)[0];
+}
+
+/* ------------------------- CAPTURAR LAS RUTAS URL ------------------------- */
 
 /* -------------------------------------------------------------------------- */
 /*                          SOLICITUD GET DE TEMPLATE                         */
@@ -145,7 +173,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
     include_once 'modules/topbar.php';
     include_once 'modules/navbar.php';
     include_once 'modules/sidebar.php';
-    include_once 'pages/home/home.php';
+
+    if (!empty($routesArray[0])) {
+      if ($routesArray[0] == 'admin' || $routesArray[0] == 'salir') {
+        include_once 'pages/' . $routesArray[0] . '/' . $routesArray[0] . '.php';
+      }
+    } else {
+      include_once 'pages/home/home.php';
+    }
+
     include_once 'modules/footer.php';
     ?>
   </div>

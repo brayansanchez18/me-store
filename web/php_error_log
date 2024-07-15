@@ -1,0 +1,4 @@
+[15-Jul-2024 08:09:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\me-store\web\views\modules\sidebar.php on line 16
+[15-Jul-2024 08:09:08 Europe/Berlin] PHP Warning:  Attempt to read property "name_admin" on null in C:\xampp\htdocs\me-store\web\views\modules\sidebar.php on line 16
+[15-Jul-2024 08:09:12 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\me-store\web\views\modules\sidebar.php on line 16
+[15-Jul-2024 08:09:12 Europe/Berlin] PHP Warning:  Attempt to read property "name_admin" on null in C:\xampp\htdocs\me-store\web\views\modules\sidebar.php on line 16

@@ -23,7 +23,6 @@ class CurlController
       CURLOPT_POSTFIELDS => $fields,
       CURLOPT_HTTPHEADER => array(
         'Authorization: SSDFzdg235dsgsdfAsa44SDFGDFDadg',
-        'Content-Type: application/x-www-form-urlencoded'
       ),
     ));
 
