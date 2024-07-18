@@ -13,7 +13,9 @@
         <img src="<?= $path ?>views/assets/img/adminlte/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block"><?= $_SESSION['admin']->name_admin ?></a>
+        <?php if (isset($_SESSION['admin'])) : ?>
+          <a href="#" class="d-block"><?= $_SESSION['admin']->name_admin ?></a>
+        <?php endif ?>
       </div>
     </div>
 

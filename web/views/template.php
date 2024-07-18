@@ -42,7 +42,19 @@ $template = CurlController::request($url, $method, $fields);
 if ($template->status == 200) {
   $template = $template->results[0];
 } else {
-  # code...
+  echo '<!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <link rel="stylesheet" href="' . $path . 'views/assets/css/plugins/adminlte/adminlte.min.css">
+        </head>
+        <body class="hold-transition sidebar-collapse layout-top-nav">
+        <div class="wrapper">';
+  include "pages/500/500.php";
+  echo '</div>
+        </body>
+        </html>';
+
+  return;
 }
 
 /* ------------------------ SOLICITUD GET DE TEMPLATE ----------------------- */
@@ -117,10 +129,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- JDSlider -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/jdSlider/jdSlider.css">
+  <!-- Notie Alert -->
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/notie/notie.min.css">
+  <!-- Toastr Alert -->
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/toastr/toastr.min.css">
+  <!-- Material Preloader -->
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/material-preloader/material-preloader.css">
+  <!-- Tags Input -->
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/tags-input/tags-input.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/adminlte/adminlte.min.css">
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/template/template.css">
   <link rel="stylesheet" href="<?= $path ?>/views/assets/css/products/products.css">
+
 
   <style>
     body {
@@ -161,6 +187,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="<?= $path ?>views/assets/js/plugins/jdSlider/jdSlider.js"></script>
   <!-- KNOB -->
   <script src="<?= $path ?>views/assets/js/plugins/knob/knob.js"></script>
+  <script src="<?= $path ?>views/assets/js/alerts/alerts.js"></script>
+  <!-- Notie Alert -->
+  <!-- https://jaredreich.com/notie/ -->
+  <script src="<?= $path ?>views/assets/js/plugins/notie/notie.min.js"></script>
+  <!-- Sweet Alert 2 -->
+  <!-- https://sweetalert2.github.io/ -->
+  <script src="<?= $path ?>views/assets/js/plugins/sweetalert/sweetalert.min.js"></script>
+  <!-- Toastr Alert-->
+  <script src="<?= $path ?>views/assets/js/plugins/toastr/toastr.min.js"></script>
+  <!-- Material Preloader -->
+  <!-- https://www.jqueryscript.net/demo/Google-Inbox-Style-Linear-Preloader-Plugin-with-jQuery-CSS3/ -->
+  <script src="<?= $path ?>views/assets/js/plugins/material-preloader/material-preloader.js"></script>
+  <!-- Tags-Input -->
+  <!-- https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/examples/ -->
+  <script src="<?= $path ?>views/assets/js/plugins/tags-input/tags-input.js"></script>
+  <!-- DataTables  & Plugins -->
+  <script src="<?= $path ?>views/assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/jszip/jszip.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
   <!-- ------------------------------- JS PLUGINS ------------------------------- -->
 
@@ -177,6 +231,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     if (!empty($routesArray[0])) {
       if ($routesArray[0] == 'admin' || $routesArray[0] == 'salir') {
         include_once 'pages/' . $routesArray[0] . '/' . $routesArray[0] . '.php';
+      } else {
+        include_once 'pages/404/404.php';
       }
     } else {
       include_once 'pages/home/home.php';

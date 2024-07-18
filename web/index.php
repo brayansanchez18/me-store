@@ -19,5 +19,13 @@ require_once 'controllers/curl.controller.php';
 
 /* ------------------------------- CONTROLLERS ------------------------------ */
 
+/* -------------------------------------------------------------------------- */
+/*                                 EXTENSIONES                                */
+/* -------------------------------------------------------------------------- */
+
+require_once 'extensions/vendor/autoload.php';
+
+/* ------------------------------- EXTENSIONES ------------------------------ */
+
 $index = new TemplateController();
 $index->index();
