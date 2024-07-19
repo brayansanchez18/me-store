@@ -29,5 +29,5 @@ if (!isset($_SESSION['admin'])) {
 }
 
 ?>
-<!-- <script src="<?= $path ?>views/assets/js/tables/tables.js"></script> -->
+<script src="<?= $path ?>views/assets/js/tables/tables.js"></script>
 <script src="<?= $path ?>views/assets/js/forms/forms.js"></script>
