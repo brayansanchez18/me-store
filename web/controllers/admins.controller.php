@@ -35,7 +35,8 @@ class AdminsControllers
         if ($login->status == 200) {
           $_SESSION['admin'] = $login->results[0];
 
-          echo '<script>location.reload();</script>';
+          echo '<script>fncFormatInputs();
+          location.reload();</script>';
         } else {
           $error = null;
 

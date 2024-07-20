@@ -57,11 +57,39 @@ class DatatableController
 
       $select = 'id_admin,rol_admin,name_admin,email_admin,date_updated_admin';
 
-      $url = 'admins?select=' . $select . '&orderBy=' . $orderBy . '&orderMode=' . $orderType . '&startAt=' . $start . '&endAt=' . $length;
-      $data = CurlController::request($url, $method, $fields)->results;
-      // echo '<pre>' . print_r($data) . '</pre>';
+      /* ---------------------------- BUSQUEDA DE DATOS --------------------------- */
 
-      $recordsFiltered = $totalData;
+      if (!empty($_POST['search']['value'])) {
+        if (preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST['search']['value'])) {
+
+          $linkTo = ['name_admin', 'email_admin', 'rol_admin'];
+          $search = str_replace(' ', '_', $_POST['search']['value']);
+
+          foreach ($linkTo as $key => $value) {
+            $url = 'admins?select=' . $select . '&linkTo=' . $value . '&search=' . $search . '&orderBy=' . $orderBy . '&orderMode=' . $orderType . '&startAt=' . $start . '&endAt=' . $length;
+            $data = CurlController::request($url, $method, $fields)->results;
+
+            if ($data == 'Not Found') {
+              $data = [];
+              $recordsFiltered = 0;
+            } else {
+              $recordsFiltered = count($data);
+              break;
+            }
+          }
+        } else {
+          echo '{"data": []}';
+          return;
+        }
+      } else {
+        $url = 'admins?select=' . $select . '&orderBy=' . $orderBy . '&orderMode=' . $orderType . '&startAt=' . $start . '&endAt=' . $length;
+        $data = CurlController::request($url, $method, $fields)->results;
+        // echo '<pre>' . print_r($data) . '</pre>';
+
+        $recordsFiltered = $totalData;
+      }
+
+
 
       /* ---------------------------- SELECCIONAR DATOS --------------------------- */
 
