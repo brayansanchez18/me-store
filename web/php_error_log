@@ -1,0 +1,29 @@
+[20-Jul-2024 22:32:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "BM_CASE_TITLE" in C:\xampp\htdocs\me-store\web\controllers\template.controller.php:148
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\controllers\admins.controller.php(202): TemplateController::capitalize('Jazmin Montserr...')
+#1 C:\xampp\htdocs\me-store\web\views\pages\admin\administradores\modules\gestion.php(29): AdminsControllers->adminManage()
+#2 C:\xampp\htdocs\me-store\web\views\pages\admin\administradores\administradores.php(24): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\views\pages\admin\admin.php(22): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\me-store\web\views\template.php(234): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#7 {main}
+  thrown in C:\xampp\htdocs\me-store\web\controllers\template.controller.php on line 148
+[20-Jul-2024 22:34:54 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\curl.controller.php on line 15
+[20-Jul-2024 22:34:54 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 216
+[20-Jul-2024 22:34:54 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 223
+[20-Jul-2024 22:37:17 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\curl.controller.php on line 15
+[20-Jul-2024 22:37:17 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 216
+[20-Jul-2024 22:37:17 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 223
+[20-Jul-2024 22:38:22 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\curl.controller.php on line 15
+[20-Jul-2024 22:38:22 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 217
+[20-Jul-2024 22:38:22 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 224
+[20-Jul-2024 22:44:40 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\curl.controller.php on line 15
+[20-Jul-2024 22:44:40 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 216
+[20-Jul-2024 22:44:40 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 223
+[20-Jul-2024 22:45:32 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\curl.controller.php on line 15
+[20-Jul-2024 22:45:32 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 216
+[20-Jul-2024 22:45:32 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 223
+[20-Jul-2024 22:46:41 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\curl.controller.php on line 15
+[20-Jul-2024 22:46:41 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 216
+[20-Jul-2024 22:46:41 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 223

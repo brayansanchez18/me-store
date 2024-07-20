@@ -138,4 +138,16 @@ class TemplateController
   }
 
   /* -------------------------- FUNCION LIMPIAR HTML -------------------------- */
+
+  /* -------------------------------------------------------------------------- */
+  /*                             FUNCION CAPITALIZE                             */
+  /* -------------------------------------------------------------------------- */
+
+  static public function capitalize($value)
+  {
+    $value = mb_convert_case($value, MB_CASE_TITLE, 'UTF-8');
+    return $value;
+  }
+
+  /* --------------------------- FUNCION CAPITALIZE --------------------------- */
 }

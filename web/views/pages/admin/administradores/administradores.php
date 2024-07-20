@@ -18,6 +18,16 @@
   <!-- /.content-header -->
 
   <?php
-  include_once 'modules/listado.php';
+
+  if (!empty($routesArray[2])) {
+    if ($routesArray[2] == 'gestion') {
+      include_once 'modules/' . $routesArray[2] . '.php';
+    } else {
+      echo '<script>window.location=' . $path . '404</script>';
+    }
+  } else {
+    include_once 'modules/listado.php';
+  }
+
   ?>
 </div>
