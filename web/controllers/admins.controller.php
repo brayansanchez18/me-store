@@ -36,6 +36,8 @@ class AdminsControllers
           $_SESSION['admin'] = $login->results[0];
 
           echo '<script>fncFormatInputs();
+          localStorage.setItem("token-admin", "' . $login->results[0]->token_admin . '");
+          localStorage.setItem("id_admin", "' . base64_encode($login->results[0]->id_admin) . '");
           location.reload();</script>';
         } else {
           $error = null;
@@ -61,18 +63,18 @@ class AdminsControllers
           // </script>';
 
           /* ------------------------------- SWEERALERT ------------------------------- */
-          echo '<script>
-          fncSweetAlert("error", "Error al ingresar: ' . $error . '", "");
-          fncMatPreloader("off");
-          fncFormatInputs();
-          </script>';
-
-          /* ------------------------------- TOAST ALERT ------------------------------ */
           // echo '<script>
-          // fncToastr("error", "Error al ingresar: ' . $error . '");
+          // fncSweetAlert("error", "Error al ingresar: ' . $error . '", "");
           // fncMatPreloader("off");
           // fncFormatInputs();
           // </script>';
+
+          /* ------------------------------- TOAST ALERT ------------------------------ */
+          echo '<script>
+          fncToastr("error", "Error al ingresar: ' . $error . '");
+          fncMatPreloader("off");
+          fncFormatInputs();
+          </script>';
         }
       } else {
         echo '<script>
@@ -199,39 +201,92 @@ class AdminsControllers
         preg_match('/^[.a-zA-Z0-9_]+([.][.a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["email_admin"])
         && preg_match('/^[A-Za-zñÑáéíóúÁÉÍÓÚ ]{1,}$/', $_POST["name_admin"])
       ) {
-        $nameCapitalize  = trim(TemplateController::capitalize($_POST['name_admin']));
-        $crypt = crypt($_POST['password_admin'], '$2a$07$azybxcags23425sdg23sdfhsd$');
-        $url = 'admins?token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
-        $method = 'POST';
-        $fields = [
-          'name_admin' => $nameCapitalize,
-          'rol_admin' => $_POST['rol_admin'],
-          'email_admin' => $_POST['email_admin'],
-          'password_admin' => $crypt,
-          'date_created_admin' => date('Y-m-d')
-        ];
+        if (isset($_POST['idAdmin'])) {
+          if ($_POST['password_admin'] != '') {
+            if (preg_match('/^[*\\$\\!\\¡\\?\\¿\\.\\_\\#\\-\\0-9A-Za-z]{1,}$/', $_POST['password_admin'])) {
+              $crypt = crypt($_POST['password_admin'], '$2a$07$azybxcags23425sdg23sdfhsd$');
+            } else {
+              echo '<script>
+                fncFormatInputs();
+                fncMatPreloader("off");
+                fncToastr("error","La contraseña no puede llevar ciertos caracteres especiales");
+              </script>';
+            }
+          } else {
+            $crypt = $_POST['oldPassword'];
+          }
 
-        $createData = CurlController::request($url, $method, $fields);
+          $url = 'admins?id=' . base64_decode($_POST['idAdmin']) . '&nameId=id_admin&token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+          $method = 'PUT';
+          $fields = 'name_admin=' . trim(TemplateController::capitalize($_POST['name_admin'])) . '&rol_admin=' . $_POST['rol_admin'] . '&email_admin=' . $_POST['email_admin'] . '&password_admin=' . $crypt;
 
-        if ($createData->status == 200) {
-          echo '<script>
-            fncFormatInputs();
-            fncMatPreloader("off");
-            fncSweetAlert("success", "Administrador creado con exito", "/admin/administradores");
-          </script>';
-        } else {
-          if ($createData->status == 303) {
+          $updateData = CurlController::request($url, $method, $fields);
+
+          if ($updateData->status == 200) {
             echo '<script>
               fncFormatInputs();
               fncMatPreloader("off");
-              fncSweetAlert("error", "La sesion expiro, vulva a ingresar", "/salir");
+              fncSweetAlert("success", "Administrador editado con exito", "/admin/administradores");
             </script>';
           } else {
+            if ($updateData->status == 303) {
+              echo '<script>
+                fncFormatInputs();
+                fncMatPreloader("off");
+                fncSweetAlert("error", "La sesion expiro, vuelva a ingresar", "/salir");
+              </script>';
+            } else {
+              echo '<script>
+                fncFormatInputs();
+                fncMatPreloader("off");
+                fncToastr("error", "Ocurrio un error al editar al administrador, por favor intentelo de nuevo");
+              </script>';
+            }
+          }
+        } else {
+          $nameCapitalize  = trim(TemplateController::capitalize($_POST['name_admin']));
+          if (preg_match('/^[*\\$\\!\\¡\\?\\¿\\.\\_\\#\\-\\0-9A-Za-z]{1,}$/', $_POST['password_admin'])) {
+            $crypt = crypt($_POST['password_admin'], '$2a$07$azybxcags23425sdg23sdfhsd$');
+          } else {
+            echo '<script>
+                fncFormatInputs();
+                fncMatPreloader("off");
+                fncToastr("error","La contraseña no puede llevar ciertos caracteres especiales");
+              </script>';
+          }
+
+          $url = 'admins?token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+          $method = 'POST';
+          $fields = [
+            'name_admin' => $nameCapitalize,
+            'rol_admin' => $_POST['rol_admin'],
+            'email_admin' => $_POST['email_admin'],
+            'password_admin' => $crypt,
+            'date_created_admin' => date('Y-m-d')
+          ];
+
+          $createData = CurlController::request($url, $method, $fields);
+
+          if ($createData->status == 200) {
             echo '<script>
               fncFormatInputs();
               fncMatPreloader("off");
-              fncToastr("error", "Ocurrio un error al crear al administrador, por favor intentelo de nuevo");
+              fncSweetAlert("success", "Administrador creado con exito", "/admin/administradores");
             </script>';
+          } else {
+            if ($createData->status == 303) {
+              echo '<script>
+                fncFormatInputs();
+                fncMatPreloader("off");
+                fncSweetAlert("error", "La sesion expiro, vuelva a ingresar", "/salir");
+              </script>';
+            } else {
+              echo '<script>
+                fncFormatInputs();
+                fncMatPreloader("off");
+                fncToastr("error", "Ocurrio un error al crear al administrador, por favor intentelo de nuevo");
+              </script>';
+            }
           }
         }
       } else {

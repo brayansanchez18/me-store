@@ -1,12 +1,37 @@
+<?php
+if (isset($_GET['admin'])) {
+
+  $select = 'id_admin,name_admin,email_admin,password_admin,rol_admin';
+  $url = 'admins?linkTo=id_admin&equalTo=' . base64_decode($_GET['admin']) . '&select=' . $select;
+  $method = 'GET';
+  $fields = [];
+
+  $admin = CurlController::request($url, $method, $fields);
+
+  if ($admin->status == 200) {
+    $admin = $admin->results[0];
+  } else {
+    $admin = null;
+  }
+} else {
+  $admin = null;
+}
+
+
+?>
 <div class="content">
   <div class="container">
     <div class="card">
       <form method="post" class="needs-validation" novalidate>
+        <?php if (!empty($admin)) : ?>
+          <input type="hidden" name="idAdmin" value="<?= base64_encode($admin->id_admin) ?>">
+          <input type="hidden" name="oldPassword" value="<?= $admin->password_admin ?>">
+        <?php endif ?>
         <div class="card-header">
           <div class="container">
             <div class="row">
               <div class="col-12 col-lg-6 text-center text-lg-left">
-                <h4 class="mt-3">Agregar Administrador</h4>
+                <h4 class="mt-3"><?= (!empty($admin)) ? 'Editar' : 'Agregar' ?> Administrador</h4>
               </div>
 
               <div class="col-12 col-lg-6 mt-2 d-none d-lg-block">
@@ -34,7 +59,7 @@
                 <div class="card-body">
                   <div class="form-group pb-3">
                     <label for="name_admin">Nombre <sup class="text-danger font-weight-bold">*</sup></label>
-                    <input type="text" class="form-control" placeholder="Ingresar el nombre" id="name_admin" name="name_admin" onchange="validateJS(event,'text')" value="" required>
+                    <input type="text" class="form-control" placeholder="Ingresar el nombre" id="name_admin" name="name_admin" onchange="validateJS(event,'text')" value="<?= (!empty($admin) ? $admin->name_admin : '') ?>" required>
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor llena este campo correctamente.</div>
                   </div>
@@ -44,8 +69,8 @@
 
                     <select name="rol_admin" id="rol_admin" class="form-control" required>
                       <option value="">Elije Rol</option>
-                      <option value="admin">Administrador</option>
-                      <option value="editor">Editor</option>
+                      <option value="admin" <?php if (!empty($admin) && $admin->rol_admin == 'admin') : ?> selected <?php endif ?>>Administrador</option>
+                      <option value="editor" <?php if (!empty($admin) && $admin->rol_admin == 'editor') : ?> selected <?php endif ?>>Editor</option>
                     </select>
 
                     <div class="valid-feedback">Válido.</div>
@@ -61,7 +86,7 @@
                   <div class="form-group pb-3">
                     <label for="email_admin">Email <sup class="text-danger font-weight-bold">*</sup></label>
 
-                    <input type="email" class="form-control" placeholder="Ingresar el email" id="email_admin" name="email_admin" onchange="validateJS(event,'email')" value="" required>
+                    <input type="email" class="form-control" placeholder="Ingresar el email" id="email_admin" name="email_admin" onchange="validateJS(event,'email')" value="<?= (!empty($admin) ? $admin->email_admin : '') ?>" required>
 
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor llena este campo correctamente.</div>
@@ -70,7 +95,7 @@
                   <div class="form-group pb-3">
                     <label for="email_admin">Contraseña <sup class="text-danger font-weight-bold">*</sup></label>
 
-                    <input type="password" class="form-control" placeholder="Ingresar la contraseña" id="password_admin" name="password_admin" onchange="validateJS(event,'password')" required>
+                    <input type="password" class="form-control" placeholder="Ingresar la contraseña" id="password_admin" name="password_admin" onchange="validateJS(event,'password')" <?php if (empty($admin)) : ?> required <?php endif ?>>
 
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor llena este campo correctamente.</div>

@@ -120,12 +120,12 @@ class DatatableController
         $rol_admin = $value->rol_admin;
         $date_updated_admin = $value->date_updated_admin;
         $actions = "<div class='btn-group'>
-                  <a href='' class='btn bg-yellow border-0 rounded-pill mr-2 btn-sm px-3'>
+                  <a href='/admin/administradores/gestion?admin=" . base64_encode($value->id_admin) . "' class='btn bg-yellow border-0 rounded-pill mr-2 btn-sm px-3'>
                     <i class='fas fa-pencil-alt text-white'></i>
                   </a>
-                  <a href='' class='btn btn-danger border-0 rounded-pill mr-2 btn-sm px-3'>
+                  <button class='btn btn-danger border-0 rounded-pill mr-2 btn-sm px-3 deleteItem' rol='admin' table='admins' colum='admin' idItem='" . base64_encode($value->id_admin) . "'>
                     <i class='fas fa-trash-alt text-white'></i>
-                  </a>
+                  </button>
                 </div>";
 
         $actions = TemplateController::htmlClean($actions);
