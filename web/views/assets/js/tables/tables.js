@@ -43,26 +43,27 @@ Tabla para plantillas
 Tabla para categorias
 =============================================*/
 
-// if ($(".categoriesTable").length > 0) {
-//   var url = "/ajax/data-categories.ajax.php";
+if ($(".categoriesTable").length > 0) {
+  var url = "/ajax/data-categories.ajax.php";
+  // var url = null;
 
-//   var columns = [
-//     { data: "id_category" },
-//     { data: "status_category" },
-//     { data: "name_category" },
-//     { data: "url_category" },
-//     { data: "image_category" },
-//     { data: "description_category" },
-//     { data: "keywords_category" },
-//     { data: "subcategories_category" },
-//     { data: "products_category" },
-//     { data: "views_category" },
-//     { data: "date_updated_category" },
-//     { data: "actions", orderable: false, searchable: false },
-//   ];
+  var columns = [
+    { data: "id_category" },
+    { data: "status_category" },
+    { data: "name_category" },
+    { data: "url_category" },
+    { data: "image_category" },
+    { data: "description_category" },
+    { data: "keywords_category" },
+    { data: "subcategories_category" },
+    { data: "products_category" },
+    { data: "views_category" },
+    { data: "date_updated_category" },
+    { data: "actions", orderable: false, searchable: false },
+  ];
 
-//   var order = [0, "desc"];
-// }
+  var order = [0, "desc"];
+}
 
 /*=============================================
 Tabla para subcategorias

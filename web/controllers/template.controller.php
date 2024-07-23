@@ -150,4 +150,19 @@ class TemplateController
   }
 
   /* --------------------------- FUNCION CAPITALIZE --------------------------- */
+
+  /* -------------------------------------------------------------------------- */
+  /*                         FUNCION PARA REDUCIR TEXTO                         */
+  /* -------------------------------------------------------------------------- */
+
+  static public function reduceText($value, $limit)
+  {
+    if (strlen($value) > $limit) {
+      $value = substr($value, 0, $limit) . '...';
+    }
+
+    return $value;
+  }
+
+  /* ----------------------- FUNCION PARA REDUCIR TEXTO ----------------------- */
 }

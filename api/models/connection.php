@@ -12,7 +12,7 @@ class Connection
 	static public function infoDatabase()
 	{
 		$infoDB = array(
-			"database" => "mestore",
+			"database" => "mestore1",
 			"user" => "root",
 			"pass" => ""
 		);

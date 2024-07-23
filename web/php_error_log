@@ -28,3 +28,9 @@ Stack trace:
 [20-Jul-2024 22:46:41 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 216
 [20-Jul-2024 22:46:41 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\controllers\admins.controller.php on line 223
 [21-Jul-2024 01:13:38 Europe/Berlin] PHP Parse error:  syntax error, unexpected end of file, expecting "elseif" or "else" or "endif" in C:\xampp\htdocs\me-store\web\views\pages\admin\administradores\modules\gestion.php on line 132
+[22-Jul-2024 07:35:01 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\template.php on line 42
+[22-Jul-2024 07:35:05 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\template.php on line 42
+[22-Jul-2024 07:35:58 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\template.php on line 42
+[22-Jul-2024 07:36:02 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\template.php on line 42
+[22-Jul-2024 07:36:07 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\template.php on line 42
+[22-Jul-2024 07:36:11 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\template.php on line 42
