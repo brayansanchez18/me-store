@@ -220,3 +220,40 @@
     </div>
   </div>
 </div>
+
+<!-- -------------------------------------------------------------------------- */
+/*                        Modal con librería de iconos                        */
+/* -------------------------------------------------------------------------- -->
+
+<div class="modal" id="myIcon">
+  <div class="modal-dialog modal-lg modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Cambiar Icono</h4>
+        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body mx-3">
+        <?php
+        $data = file_get_contents($path . 'views/assets/json/fontawesome.json');
+        $icons = json_decode($data);
+        ?>
+
+        <input type="text" class="form-control mt-4 mb-3 myInputIcon" placeholder="Buscar Icono">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-3" style="overflow-y: scroll; overflow-x: hidden; height:500px">
+          <?php foreach ($icons as $key => $value) : ?>
+            <div class="col text-center py-4 btn btnChangeIcon" mode="<?= $value ?>">
+              <i class="<?= $value ?> fa-2x"></i>
+            </div>
+          <?php endforeach ?>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white btn-sm" data-bs-dismiss="modal">Salir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------------------- Modal con librería de iconos ---------------------- -->

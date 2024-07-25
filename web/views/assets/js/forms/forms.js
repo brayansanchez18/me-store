@@ -73,7 +73,6 @@ function validateDataRepeat(event, type) {
           validateJS(event, "email");
         } else {
           validateJS(event, "complete");
-
           createUrl(event, "url_" + type);
 
           $(".metaTitle").html(value);
@@ -278,7 +277,7 @@ Tags Input
 
 if ($(".tags-input").length > 0) {
   $(".tags-input").tagsinput({
-    maxTags: 5,
+    maxTags: 8,
   });
 }
 
@@ -288,12 +287,10 @@ Validamos imagen
 
 function validateImageJS(event, tagImg) {
   fncSweetAlert("loading", "", "");
-
   var image = event.target.files[0];
 
   if (image == undefined) {
     fncSweetAlert("close", "", "");
-
     return;
   }
 
@@ -306,18 +303,14 @@ function validateImageJS(event, tagImg) {
     image["type"] !== "image/png" &&
     image["type"] !== "image/gif"
   ) {
-    fncSweetAlert(
-      "error",
-      "La imagen debe estar en formato JPG, GIF o PNG.",
-      null
-    );
+    fncToastr("error", "La imagen debe estar en formato JPG, GIF o PNG.");
 
     return;
   } else if (image["size"] > 2000000) {
     /*=============================================
   Validamos el tamaño
   =============================================*/
-    fncSweetAlert("error", "La imagen no debe ser superior a 2MB", null);
+    fncToastr("error", "La imagen no debe ser superior a 2MB");
 
     return;
   } else {
