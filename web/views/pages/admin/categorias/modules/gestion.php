@@ -235,7 +235,7 @@
 
       <div class="modal-body mx-3">
         <?php
-        $data = file_get_contents($path . 'views/assets/json/fontawesome.json');
+        $data = file_get_contents($path . 'views/assets/json/fontawesome1.json');
         $icons = json_decode($data);
         ?>
 

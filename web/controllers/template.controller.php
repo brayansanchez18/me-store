@@ -165,4 +165,89 @@ class TemplateController
   }
 
   /* ----------------------- FUNCION PARA REDUCIR TEXTO ----------------------- */
+
+  /* -------------------------------------------------------------------------- */
+  /*                       FUNCION PARA ALMACENAR IMAGENES                      */
+  /* -------------------------------------------------------------------------- */
+
+  static public function saveImage($image, $folder, $name, $width, $height)
+  {
+    if (isset($image['tmp_name']) && !empty($image['tmp_name'])) {
+
+      /* -------------------------------------------------------------------------- */
+      /*                       CONFUGURAR RUTA DEL DIRECTORIO                       */
+      /* -------------------------------------------------------------------------- */
+
+      $directory = strtolower('views/' . $folder);
+
+      /* --------------------- CONFIGURAR RUTA DEL DIRECTORIO --------------------- */
+
+      /* -------------------------------------------------------------------------- */
+      /*                     PREGUNTAR SI NO EXISTE EL DIRECOTIO                    */
+      /* -------------------------------------------------------------------------- */
+
+      if (!file_exists($directory)) {
+        mkdir($directory, 0775);
+      }
+
+      /* ------------------- PREGUNTAR SI NO EXISTE EL DIRECOTIO ------------------ */
+
+      /* -------------------------------------------------------------------------- */
+      /*                  CAPTURAR <W> Y <H> ORIGINAL DE LA IMAGEN                  */
+      /* -------------------------------------------------------------------------- */
+
+      list($lastWidth, $lastHeight) = getimagesize($image['tmp_name']);
+
+      if ($lastWidth < $width || $lastHeight < $height) {
+        $lastWidth  = $width;
+        $lastHeight = $height;
+      }
+
+      /* ---------------- CAPTURAR <W> Y <H> ORIGINAL DE LA IMAGEN ---------------- */
+
+      /* -------------------------------------------------------------------------- */
+      /*                  APLICAR FUNCIONES SEGUN EL TIPO DE IMAGEN                 */
+      /* -------------------------------------------------------------------------- */
+
+      if ($image['type'] == 'image/jpeg') {
+        # definimos nombre del archivo
+        $newName = $name . '.jpg';
+        # definimos el destino donde queremos guardar el archivo
+        $folderPath = $directory . '/' . $newName;
+        # Crear una copia de la imagen
+        $start = imagecreatefromjpeg($image['tmp_name']);
+        # Instrucciones para aplicar a la imagen definitiva
+        $end = imagecreatetruecolor($width, $height);
+        # redimencionar imagen
+        imagecopyresized($end,  $start,  0, 0,  0, 0, $width, $height, $lastWidth, $lastHeight);
+        # guardamos la imagen en el directorio establecido
+        imagejpeg($end, $folderPath);
+      }
+
+      if ($image['type'] == 'image/png') {
+        $newName  = $name . '.png';
+        $folderPath = $directory . '/' . $newName;
+        $start = imagecreatefrompng($image['tmp_name']);
+        $end = imagecreatetruecolor($width, $height);
+        imagealphablending($end, FALSE);
+        imagesavealpha($end, TRUE);
+        imagecopyresampled($end, $start, 0, 0, 0, 0, $width, $height, $lastWidth, $lastHeight);
+        imagepng($end, $folderPath);
+      }
+
+      if ($image['type'] == 'image/gif') {
+        $newName = $name . '.gif';
+        $folderPath = $directory . '/' . $newName;
+        move_uploaded_file($image['tmp_name'], $folderPath);
+      }
+
+      /* ---------------- APLICAR FUNCIONES SEGUN EL TIPO DE IMAGEN --------------- */
+
+      return $newName;
+    } else {
+      return 'error';
+    }
+  }
+
+  /* --------------------- FUNCION PARA ALMACENAR IMAGENES -------------------- */
 }

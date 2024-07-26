@@ -4,111 +4,87 @@ class CategoriesController
 {
   public function categoryManage()
   {
-    if (isset($_POST['name_admin'])) {
+    if (isset($_POST['name_category'])) {
+      /* -------------------------------- PRELOADER ------------------------------- */
       echo '<script>
-        fncMatPreloader("on");
-        fncSweetAlert("loading", "", "");
+        fncMatPreloader("on")
       </script>';
 
+      /* -------------------------------------------------------------------------- */
+      /*                         VALIDAR Y GUARDAR LA IMAGEN                        */
+      /* -------------------------------------------------------------------------- */
+
       if (
-        preg_match('/^[.a-zA-Z0-9_]+([.][.a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["email_admin"])
-        && preg_match('/^[A-Za-zñÑáéíóúÁÉÍÓÚ ]{1,}$/', $_POST["name_admin"])
+        isset($_FILES['image_category']['tmp_name']) &&
+        !empty($_FILES['image_category']['tmp_name'])
       ) {
-        if (isset($_POST['idAdmin'])) {
-          if ($_POST['password_admin'] != '') {
-            if (preg_match('/^[*\\$\\!\\¡\\?\\¿\\.\\_\\#\\-\\0-9A-Za-z]{1,}$/', $_POST['password_admin'])) {
-              $crypt = crypt($_POST['password_admin'], '$2a$07$azybxcags23425sdg23sdfhsd$');
-            } else {
-              echo '<script>
-                fncFormatInputs();
-                fncMatPreloader("off");
-                fncToastr("error","La contraseña no puede llevar ciertos caracteres especiales");
-              </script>';
-            }
-          } else {
-            $crypt = $_POST['oldPassword'];
-          }
 
-          $url = 'admins?id=' . base64_decode($_POST['idAdmin']) . '&nameId=id_admin&token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
-          $method = 'PUT';
-          $fields = 'name_admin=' . trim(TemplateController::capitalize($_POST['name_admin'])) . '&rol_admin=' . $_POST['rol_admin'] . '&email_admin=' . $_POST['email_admin'] . '&password_admin=' . $crypt;
+        $image = $_FILES['image_category'];
+        $folder = 'assets/img/categories/' . $_POST['url_category'];
+        $name = $_POST['url_category'];
+        $width = 1000;
+        $height = 600;
 
-          $updateData = CurlController::request($url, $method, $fields);
-
-          if ($updateData->status == 200) {
-            echo '<script>
-              fncFormatInputs();
-              fncMatPreloader("off");
-              fncSweetAlert("success", "Administrador editado con exito", "/admin/administradores");
-            </script>';
-          } else {
-            if ($updateData->status == 303) {
-              echo '<script>
-                fncFormatInputs();
-                fncMatPreloader("off");
-                fncSweetAlert("error", "La sesion expiro, vuelva a ingresar", "/salir");
-              </script>';
-            } else {
-              echo '<script>
-                fncFormatInputs();
-                fncMatPreloader("off");
-                fncToastr("error", "Ocurrio un error al editar al administrador, por favor intentelo de nuevo");
-              </script>';
-            }
-          }
-        } else {
-          $nameCapitalize  = trim(TemplateController::capitalize($_POST['name_admin']));
-          if (preg_match('/^[*\\$\\!\\¡\\?\\¿\\.\\_\\#\\-\\0-9A-Za-z]{1,}$/', $_POST['password_admin'])) {
-            $crypt = crypt($_POST['password_admin'], '$2a$07$azybxcags23425sdg23sdfhsd$');
-          } else {
-            echo '<script>
-                fncFormatInputs();
-                fncMatPreloader("off");
-                fncToastr("error","La contraseña no puede llevar ciertos caracteres especiales");
-              </script>';
-          }
-
-          $url = 'admins?token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
-          $method = 'POST';
-          $fields = [
-            'name_admin' => $nameCapitalize,
-            'rol_admin' => $_POST['rol_admin'],
-            'email_admin' => $_POST['email_admin'],
-            'password_admin' => $crypt,
-            'date_created_admin' => date('Y-m-d')
-          ];
-
-          $createData = CurlController::request($url, $method, $fields);
-
-          if ($createData->status == 200) {
-            echo '<script>
-              fncFormatInputs();
-              fncMatPreloader("off");
-              fncSweetAlert("success", "Administrador creado con exito", "/admin/administradores");
-            </script>';
-          } else {
-            if ($createData->status == 303) {
-              echo '<script>
-                fncFormatInputs();
-                fncMatPreloader("off");
-                fncSweetAlert("error", "La sesion expiro, vuelva a ingresar", "/salir");
-              </script>';
-            } else {
-              echo '<script>
-                fncFormatInputs();
-                fncMatPreloader("off");
-                fncToastr("error", "Ocurrio un error al crear al administrador, por favor intentelo de nuevo");
-              </script>';
-            }
-          }
-        }
+        $saveImageCategory = TemplateController::saveImage($image, $folder, $name, $width, $height);
       } else {
+
         echo '<script>
-					fncFormatInputs();
-					fncMatPreloader("off");
-					fncToastr("error","Error en los campos del formulario");
-				</script>';
+          fncFormatInputs();
+          fncToastr("error","El campo de la imagen no puede ir vacio");
+        </script>';
+        return;
       }
+
+      /* ----------------------- VALIDAR Y GUARDAR LA IMAGEN ---------------------- */
+
+      /* -------------------------------------------------------------------------- */
+      /*                           VALIDAR Y GUARDAR INFO                           */
+      /* -------------------------------------------------------------------------- */
+
+      $fields = [
+        'name_category' => trim(TemplateController::capitalize($_POST['name_category'])),
+        'url_category' => $_POST['url_category'],
+        'icon_category' => $_POST['icon_category'],
+        'image_category' => $saveImageCategory,
+        'description_category' => trim($_POST['description_category']),
+        'keywords_category' => strtolower($_POST['keywords_category']),
+        'date_created_category' => date('Y-m-d')
+      ];
+
+      $url = 'categories?token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+      $method = 'POST';
+
+      $createData = CurlController::request($url, $method, $fields);
+
+      // echo '<pre>' . print_r($createData) . '</pre>';
+
+      if ($createData->status == 200) {
+
+        echo '<script>
+              fncMatPreloader("off");
+              fncFormatInputs();
+              fncSweetAlert("success","Categoria creada con éxito","/admin/categorias");
+            </script>';
+      } else {
+
+        if ($createData->status == 303) {
+
+          echo '<script>
+              fncFormatInputs();
+              fncMatPreloader("off");
+              fncSweetAlert("error","Token expirado, vuelva a iniciar sesión","/salir");
+            </script>';
+        } else {
+
+          echo '<script>
+              fncFormatInputs();
+              fncMatPreloader("off");
+              fncToastr("error","Ocurrió un error mientras se guardaban los datos, intente de nuevo");
+            </script>';
+        }
+      }
+
+      /* ------------------------- VALIDAR Y GUARDAR INFO ------------------------- */
     }
   }
 }
