@@ -69,26 +69,26 @@ if ($(".categoriesTable").length > 0) {
 Tabla para subcategorias
 =============================================*/
 
-// if ($(".subcategoriesTable").length > 0) {
-//   var url = "/ajax/data-subcategories.ajax.php";
+if ($(".subcategoriesTable").length > 0) {
+  var url = "/ajax/data-subcategories.ajax.php";
 
-//   var columns = [
-//     { data: "id_subcategory" },
-//     { data: "status_subcategory" },
-//     { data: "name_subcategory" },
-//     { data: "url_subcategory" },
-//     { data: "image_subcategory" },
-//     { data: "description_subcategory" },
-//     { data: "keywords_subcategory" },
-//     { data: "name_category" },
-//     { data: "products_subcategory" },
-//     { data: "views_subcategory" },
-//     { data: "date_updated_subcategory" },
-//     { data: "actions", orderable: false, searchable: false },
-//   ];
+  var columns = [
+    { data: "id_subcategory" },
+    { data: "status_subcategory" },
+    { data: "name_subcategory" },
+    { data: "url_subcategory" },
+    { data: "image_subcategory" },
+    { data: "description_subcategory" },
+    { data: "keywords_subcategory" },
+    { data: "name_category" },
+    { data: "products_subcategory" },
+    { data: "views_subcategory" },
+    { data: "date_updated_subcategory" },
+    { data: "actions", orderable: false, searchable: false },
+  ];
 
-//   var order = [0, "desc"];
-// }
+  var order = [0, "desc"];
+}
 
 /*=============================================
 Tabla para productos
