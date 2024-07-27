@@ -315,51 +315,51 @@ $(document).on("click", ".deleteItem", function () {
 Suiche
 =============================================*/
 
-// $("#tables").on("draw.dt", function () {
-//   $("input[data-bootstrap-switch]").each(function () {
-//     $(this).bootstrapSwitch({
-//       onSwitchChange: function (event, state) {
-//         var idItem = $(event.target).attr("idItem");
-//         var table = $(event.target).attr("table");
-//         var column = $(event.target).attr("column");
-//         var status = 0;
+$("#tables").on("draw.dt", function () {
+  $("input[data-bootstrap-switch]").each(function () {
+    $(this).bootstrapSwitch({
+      onSwitchChange: function (event, state) {
+        var idItem = $(event.target).attr("idItem");
+        var table = $(event.target).attr("table");
+        var column = $(event.target).attr("column");
+        var status = 0;
 
-//         if (state) {
-//           status = 1;
-//         } else {
-//           status = 0;
-//         }
+        if (state) {
+          status = 1;
+        } else {
+          status = 0;
+        }
 
-//         var token = localStorage.getItem("token-admin");
+        var token = localStorage.getItem("token-admin");
 
-//         var data = new FormData();
-//         data.append("token", token);
-//         data.append("table", table);
-//         data.append("id", idItem);
-//         data.append("status", status);
-//         data.append("column", column);
+        var data = new FormData();
+        data.append("token", token);
+        data.append("table", table);
+        data.append("id", idItem);
+        data.append("status", status);
+        data.append("column", column);
 
-//         $.ajax({
-//           url: "/ajax/status-admin.ajax.php",
-//           method: "POST",
-//           data: data,
-//           contentType: false,
-//           cache: false,
-//           processData: false,
-//           success: function (response) {
-//             if (response == 200) {
-//               fncMatPreloader("off");
-//               fncToastr("success", "El item ha sido actualizado correctamente");
-//             } else {
-//               fncMatPreloader("off");
-//               fncToastr("Error", "Este item no se pudo actualizar");
-//             }
-//           },
-//         });
-//       },
-//     });
-//   });
-// });
+        $.ajax({
+          url: "/ajax/status-admin.ajax.php",
+          method: "POST",
+          data: data,
+          contentType: false,
+          cache: false,
+          processData: false,
+          success: function (response) {
+            if (response == 200) {
+              fncMatPreloader("off");
+              fncToastr("success", "El item ha sido actualizado correctamente");
+            } else {
+              fncMatPreloader("off");
+              fncToastr("Error", "Este item no se pudo actualizar");
+            }
+          },
+        });
+      },
+    });
+  });
+});
 
 /*=============================================
 Rango de fechas
