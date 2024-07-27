@@ -273,7 +273,8 @@ $(document).on("click", ".deleteItem", function () {
                   break;
                 case "categories":
                   var rutaDir = "categorias";
-
+                case "subcategories":
+                  var rutaDir = "subcategorias";
                 default:
                   break;
               }

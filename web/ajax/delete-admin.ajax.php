@@ -57,7 +57,50 @@ class DeleteController
 
     /* ---------------------------- BORRAR CATEGORIAS --------------------------- */
 
-    $url = $this->table . "?id=" . base64_decode($this->id) . "&nameId=" . $this->nameId . "&token=" . $this->token . "&table=admins&suffix=admin";
+    /* -------------------------------------------------------------------------- */
+    /*                             BORRAR SUBCATEGORIA                            */
+    /* -------------------------------------------------------------------------- */
+
+    if ($this->table == 'subcategories') {
+
+      $select = 'url_subcategory,image_subcategory,products_subcategory,id_category_subcategory';
+      $url = 'subcategories?linkTo=id_subcategory&equalTo=' . base64_decode($this->id) . '&select=' . $select;
+      $method = 'GET';
+      $fields = [];
+      $dataItem = CurlController::request($url, $method, $fields)->results[0];
+
+      /* ---------------------- NO BORRAR SI TIENE PRODUCTOS ---------------------- */
+
+      if ($dataItem->products_subcategory > 0) {
+        echo 'no-borrar';
+        return;
+      }
+
+      /* ------------------------------ BORRAR IMAGEN ----------------------------- */
+
+      unlink('../views/assets/img/subcategories/' . $dataItem->url_subcategory . '/' . $dataItem->image_subcategory);
+
+      /* ---------------------------- BORRAR DIRECTORIO --------------------------- */
+
+      rmdir('../views/assets/img/subcategories/' . $dataItem->url_subcategory);
+
+      /* ---------------- QUITAR SUBCATEGORIA VICULADA A CATEGORIA ---------------- */
+
+      $url = 'categories?equalTo=' . $dataItem->id_category_subcategory . '&linkTo=id_category&select=subcategories_category';
+      $method = 'GET';
+      $fields = [];
+
+      $subcategories_category = CurlController::request($url, $method, $fields)->results[0]->subcategories_category;
+
+      $url = 'categories?id=' . $dataItem->id_category_subcategory . '&nameId=id_category&token=' . $this->token . '&table=admins&suffix=admin';
+      $method = 'PUT';
+      $fields = 'subcategories_category=' . ($subcategories_category - 1);
+      $updateCategory = CurlController::request($url, $method, $fields);
+    }
+
+    /* --------------------------- BORRAR SUBCATEGORIA -------------------------- */
+
+    $url = $this->table . '?id=' . base64_decode($this->id) . '&nameId=' . $this->nameId . '&token=' . $this->token . '&table=admins&suffix=admin';
     $method = 'DELETE';
     $fields = [];
     $delete = CurlController::request($url, $method, $fields);
