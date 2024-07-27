@@ -163,7 +163,7 @@ class DatatableController
 									<a href='/admin/categorias/gestion?category=" . base64_encode($value->id_category) . "' class='btn bg-yellow border-0 rounded-pill mr-2 btn-sm px-3'>
 										<i class='fas fa-pencil-alt text-white'></i>
 									</a>
-									<button class='btn btn-danger border-0 rounded-pill mr-2 btn-sm px-3 deleteItem' rol='admin' table='categories' column='category' idItem='" . base64_encode($value->id_category) . "'>
+									<button class='btn btn-danger border-0 rounded-pill mr-2 btn-sm px-3 deleteItem' rol='admin' table='categories' colum='category' idItem='" . base64_encode($value->id_category) . "'>
 										<i class='fas fa-trash-alt text-white'></i>
 									</button>
 								</div>";

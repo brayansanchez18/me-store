@@ -236,7 +236,7 @@ Eliminar item
 $(document).on("click", ".deleteItem", function () {
   var idItem = $(this).attr("idItem");
   var table = $(this).attr("table");
-  var column = $(this).attr("column");
+  var column = $(this).attr("colum");
   var rol = $(this).attr("rol");
 
   fncSweetAlert("confirm", "¿Está seguro de borrar este item?", "").then(
@@ -267,11 +267,21 @@ $(document).on("click", ".deleteItem", function () {
           processData: false,
           success: function (response) {
             if (response == 200) {
+              switch (table) {
+                case "admins":
+                  var rutaDir = "administradores";
+                  break;
+                case "categories":
+                  var rutaDir = "categorias";
+
+                default:
+                  break;
+              }
               fncMatPreloader("off");
               fncSweetAlert(
                 "success",
                 "El item ha sido borrado correctamente",
-                "/admin/administradores"
+                "/admin/" + rutaDir
               );
             } else if (response == "no-borrar") {
               if (table == "categories") {
