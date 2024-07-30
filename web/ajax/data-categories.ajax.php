@@ -59,7 +59,7 @@ class DatatableController
       /*                              SELECCIONAR DATOS                             */
       /* -------------------------------------------------------------------------- */
 
-      $select = '*';
+      $select = 'id_category,status_category,name_category,url_category,image_category,description_category,keywords_category,subcategories_category,products_category,views_category,date_updated_category';
 
       /* ---------------------------- BUSQUEDA DE DATOS --------------------------- */
 

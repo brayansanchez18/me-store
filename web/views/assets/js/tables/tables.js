@@ -94,26 +94,26 @@ if ($(".subcategoriesTable").length > 0) {
 Tabla para productos
 =============================================*/
 
-// if ($(".productsTable").length > 0) {
-//   var url = "/ajax/data-products.ajax.php";
+if ($(".productsTable").length > 0) {
+  var url = "/ajax/data-products.ajax.php";
 
-//   var columns = [
-//     { data: "id_product" },
-//     { data: "status_product" },
-//     { data: "name_product" },
-//     { data: "url_product" },
-//     { data: "image_product" },
-//     { data: "description_product" },
-//     { data: "keywords_product" },
-//     { data: "name_category" },
-//     { data: "name_subcategory" },
-//     { data: "views_product" },
-//     { data: "date_updated_product" },
-//     { data: "actions", orderable: false, searchable: false },
-//   ];
+  var columns = [
+    { data: "id_product" },
+    { data: "status_product" },
+    { data: "name_product" },
+    { data: "url_product" },
+    { data: "image_product" },
+    { data: "description_product" },
+    { data: "keywords_product" },
+    { data: "name_category" },
+    { data: "name_subcategory" },
+    { data: "views_product" },
+    { data: "date_updated_product" },
+    { data: "actions", orderable: false, searchable: false },
+  ];
 
-//   var order = [0, "desc"];
-// }
+  var order = [0, "desc"];
+}
 
 /*=============================================
 Tabla para slides
