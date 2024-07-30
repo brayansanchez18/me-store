@@ -251,11 +251,11 @@ if (isset($_GET['subcategory'])) {
 
               <div class="col-12 col-lg-6 mt-2 d-none d-lg-block">
                 <button type="submit" class="btn border-0 templateColor float-right py-2 px-3 btn-sm rounded-pill">Guardar Información</button>
-                <a href="/admin/categorias" class="btn btn-default float-right py-2 px-3 btn-sm rounded-pill mr-2">Regresar</a>
+                <a href="/admin/subcategorias" class="btn btn-default float-right py-2 px-3 btn-sm rounded-pill mr-2">Regresar</a>
               </div>
 
               <div class="col-12 text-center d-flex justify-content-center mt-2 d-block d-lg-none">
-                <div><a href="/admin/categorias" class="btn btn-default py-2 px-3 btn-sm rounded-pill mr-2">Regresar</a></div>
+                <div><a href="/admin/subcategorias" class="btn btn-default py-2 px-3 btn-sm rounded-pill mr-2">Regresar</a></div>
                 <div><button type="submit" class="btn border-0 templateColor py-2 px-3 btn-sm rounded-pill">Guardar Información</button></div>
               </div>
             </div>
@@ -265,40 +265,3 @@ if (isset($_GET['subcategory'])) {
     </div>
   </div>
 </div>
-
-<!-- -------------------------------------------------------------------------- */
-/*                        Modal con librería de iconos                        */
-/* -------------------------------------------------------------------------- -->
-
-<div class="modal" id="myIcon">
-  <div class="modal-dialog modal-lg modal-dialog-centered ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Cambiar Icono</h4>
-        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
-      </div>
-
-      <div class="modal-body mx-3">
-        <?php
-        $data = file_get_contents($path . 'views/assets/json/fontawesome1.json');
-        $icons = json_decode($data);
-        ?>
-
-        <input type="text" class="form-control mt-4 mb-3 myInputIcon" placeholder="Buscar Icono">
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-3" style="overflow-y: scroll; overflow-x: hidden; height:500px">
-          <?php foreach ($icons as $key => $value) : ?>
-            <div class="col text-center py-4 btn btnChangeIcon" mode="<?= $value ?>">
-              <i class="<?= $value ?> fa-2x"></i>
-            </div>
-          <?php endforeach ?>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-white btn-sm" data-bs-dismiss="modal">Salir</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ---------------------- Modal con librería de iconos ---------------------- -->

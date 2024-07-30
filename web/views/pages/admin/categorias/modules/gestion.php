@@ -291,5 +291,5 @@ if (isset($_GET['category'])) {
       </div>
     </div>
   </div>
-
-  <!-- ---------------------- Modal con librería de iconos ---------------------- -->
+</div>
+<!-- ---------------------- Modal con librería de iconos ---------------------- -->
