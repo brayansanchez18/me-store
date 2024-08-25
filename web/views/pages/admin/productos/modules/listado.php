@@ -27,7 +27,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <!-- <tr>
               <td>1</td>
               <td>
                 <input type="checkbox" data-size="mini" data-bootstrap-switch data-off-color="danger" data-on-color="dark" checked="true">
@@ -65,7 +65,7 @@
                   </a>
                 </div>
               </td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>

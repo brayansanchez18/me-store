@@ -94,7 +94,13 @@ if (isset($_GET['subcategory'])) {
 
                   <div class="form-group pb-3">
                     <label for="name_subcategory">Título <sup class="text-danger font-weight-bold">*</sup></label>
-                    <input type="text" class="form-control" placeholder="Ingresar el título" id="name_subcategory" name="name_subcategory" onchange="validateDataRepeat(event,'subcategory')" <?php if (!empty($subcategory)) : ?> readonly <?php endif ?> value="<?= (!empty($subcategory) ? $subcategory->name_subcategory : '') ?>" required>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Ingresar el título"
+                      id="name_subcategory"
+                      name="name_subcategory"
+                      onchange="validateDataRepeat(event,'subcategory')" <?php if (!empty($subcategory)) : ?> readonly <?php endif ?> value="<?= (!empty($subcategory) ? $subcategory->name_subcategory : '') ?>" required>
 
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor llena este campo correctamente.</div>
@@ -103,8 +109,16 @@ if (isset($_GET['subcategory'])) {
                   <!-- ---------------------------- URL SUBCATEGORIA --------------------------- -->
 
                   <div class="form-group pb-3">
-                    <label for="url_subcategory">URL <sup class="text-danger font-weight-bold">*</sup></label>
-                    <input type="text" class="form-control" id="url_subcategory" name="url_subcategory" value="<?= (!empty($subcategory) ? $subcategory->url_subcategory : '') ?>" readonly required>
+                    <label for="url_subcategory">
+                      URL <sup class="text-danger font-weight-bold">*</sup>
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="url_subcategory"
+                      name="url_subcategory"
+                      value="<?= (!empty($subcategory) ? $subcategory->url_subcategory : '') ?>" readonly
+                      required>
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor llena este campo correctamente.</div>
                   </div>
@@ -127,8 +141,17 @@ if (isset($_GET['subcategory'])) {
                   <!-- ------------------------ DESCRIPCION SUBCATEGORIA ----------------------- -->
 
                   <div class="form-group pb-3">
-                    <label for="description_subcategory">Descripción<sup class="text-danger font-weight-bold">*</sup></label>
-                    <textarea rows="9" class="form-control mb-3" placeholder="Ingresar la descripción" id="description_subcategory" name="description_subcategory" onchange="validateJS(event,'complete')" required><?= (!empty($subcategory) ? $subcategory->description_subcategory : '') ?></textarea>
+                    <label for="description_subcategory">
+                      Descripción<sup class="text-danger font-weight-bold">*</sup>
+                    </label>
+                    <textarea
+                      rows="9"
+                      class="form-control mb-3"
+                      placeholder="Ingresar la descripción"
+                      id="description_subcategory"
+                      name="description_subcategory"
+                      onchange="validateJS(event,'complete')"
+                      required><?= (!empty($subcategory) ? $subcategory->description_subcategory : '') ?></textarea>
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor llena este campo correctamente.</div>
                   </div>
@@ -136,8 +159,20 @@ if (isset($_GET['subcategory'])) {
                   <!-- --------------------------- PALABRAS CLAVE --------------------------- -->
 
                   <div class="form-group pb-3">
-                    <label for="keywords_subcategory">Palabras claves<sup class="text-danger font-weight-bold">*</sup></label>
-                    <input type="text" class="form-control tags-input" data-role="tagsinput" placeholder="Ingresar las palabras claves" id="keywords_subcategory" name="keywords_subcategory" onchange="validateJS(event,'complete-tags')" value="<?= (!empty($subcategory) ? $subcategory->keywords_subcategory : '') ?>" required>
+                    <label for="keywords_subcategory">
+                      Palabras claves<sup class="text-danger font-weight-bold">*</sup>
+                    </label>
+
+                    <input
+                      type="text"
+                      class="form-control tags-input"
+                      data-role="tagsinput"
+                      placeholder="Ingresar las palabras claves"
+                      id="keywords_subcategory"
+                      name="keywords_subcategory"
+                      onchange="validateJS(event,'complete-tags')"
+                      value="<?= (!empty($subcategory) ? $subcategory->keywords_subcategory : '') ?>"
+                      required>
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor llena este campo correctamente.</div>
                   </div>
@@ -165,7 +200,15 @@ if (isset($_GET['subcategory'])) {
                     </label>
 
                     <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="image_subcategory" name="image_subcategory" accept="image/*" maxSize="2000000" onchange="validateImageJS(event,'changeImage')" <?php if (empty($subcategory)) : ?> required <?php endif ?>>
+                      <input
+                        type="file"
+                        class="custom-file-input"
+                        id="image_subcategory"
+                        name="image_subcategory"
+                        accept="image/*"
+                        maxSize="2000000"
+                        onchange="validateImageJS(event,'changeImage')"
+                        <?php if (empty($subcategory)) : ?> required <?php endif ?>>
                       <div class="valid-feedback">Válido.</div>
                       <div class="invalid-feedback">Por favor llena este campo correctamente.</div>
                       <label class="custom-file-label" for="image_subcategory">Buscar Archivo</label>
