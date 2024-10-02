@@ -65,35 +65,47 @@ class DatatableController
       /* ---------------------------- BUSQUEDA DE DATOS --------------------------- */
 
       if (!empty($_POST['search']['value'])) {
+
         if (preg_match('/^[0-9A-Za-zñÑáéíóú ]{1,}$/', $_POST['search']['value'])) {
 
-          $linkTo = ['name_product', 'url_product', 'description_product', 'keywords_product', 'date_updated_product', 'name_category', 'name_subcategory'];
-          $search = str_replace(' ', '_', $_POST['search']['value']);
+          $linkTo = ["name_product", "url_product", "description_product", "keywords_product", "date_updated_product,name_category,name_subcategory"];
+
+          $search = str_replace(" ", "_", $_POST['search']['value']);
 
           foreach ($linkTo as $key => $value) {
-            $url = 'relations?rel=products,subcategories,categories&type=product,subcategory,category&select=' . $select . '&linkTo=' . $value . '&search=' . $search . '&orderBy=' . $orderBy . '&orderMode=' . $orderType . '&startAt=' . $start . '&endAt=' . $length;
+
+            $url = "relations?rel=products,subcategories,categories&type=product,subcategory,category&select=" . $select . "&linkTo=" . $value . "&search=" . $search . "&orderBy=" . $orderBy . "&orderMode=" . $orderType . "&startAt=" . $start . "&endAt=" . $length;
+
             $data = CurlController::request($url, $method, $fields)->results;
 
-            if ($data == 'Not Found') {
-              $data = [];
+            if ($data == "Not Found") {
+
+              $data = array();
               $recordsFiltered = 0;
             } else {
+
               $recordsFiltered = count($data);
               break;
             }
           }
         } else {
+
           echo '{
-            "Draw": 1,
-            "recordsTotal": 0,
-            "recordsFiltered": 0,
-            "data":[]}';
+        "Draw": 1,
+        "recordsTotal": 0,
+        "recordsFiltered": 0,
+        "data":[]}';
           return;
         }
       } else {
-        $url = 'relations?rel=products,subcategories,categories&type=product,subcategory,category&select=' . $select . '&orderBy=' . $orderBy . '&orderMode=' . $orderType . '&startAt=' . $start . '&endAt=' . $length;
+
+        /*=============================================
+        Seleccionar datos
+        =============================================*/
+
+        $url = "relations?rel=products,subcategories,categories&type=product,subcategory,category&select=" . $select . "&orderBy=" . $orderBy . "&orderMode=" . $orderType . "&startAt=" . $start . "&endAt=" . $length;
         $data = CurlController::request($url, $method, $fields)->results;
-        // echo '<pre>' . print_r($data) . '</pre>';
+
 
         $recordsFiltered = $totalData;
       }
@@ -112,6 +124,7 @@ class DatatableController
           "recordsTotal": 0,
           "recordsFiltered": 0,
           "data":[]}';
+        return;
       }
 
       /* ----------------------- CUANDO LA DATA VIENE VACIA ----------------------- */

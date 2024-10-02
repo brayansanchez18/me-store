@@ -32,7 +32,47 @@ class SubcategoriesController
         $method = 'PUT';
         $updateData = CurlController::request($url, $method, $fields);
 
-        if ($updateData->status == 200) {
+        /* -------------------------------------------------------------------------- */
+        /*                 QUITAR SUBCATEGORIAS VINCULADAS A CATEGORIA                */
+        /* -------------------------------------------------------------------------- */
+
+        $url = 'categories?equalTo=' . base64_decode($_POST['old_id_category_subcategory']) . '&linkTo=id_category&select=subcategories_category';
+        $method = 'GET';
+        $fields = [];
+
+        $old_subcategories_category = CurlController::request($url, $method, $fields)->results[0]->subcategories_category;
+
+        $url = 'categories?id=' . base64_decode($_POST['old_id_category_subcategory']) . '&nameId=id_category&token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+        $method = 'PUT';
+        $fields = 'subcategories_category=' . ($old_subcategories_category - 1);
+
+        /* --------------- QUITAR SUBCATEGORIAS VINCULADAS A CATEGORIA -------------- */
+
+        /* -------------------------------------------------------------------------- */
+        /*                AGREGAR SUBCATEGORIAS VINCULADAS A CATEGORIAS               */
+        /* -------------------------------------------------------------------------- */
+
+        $updateOldCategory = CurlController::request($url, $method, $fields);
+
+        $url = 'categories?equalTo=' . $_POST['id_category_subcategory'] . '&linkTo=id_category&select=subcategories_category';
+        $method = 'GET';
+        $fields = [];
+
+        $subcategories_category = CurlController::request($url, $method, $fields)->results[0]->subcategories_category;
+
+        $url = 'categories?id=' . $_POST['id_category_subcategory'] . '&nameId=id_category&token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+        $method = 'PUT';
+        $fields = 'subcategories_category=' . ($subcategories_category + 1);
+
+        $updateCategory = CurlController::request($url, $method, $fields);
+
+        /* -------------- AGREGAR SUBCATEGORIAS VINCULADAS A CATEGORIAS ------------- */
+
+        if (
+          $updateData->status == 200 &&
+          $updateOldCategory->status == 200 &&
+          $updateCategory->status == 200
+        ) {
 
           echo '<script>
 							fncMatPreloader("off");
@@ -107,12 +147,33 @@ class SubcategoriesController
 
         // echo '<pre>' . print_r($createData) . '</pre>';
 
-        if ($createData->status == 200) {
+        /* -------------------------------------------------------------------------- */
+        /*               AUMENTAR SUBCATEGORIAS VINCULADAS A CATEGORIAS               */
+        /* -------------------------------------------------------------------------- */
+
+        $url = 'categories?equalTo=' . $_POST['id_category_subcategory'] . '&linkTo=id_category&select=subcategories_category';
+        $method = 'GET';
+        $fields = [];
+
+        $subcategories_category = CurlController::request($url, $method, $fields)->results[0]->subcategories_category;
+
+        $url = 'categories?id=' . $_POST['id_category_subcategory'] . '&nameId=id_category&token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+        $method = 'PUT';
+        $fields = 'subcategories_category=' . ($subcategories_category + 1);
+
+        $updateCategory = CurlController::request($url, $method, $fields);
+
+        /* ------------- AUMENTAR SUBCATEGORIAS VIUNCULADAS A CATEGORIAS ------------ */
+
+        if (
+          $createData->status == 200 &&
+          $updateCategory->status == 200
+        ) {
 
           echo '<script>
                 fncMatPreloader("off");
                 fncFormatInputs();
-                fncSweetAlert("success","Categoria creada con éxito","/admin/subcategorias");
+                fncSweetAlert("success","Sub-Categoria creada con éxito","/admin/subcategorias");
               </script>';
         } else {
 

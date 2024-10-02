@@ -1,6 +1,6 @@
-/*=============================================
-Validación Bootstrap 5
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                           Validación Bootstrap 5                           */
+/* -------------------------------------------------------------------------- */
 // Disable form submissions if there are invalid fields
 (function () {
   "use strict";
@@ -28,9 +28,11 @@ Validación Bootstrap 5
   );
 })();
 
-/*=============================================
-Función para validar datos repetidos
-=============================================*/
+/* ------------------------- Validación Bootstrap 5 ------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                    Función para validar datos repetidos                    */
+/* -------------------------------------------------------------------------- */
 
 function validateDataRepeat(event, type) {
   if (type == "category") {
@@ -92,9 +94,11 @@ function validateDataRepeat(event, type) {
   });
 }
 
-/*=============================================
-Función para crear Url's
-=============================================*/
+/* ------------------ Función para validar datos repetidos ------------------ */
+
+/* -------------------------------------------------------------------------- */
+/*                          Función para crear Url's                          */
+/* -------------------------------------------------------------------------- */
 
 function createUrl(event, input) {
   var value = event.target.value;
@@ -116,9 +120,11 @@ function createUrl(event, input) {
   $(".metaURL").html(value);
 }
 
-/*=============================================
-Función para validar formularios
-=============================================*/
+/* ------------------------ Función para crear Url's ------------------------ */
+
+/* -------------------------------------------------------------------------- */
+/*                      Función para validar formularios                      */
+/* -------------------------------------------------------------------------- */
 
 function validateJS(event, type) {
   $(event.target).parent().addClass("was-validated");
@@ -206,9 +212,11 @@ function validateJS(event, type) {
   }
 }
 
-/*=============================================
-Función para recordar email en el login
-=============================================*/
+/* -------------------- Función para validar formularios -------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                   Función para recordar email en el login                  */
+/* -------------------------------------------------------------------------- */
 
 function rememberEmail(event) {
   if (event.target.checked) {
@@ -235,9 +243,11 @@ function getEmail() {
 
 getEmail();
 
-/*=============================================
-Cambio de icono para la categoría
-=============================================*/
+/* ----------------- Función para recordar email en el login ---------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                      Cambio de icono para la categoría                     */
+/* -------------------------------------------------------------------------- */
 
 function addIcon(event) {
   $("#myIcon").show();
@@ -271,9 +281,11 @@ $(document).on("click", '[data-bs-dismiss="modal"]', function () {
   });
 });
 
-/*=============================================
-Tags Input
-=============================================*/
+/* -------------------- Cambio de icono para la categoría ------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                 Tags Input                                 */
+/* -------------------------------------------------------------------------- */
 
 if ($(".tags-input").length > 0) {
   $(".tags-input").tagsinput({
@@ -281,9 +293,11 @@ if ($(".tags-input").length > 0) {
   });
 }
 
-/*=============================================
-Validamos imagen
-=============================================*/
+/* ------------------------------- Tags Input ------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                              Validamos imagen                              */
+/* -------------------------------------------------------------------------- */
 
 function validateImageJS(event, tagImg) {
   fncSweetAlert("loading", "", "");
@@ -294,9 +308,7 @@ function validateImageJS(event, tagImg) {
     return;
   }
 
-  /*=============================================
-  Validamos el formato
-  =============================================*/
+  /* -------------------------- Validamos el formato -------------------------- */
 
   if (
     image["type"] !== "image/jpeg" &&
@@ -307,16 +319,13 @@ function validateImageJS(event, tagImg) {
 
     return;
   } else if (image["size"] > 2000000) {
-    /*=============================================
-  Validamos el tamaño
-  =============================================*/
+    /* --------------------------- Validamos el tamaño -------------------------- */
+
     fncToastr("error", "La imagen no debe ser superior a 2MB");
 
     return;
   } else {
-    /*=============================================
-  Mostramos la imagen temporal
-  =============================================*/
+    /* ---------------------- Mostramos la imagen temporal ---------------------- */
     var data = new FileReader();
     data.readAsDataURL(image);
 
@@ -331,9 +340,11 @@ function validateImageJS(event, tagImg) {
   }
 }
 
-/*=============================================
-Traer subcategorias de acuerdo a la categoría seleccionada
-=============================================*/
+/* ---------------------------- Validamos imagen ---------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*         Traer subcategorias de acuerdo a la categoría seleccionada         */
+/* -------------------------------------------------------------------------- */
 
 function changeCategory(event) {
   $("#id_subcategory_product").html(
@@ -341,7 +352,7 @@ function changeCategory(event) {
   );
 
   var idCategory = event.target.value;
-  console.log("idCategory", idCategory);
+  // console.log("idCategory", idCategory);
 
   var data = new FormData();
   data.append("idCategory", idCategory);
@@ -358,13 +369,11 @@ function changeCategory(event) {
         JSON.parse(response).forEach((v) => {
           $("#id_subcategory_product").append(
             `
-
             <option value="` +
               v.id_subcategory +
               `">` +
               v.name_subcategory +
               `</option>
-
           `
           );
         });
@@ -373,472 +382,474 @@ function changeCategory(event) {
   });
 }
 
+/* ------- Traer subcategorias de acuerdo a la categoría seleccionada ------- */
+
 /*=============================================
 Summernote
 =============================================*/
 
-if ($(".summernote").length > 0) {
-  $(".summernote").summernote({
-    minHeight: 500,
-    prettifyHtml: false,
-    followingToolbar: true,
-    codemirror: {
-      // codemirror options
-      mode: "application/xml",
-      styleActiveLine: true,
-      lineNumbers: true,
-      lineWrapping: true,
-    },
-    toolbar: [
-      ["misc", ["codeview", "undo", "redo"]],
-      ["style", ["bold", "italic", "underline", "clear"]],
-      ["para", ["style", "ul", "ol", "paragraph", "height"]],
-      ["fontsize", ["fontsize"]],
-      ["color", ["color"]],
-      ["insert", ["link", "picture", "hr", "video", "table", "emoji"]],
-    ],
-    callbacks: {
-      onImageUpload: function (files) {
-        fncSweetAlert("loading", "Cargando imagen...", "");
+// if ($(".summernote").length > 0) {
+//   $(".summernote").summernote({
+//     minHeight: 500,
+//     prettifyHtml: false,
+//     followingToolbar: true,
+//     codemirror: {
+//       // codemirror options
+//       mode: "application/xml",
+//       styleActiveLine: true,
+//       lineNumbers: true,
+//       lineWrapping: true,
+//     },
+//     toolbar: [
+//       ["misc", ["codeview", "undo", "redo"]],
+//       ["style", ["bold", "italic", "underline", "clear"]],
+//       ["para", ["style", "ul", "ol", "paragraph", "height"]],
+//       ["fontsize", ["fontsize"]],
+//       ["color", ["color"]],
+//       ["insert", ["link", "picture", "hr", "video", "table", "emoji"]],
+//     ],
+//     callbacks: {
+//       onImageUpload: function (files) {
+//         fncSweetAlert("loading", "Cargando imagen...", "");
 
-        for (var i = 0; i < files.length; i++) {
-          upload(files[i]);
-        }
-      },
-    },
-  });
-}
+//         for (var i = 0; i < files.length; i++) {
+//           upload(files[i]);
+//         }
+//       },
+//     },
+//   });
+// }
 
 /*=============================================
 Adicionar fondo blanco al toolbar de summernote
 Adicionar iconos al toolbar de summernote
 =============================================*/
 
-if ($(".note-toolbar").length > 0) {
-  $(".note-toolbar").addClass("bg-white");
+// if ($(".note-toolbar").length > 0) {
+//   $(".note-toolbar").addClass("bg-white");
 
-  $(".emoji-picker").removeClass("fa-smile-o");
-  $(".emoji-picker").addClass("fa-smile");
+//   $(".emoji-picker").removeClass("fa-smile-o");
+//   $(".emoji-picker").addClass("fa-smile");
 
-  $("[aria-label='More Color']").html(`<i class="fas fa-caret-down"></i>`);
-}
+//   $("[aria-label='More Color']").html(`<i class="fas fa-caret-down"></i>`);
+// }
 
 /*=============================================
 Subir imagen al servidor
 =============================================*/
 
-function upload(file) {
-  var data = new FormData();
-  data.append("file", file, file.name);
+// function upload(file) {
+//   var data = new FormData();
+//   data.append("file", file, file.name);
 
-  $.ajax({
-    url: "/ajax/upload.ajax.php",
-    method: "POST",
-    data: data,
-    contentType: false,
-    cache: false,
-    processData: false,
-    success: function (response) {
-      fncSweetAlert("close", null, null);
+//   $.ajax({
+//     url: "/ajax/upload.ajax.php",
+//     method: "POST",
+//     data: data,
+//     contentType: false,
+//     cache: false,
+//     processData: false,
+//     success: function (response) {
+//       fncSweetAlert("close", null, null);
 
-      switch (response) {
-        case "size":
-          fncNotie(3, "Error: la imagen debe pesar menos de 10MB");
+//       switch (response) {
+//         case "size":
+//           fncNotie(3, "Error: la imagen debe pesar menos de 10MB");
 
-          return;
+//           return;
 
-          break;
+//           break;
 
-        case "type":
-          fncNotie(3, "Error: la imagen debe ser formato JPG, PNG o GIF");
+//         case "type":
+//           fncNotie(3, "Error: la imagen debe ser formato JPG, PNG o GIF");
 
-          return;
+//           return;
 
-          break;
+//           break;
 
-        case "process":
-          fncNotie(3, "Error en el proceso de subir la imagen");
+//         case "process":
+//           fncNotie(3, "Error en el proceso de subir la imagen");
 
-          return;
+//           return;
 
-          break;
-      }
+//           break;
+//       }
 
-      $(".summernote").summernote("insertImage", response, function ($image) {
-        $image.attr("class", "img-fluid");
-        $image.css("width", "100%");
-      });
+//       $(".summernote").summernote("insertImage", response, function ($image) {
+//         $image.attr("class", "img-fluid");
+//         $image.css("width", "100%");
+//       });
 
-      console.log("response", response);
-    },
+//       console.log("response", response);
+//     },
 
-    error: function (jqXHR, textStatus, errorThrown) {
-      console.log("jqXHR", jqXHR);
+//     error: function (jqXHR, textStatus, errorThrown) {
+//       console.log("jqXHR", jqXHR);
 
-      if (response == "type") {
-        fncNotie(3, textStatus + " " + errorThrown);
+//       if (response == "type") {
+//         fncNotie(3, textStatus + " " + errorThrown);
 
-        return;
-      }
-    },
-  });
-}
+//         return;
+//       }
+//     },
+//   });
+// }
 
 /*=============================================
 Cambio de variante: Galería o video
 =============================================*/
 
-function changeVariant(event, item) {
-  if (event.target.value == "video") {
-    $(".inputVideo_" + item).show();
-    $(".iframeYoutube_" + item).show();
-    $(".dropzone_" + item).hide();
-    $(".galleryProduct_" + item).hide();
-  } else {
-    $(".inputVideo_" + item).hide();
-    $(".iframeYoutube_" + item).hide();
-    $(".dropzone_" + item).show();
-    $(".galleryProduct_" + item).show();
-  }
-}
+// function changeVariant(event, item) {
+//   if (event.target.value == "video") {
+//     $(".inputVideo_" + item).show();
+//     $(".iframeYoutube_" + item).show();
+//     $(".dropzone_" + item).hide();
+//     $(".galleryProduct_" + item).hide();
+//   } else {
+//     $(".inputVideo_" + item).hide();
+//     $(".iframeYoutube_" + item).hide();
+//     $(".dropzone_" + item).show();
+//     $(".galleryProduct_" + item).show();
+//   }
+// }
 
 /*=============================================
 DropZone
 =============================================*/
 
-Dropzone.autoDiscover = false;
+// Dropzone.autoDiscover = false;
 
-function initDropzone(item) {
-  $(".dropzone_" + item).dropzone({
-    url: "/",
-    addRemoveLinks: true,
-    acceptedFiles: "image/jpeg, image/png, image/gif",
-    maxFilesize: 10,
-    maxFiles: 10,
-    init: function () {
-      var elem = $(this.element);
+// function initDropzone(item) {
+//   $(".dropzone_" + item).dropzone({
+//     url: "/",
+//     addRemoveLinks: true,
+//     acceptedFiles: "image/jpeg, image/png, image/gif",
+//     maxFilesize: 10,
+//     maxFiles: 10,
+//     init: function () {
+//       var elem = $(this.element);
 
-      var arrayFiles = [];
+//       var arrayFiles = [];
 
-      var countArrayFiles = 0;
+//       var countArrayFiles = 0;
 
-      this.on("addedfile", function (file) {
-        countArrayFiles++;
+//       this.on("addedfile", function (file) {
+//         countArrayFiles++;
 
-        setTimeout(function () {
-          arrayFiles.push({
-            file: file.dataURL,
-            type: file.type,
-            width: file.width,
-            height: file.height,
-          });
+//         setTimeout(function () {
+//           arrayFiles.push({
+//             file: file.dataURL,
+//             type: file.type,
+//             width: file.width,
+//             height: file.height,
+//           });
 
-          elem
-            .parent()
-            .children(".galleryProduct_" + item)
-            .val(JSON.stringify(arrayFiles));
-        }, 500 * countArrayFiles);
-      });
+//           elem
+//             .parent()
+//             .children(".galleryProduct_" + item)
+//             .val(JSON.stringify(arrayFiles));
+//         }, 500 * countArrayFiles);
+//       });
 
-      this.on("removedfile", function (file) {
-        countArrayFiles++;
+//       this.on("removedfile", function (file) {
+//         countArrayFiles++;
 
-        setTimeout(function () {
-          var index = arrayFiles.indexOf({
-            file: file.dataURL,
-            type: file.type,
-            width: file.width,
-            height: file.height,
-          });
+//         setTimeout(function () {
+//           var index = arrayFiles.indexOf({
+//             file: file.dataURL,
+//             type: file.type,
+//             width: file.width,
+//             height: file.height,
+//           });
 
-          arrayFiles.splice(index, 1);
+//           arrayFiles.splice(index, 1);
 
-          elem
-            .parent()
-            .children(".galleryProduct_" + item)
-            .val(JSON.stringify(arrayFiles));
-        }, 500 * countArrayFiles);
-      });
+//           elem
+//             .parent()
+//             .children(".galleryProduct_" + item)
+//             .val(JSON.stringify(arrayFiles));
+//         }, 500 * countArrayFiles);
+//       });
 
-      myDropzone = this;
+//       myDropzone = this;
 
-      $(".saveBtn").click(function () {
-        if (
-          arrayFiles.length == 0 &&
-          $("[name='type_variant_" + item + "']").val() == "gallery" &&
-          $(".idVariant").length == 0
-        ) {
-          fncToastr("error", "La galería no puede estar vacía");
-        } else {
-          myDropzone.processQueue();
-        }
-      });
-    },
-  });
-}
+//       $(".saveBtn").click(function () {
+//         if (
+//           arrayFiles.length == 0 &&
+//           $("[name='type_variant_" + item + "']").val() == "gallery" &&
+//           $(".idVariant").length == 0
+//         ) {
+//           fncToastr("error", "La galería no puede estar vacía");
+//         } else {
+//           myDropzone.processQueue();
+//         }
+//       });
+//     },
+//   });
+// }
 
 /*=============================================
 Activar DropZone de acuerdo a la cantidad de galerías existentes
 =============================================*/
 
-var numDropzone = $(".dropzone");
+// var numDropzone = $(".dropzone");
 
-for (var item = 1; item <= numDropzone.length; item++) {
-  initDropzone(item);
-}
+// for (var item = 1; item <= numDropzone.length; item++) {
+//   initDropzone(item);
+// }
 
 /*=============================================
 Insertar Video de youtube
 =============================================*/
 
-function changeVideo(event, item) {
-  var idYoutube = event.target.value.split("/").slice(-1);
-  $(".iframeYoutube_" + item).attr(
-    "src",
-    "https://www.youtube.com/embed/" + idYoutube
-  );
-}
+// function changeVideo(event, item) {
+//   var idYoutube = event.target.value.split("/").slice(-1);
+//   $(".iframeYoutube_" + item).attr(
+//     "src",
+//     "https://www.youtube.com/embed/" + idYoutube
+//   );
+// }
 
 /*=============================================
 Edición de Galeria
 =============================================*/
 
-var arrayFilesEdit = Array();
-var arrayFilesDelete = Array();
+// var arrayFilesEdit = Array();
+// var arrayFilesDelete = Array();
 
-function removeGallery(elem, item) {
-  $(elem).parent().remove();
+// function removeGallery(elem, item) {
+//   $(elem).parent().remove();
 
-  var index = JSON.parse($(".galleryOldProduct_" + item).val()).indexOf(
-    $(elem).attr("remove")
-  );
+//   var index = JSON.parse($(".galleryOldProduct_" + item).val()).indexOf(
+//     $(elem).attr("remove")
+//   );
 
-  arrayFilesEdit = JSON.parse($(".galleryOldProduct_" + item).val());
+//   arrayFilesEdit = JSON.parse($(".galleryOldProduct_" + item).val());
 
-  arrayFilesEdit.splice(index, 1);
+//   arrayFilesEdit.splice(index, 1);
 
-  $(".galleryOldProduct_" + item).val(JSON.stringify(arrayFilesEdit));
+//   $(".galleryOldProduct_" + item).val(JSON.stringify(arrayFilesEdit));
 
-  arrayFilesDelete = JSON.parse($(".deleteGalleryProduct_" + item).val());
+//   arrayFilesDelete = JSON.parse($(".deleteGalleryProduct_" + item).val());
 
-  arrayFilesDelete.push($(elem).attr("remove"));
+//   arrayFilesDelete.push($(elem).attr("remove"));
 
-  $(".deleteGalleryProduct_" + item).val(JSON.stringify(arrayFilesDelete));
-}
+//   $(".deleteGalleryProduct_" + item).val(JSON.stringify(arrayFilesDelete));
+// }
 
 /*=============================================
 Adicionar Variante
 =============================================*/
 
-$(document).on("click", ".addVariant", function () {
-  var variantItem = Number($('[name="totalVariants"]').val()) + 1;
+// $(document).on("click", ".addVariant", function () {
+//   var variantItem = Number($('[name="totalVariants"]').val()) + 1;
 
-  $(".variantList").append(`
+//   $(".variantList").append(`
 
-    <div class="col">
+//     <div class="col">
 
-      <div class="card variantCount">
-          
-        <div class="card-body">
+//       <div class="card variantCount">
 
-          <div class="form-group">
-                      
-            <div class="d-flex justify-content-between">
-              
-              <label for="info_product">Variante ${variantItem}<sup class="text-danger">*</sup></label>
+//         <div class="card-body">
 
-              <div>
-                <button type="button" class="btn btn-default btn-sm rounded-pill px-3 quitVariant"><i class="fas fa-times fa-xs"></i> Quitar esta variante</button>
-              </div>
+//           <div class="form-group">
 
-            </div>
+//             <div class="d-flex justify-content-between">
 
-          </div>
+//               <label for="info_product">Variante ${variantItem}<sup class="text-danger">*</sup></label>
 
-          <div class="row row-cols-1 row-cols-md-2">
-                      
-            <div class="col">
+//               <div>
+//                 <button type="button" class="btn btn-default btn-sm rounded-pill px-3 quitVariant"><i class="fas fa-times fa-xs"></i> Quitar esta variante</button>
+//               </div>
 
-              <div class="form-group">
-                
-                <select 
-                class="custom-select" 
-                name="type_variant_${variantItem}"
-                onchange="changeVariant(event, ${variantItem})"
-                > 
+//             </div>
 
-                  <option value="gallery">Galería de fotos</option>
-                  <option value="video">Video</option>
+//           </div>
 
-                </select>
+//           <div class="row row-cols-1 row-cols-md-2">
 
-              </div>
+//             <div class="col">
 
-              <div class="dropzone dropzone_${variantItem} mb-3">
-          
-                <div class="dz-message">
-                  
-                  Arrastra tus imágenes acá, tamaño máximo 400px * 450px
-                
-                </div> 
+//               <div class="form-group">
 
-              </div>
+//                 <select
+//                 class="custom-select"
+//                 name="type_variant_${variantItem}"
+//                 onchange="changeVariant(event, ${variantItem})"
+//                 >
 
-              <input type="hidden" name="galleryProduct_${variantItem}" class="galleryProduct_${variantItem}"> 
-              <input type="hidden" name="galleryOldProduct_${variantItem}" class="galleryOldProduct_${variantItem}" value='[]'> 
-              <input type="hidden" name="deleteGalleryProduct_${variantItem}" class="deleteGalleryProduct_${variantItem}" value='[]'> 
+//                   <option value="gallery">Galería de fotos</option>
+//                   <option value="video">Video</option>
 
-              <div class="input-group mb-3 inputVideo_${variantItem}" style="display:none">
-                
-                <span class="input-group-text">
-                   <i class="fas fa-clipboard-list"></i>
-                 </span>  
+//                 </select>
 
-                <input 
-                type="text" 
-                class="form-control" 
-                name="videoProduct_${variantItem}"
-                placeholder="Ingresa la URL de YouTube"
-                onchange="changeVideo(event, ${variantItem})"
-                >
+//               </div>
 
-              </div>
+//               <div class="dropzone dropzone_${variantItem} mb-3">
 
-              <iframe width="100%" height="280" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="mb-3 iframeYoutube_${variantItem}" style="display:none"></iframe>
+//                 <div class="dz-message">
 
-            </div>  
+//                   Arrastra tus imágenes acá, tamaño máximo 400px * 450px
 
-            <div class="col">
+//                 </div>
 
-              <div class="input-group mb-3">
+//               </div>
 
-                  <span class="input-group-text">
-                    <i class="fas fa-clipboard-list"></i>
-                  </span>
-                  
-                <input type="text" class="form-control" name="description_variant_${variantItem}" placeholder="Descripción: Color Negro, talla S, Material Goma">
+//               <input type="hidden" name="galleryProduct_${variantItem}" class="galleryProduct_${variantItem}">
+//               <input type="hidden" name="galleryOldProduct_${variantItem}" class="galleryOldProduct_${variantItem}" value='[]'>
+//               <input type="hidden" name="deleteGalleryProduct_${variantItem}" class="deleteGalleryProduct_${variantItem}" value='[]'>
 
-              </div>
+//               <div class="input-group mb-3 inputVideo_${variantItem}" style="display:none">
 
-              <div class="input-group mb-3">
+//                 <span class="input-group-text">
+//                    <i class="fas fa-clipboard-list"></i>
+//                  </span>
 
-                  <span class="input-group-text">
-                    <i class="fas fa-hand-holding-usd"></i>
-                  </span>
-                
-                <input type="number" step="any" class="form-control" name="cost_variant_${variantItem}" placeholder="Costo de compra">
+//                 <input
+//                 type="text"
+//                 class="form-control"
+//                 name="videoProduct_${variantItem}"
+//                 placeholder="Ingresa la URL de YouTube"
+//                 onchange="changeVideo(event, ${variantItem})"
+//                 >
 
-              </div>
+//               </div>
 
-              <div class="input-group mb-3">
+//               <iframe width="100%" height="280" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="mb-3 iframeYoutube_${variantItem}" style="display:none"></iframe>
 
-                  <span class="input-group-text">
-                    <i class="fas fa-funnel-dollar"></i>
-                  </span>
+//             </div>
 
-                <input type="number" step="any" class="form-control" name="price_variant_${variantItem}" placeholder="Precio de venta">
+//             <div class="col">
 
-              </div>
+//               <div class="input-group mb-3">
 
-              <div class="input-group mb-3">
+//                   <span class="input-group-text">
+//                     <i class="fas fa-clipboard-list"></i>
+//                   </span>
 
-                  <span class="input-group-text">
-                    <i class="fas fa-tag"></i>
-                  </span> 
+//                 <input type="text" class="form-control" name="description_variant_${variantItem}" placeholder="Descripción: Color Negro, talla S, Material Goma">
 
-                <input type="number" step="any" class="form-control" name="offer_variant_${variantItem}" placeholder="Precio de descuento">
+//               </div>
 
-              </div>
+//               <div class="input-group mb-3">
 
-              <div class="input-group mb-3">
+//                   <span class="input-group-text">
+//                     <i class="fas fa-hand-holding-usd"></i>
+//                   </span>
 
-                  <span class="input-group-text">Fin del descuento</span>
-                  
-                <input type="date" class="form-control" name="date_variant_${variantItem}">
+//                 <input type="number" step="any" class="form-control" name="cost_variant_${variantItem}" placeholder="Costo de compra">
 
-              </div>
+//               </div>
 
-              <div class="input-group mb-3">
+//               <div class="input-group mb-3">
 
-                  <span class="input-group-text">
-                    <i class="fas fa-list"></i>
-                  </span>
+//                   <span class="input-group-text">
+//                     <i class="fas fa-funnel-dollar"></i>
+//                   </span>
 
-                <input type="number" class="form-control" name="stock_variant_${variantItem}" placeholder="Stock disponible">
+//                 <input type="number" step="any" class="form-control" name="price_variant_${variantItem}" placeholder="Precio de venta">
 
-              </div>
+//               </div>
 
-            </div>
+//               <div class="input-group mb-3">
 
-          </div>
+//                   <span class="input-group-text">
+//                     <i class="fas fa-tag"></i>
+//                   </span>
 
-        </div>
+//                 <input type="number" step="any" class="form-control" name="offer_variant_${variantItem}" placeholder="Precio de descuento">
 
-      </div>
+//               </div>
 
-    </div>
+//               <div class="input-group mb-3">
 
-   `);
+//                   <span class="input-group-text">Fin del descuento</span>
 
-  $('[name="totalVariants"]').val(variantItem);
+//                 <input type="date" class="form-control" name="date_variant_${variantItem}">
 
-  initDropzone(variantItem);
-});
+//               </div>
+
+//               <div class="input-group mb-3">
+
+//                   <span class="input-group-text">
+//                     <i class="fas fa-list"></i>
+//                   </span>
+
+//                 <input type="number" class="form-control" name="stock_variant_${variantItem}" placeholder="Stock disponible">
+
+//               </div>
+
+//             </div>
+
+//           </div>
+
+//         </div>
+
+//       </div>
+
+//     </div>
+
+//    `);
+
+//   $('[name="totalVariants"]').val(variantItem);
+
+//   initDropzone(variantItem);
+// });
 
 /*=============================================
 Quitar Variante
 =============================================*/
 
-$(document).on("click", ".deleteVariant", function () {
-  $(this).parent().parent().parent().parent().parent().remove();
+// $(document).on("click", ".deleteVariant", function () {
+//   $(this).parent().parent().parent().parent().parent().remove();
 
-  var variantCount = $(".variantCount");
-  $('[name="totalVariants"]').val(variantCount.length);
+//   var variantCount = $(".variantCount");
+//   $('[name="totalVariants"]').val(variantCount.length);
 
-  if ($(this).attr("idVariant") != undefined) {
-    var data = new FormData();
+//   if ($(this).attr("idVariant") != undefined) {
+//     var data = new FormData();
 
-    data.append("token", localStorage.getItem("token-admin"));
-    data.append("table", "variants");
-    data.append("id", $(this).attr("idVariant"));
-    data.append("nameId", "id_variant");
+//     data.append("token", localStorage.getItem("token-admin"));
+//     data.append("table", "variants");
+//     data.append("id", $(this).attr("idVariant"));
+//     data.append("nameId", "id_variant");
 
-    $.ajax({
-      url: "/ajax/delete-admin.ajax.php",
-      method: "POST",
-      data: data,
-      contentType: false,
-      cache: false,
-      processData: false,
-      success: function (response) {
-        if (response == 200) {
-          fncToastr("success", "Variante borrada correctamente");
-        }
-      },
-    });
-  }
-});
+//     $.ajax({
+//       url: "/ajax/delete-admin.ajax.php",
+//       method: "POST",
+//       data: data,
+//       contentType: false,
+//       cache: false,
+//       processData: false,
+//       success: function (response) {
+//         if (response == 200) {
+//           fncToastr("success", "Variante borrada correctamente");
+//         }
+//       },
+//     });
+//   }
+// });
 
 /*=============================================
 Agregar codigo telefónico
 =============================================*/
 
-function changeCountry(event) {
-  $(".dialCode").html(event.target.value.split("_")[1]);
-}
+// function changeCountry(event) {
+//   $(".dialCode").html(event.target.value.split("_")[1]);
+// }
 
 /*=============================================
 Activar select 2
 =============================================*/
 
-if ($(".select2").length > 0) {
-  $(".select2").select2();
-}
+// if ($(".select2").length > 0) {
+//   $(".select2").select2();
+// }
 
 /*=============================================
 Activar Input Mask
 =============================================*/
 
-if ($("[data-mask]").length > 0) {
-  $("[data-mask]").inputmask();
-}
+// if ($("[data-mask]").length > 0) {
+//   $("[data-mask]").inputmask();
+// }

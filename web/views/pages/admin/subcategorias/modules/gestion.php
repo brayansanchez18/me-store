@@ -64,6 +64,12 @@ if (isset($_GET['subcategory'])) {
                   <!-- ------------------------ SELECCIONAR CATEGORIA ----------------------- -->
 
                   <div class="form-group pb-3">
+                    <?php if (!empty($subcategory)) : ?>
+                      <input
+                        type="hidden"
+                        name="old_id_category_subcategory"
+                        value="<?= base64_encode($subcategory->id_category_subcategory) ?>">
+                    <?php endif ?>
                     <label for="id_category_subcategory">Seleccionar Categoría<sup class="text-danger">*</sup></label>
 
                     <?php

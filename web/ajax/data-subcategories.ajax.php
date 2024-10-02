@@ -112,6 +112,7 @@ class DatatableController
           "recordsTotal": 0,
           "recordsFiltered": 0,
           "data":[]}';
+        return;
       }
 
       /* ----------------------- CUANDO LA DATA VIENE VACIA ----------------------- */
