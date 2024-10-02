@@ -4,3 +4,4 @@
 [02-Oct-2024 01:48:03 Europe/Berlin] PHP Warning:  Undefined variable $id_category_product in C:\xampp\htdocs\me-store\web\views\pages\admin\productos\modules\gestion.php on line 69
 [02-Oct-2024 01:48:03 Europe/Berlin] PHP Warning:  Undefined variable $id_subcategory_product in C:\xampp\htdocs\me-store\web\views\pages\admin\productos\modules\gestion.php on line 107
 [02-Oct-2024 02:13:38 Europe/Berlin] PHP Warning:  Attempt to read property "products_category" on string in C:\xampp\htdocs\me-store\web\controllers\products.controller.php on line 194
+[02-Oct-2024 05:39:45 Europe/Berlin] PHP Warning:  Attempt to read property "products_category" on string in C:\xampp\htdocs\me-store\web\controllers\products.controller.php on line 194
