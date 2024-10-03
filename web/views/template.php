@@ -142,6 +142,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
+  <!-- Summernote -->
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/summernote/emoji.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/adminlte/adminlte.min.css">
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/template/template.css">
@@ -180,10 +183,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- jQuery -->
   <script src="<?= $path ?>views/assets/js/plugins/jquery/jquery.min.js"></script>
-  <!-- Bootstrap 4 -->
-  <!-- <script src="<?= $path ?>views/assets/js/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-  <!-- Latest compiled JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <?php if (
+    !empty($routesArray[0]) && $routesArray[0] == 'admin' &&
+    !empty($routesArray[1]) && $routesArray[1] == 'productos' &&
+    !empty($routesArray[2]) && $routesArray[2] == 'gestion'
+  ) : ?>
+    <!-- Bootstrap 4 -->
+    <script src="<?= $path ?>views/assets/js/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <?php else: ?>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <?php endif ?>
   <script src="<?= $path ?>views/assets/js/plugins/jdSlider/jdSlider.js"></script>
   <!-- KNOB -->
   <script src="<?= $path ?>views/assets/js/plugins/knob/knob.js"></script>
@@ -218,6 +228,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Bootstrap Switch -->
   <!-- https://bttstrp.github.io/bootstrap-switch/examples.html -->
   <script src="<?= $path ?>views/assets/js/plugins/bootstrap-switch/bootstrap-switch.min.js"></script>
+  <!-- Summernote -->
+  <!-- https://summernote.org/getting-started/#run-summernote -->
+  <script src="<?= $path ?>views/assets/js/plugins/summernote/summernote-bs4.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/summernote/summernote-code-beautify-plugin.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/summernote/emoji.config.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/summernote/tam-emoji.min.js"></script>
 
   <!-- ------------------------------- JS PLUGINS ------------------------------- -->
 

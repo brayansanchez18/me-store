@@ -384,116 +384,107 @@ function changeCategory(event) {
 
 /* ------- Traer subcategorias de acuerdo a la categoría seleccionada ------- */
 
-/*=============================================
-Summernote
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                                 Summernote                                 */
+/* -------------------------------------------------------------------------- */
 
-// if ($(".summernote").length > 0) {
-//   $(".summernote").summernote({
-//     minHeight: 500,
-//     prettifyHtml: false,
-//     followingToolbar: true,
-//     codemirror: {
-//       // codemirror options
-//       mode: "application/xml",
-//       styleActiveLine: true,
-//       lineNumbers: true,
-//       lineWrapping: true,
-//     },
-//     toolbar: [
-//       ["misc", ["codeview", "undo", "redo"]],
-//       ["style", ["bold", "italic", "underline", "clear"]],
-//       ["para", ["style", "ul", "ol", "paragraph", "height"]],
-//       ["fontsize", ["fontsize"]],
-//       ["color", ["color"]],
-//       ["insert", ["link", "picture", "hr", "video", "table", "emoji"]],
-//     ],
-//     callbacks: {
-//       onImageUpload: function (files) {
-//         fncSweetAlert("loading", "Cargando imagen...", "");
+if ($(".summernote").length > 0) {
+  $(".summernote").summernote({
+    minHeight: 500,
+    prettifyHtml: false,
+    followingToolbar: true,
+    codemirror: {
+      // codemirror options
+      mode: "application/xml",
+      styleActiveLine: true,
+      lineNumbers: true,
+      lineWrapping: true,
+    },
+    toolbar: [
+      ["misc", ["codeview", "undo", "redo"]],
+      ["style", ["bold", "italic", "underline", "clear"]],
+      ["para", ["style", "ul", "ol", "paragraph", "height"]],
+      ["fontsize", ["fontsize"]],
+      ["color", ["color"]],
+      ["insert", ["link", "picture", "hr", "video", "table", "emoji"]],
+    ],
+    callbacks: {
+      onImageUpload: function (files) {
+        fncSweetAlert("loading", "Cargando imagen...", "");
 
-//         for (var i = 0; i < files.length; i++) {
-//           upload(files[i]);
-//         }
-//       },
-//     },
-//   });
-// }
+        for (var i = 0; i < files.length; i++) {
+          upload(files[i]);
+        }
+      },
+    },
+  });
+}
+
+/* ------------------------------- Summernote ------------------------------- */
 
 /*=============================================
 Adicionar fondo blanco al toolbar de summernote
 Adicionar iconos al toolbar de summernote
 =============================================*/
 
-// if ($(".note-toolbar").length > 0) {
-//   $(".note-toolbar").addClass("bg-white");
+if ($(".note-toolbar").length > 0) {
+  $(".note-toolbar").addClass("bg-white");
 
-//   $(".emoji-picker").removeClass("fa-smile-o");
-//   $(".emoji-picker").addClass("fa-smile");
+  $(".emoji-picker").removeClass("fa-smile-o");
+  $(".emoji-picker").addClass("fa-smile");
 
-//   $("[aria-label='More Color']").html(`<i class="fas fa-caret-down"></i>`);
-// }
+  $("[aria-label='More Color']").html(`<i class="fas fa-caret-down"></i>`);
+}
 
-/*=============================================
-Subir imagen al servidor
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                          Subir imagen al servidor                          */
+/* -------------------------------------------------------------------------- */
 
-// function upload(file) {
-//   var data = new FormData();
-//   data.append("file", file, file.name);
+function upload(file) {
+  var data = new FormData();
+  data.append("file", file, file.name);
 
-//   $.ajax({
-//     url: "/ajax/upload.ajax.php",
-//     method: "POST",
-//     data: data,
-//     contentType: false,
-//     cache: false,
-//     processData: false,
-//     success: function (response) {
-//       fncSweetAlert("close", null, null);
+  $.ajax({
+    url: "/ajax/upload.ajax.php",
+    method: "POST",
+    data: data,
+    contentType: false,
+    cache: false,
+    processData: false,
+    success: function (response) {
+      fncSweetAlert("close", null, null);
+      switch (response) {
+        case "size":
+          fncNotie(3, "Error: la imagen debe pesar menos de 10MB");
+          return;
+          break;
+        case "type":
+          fncNotie(3, "Error: la imagen debe ser formato JPG, PNG o GIF");
+          return;
+          break;
+        case "process":
+          fncNotie(3, "Error en el proceso de subir la imagen");
+          return;
+          break;
+      }
+      $(".summernote").summernote("insertImage", response, function ($image) {
+        $image.attr("class", "img-fluid");
+        $image.css("width", "100%");
+      });
+      console.log("response", response);
+    },
 
-//       switch (response) {
-//         case "size":
-//           fncNotie(3, "Error: la imagen debe pesar menos de 10MB");
+    error: function (jqXHR, textStatus, errorThrown) {
+      // console.log("jqXHR", jqXHR);
+      if (response == "type") {
+        fncNotie(3, textStatus + " " + errorThrown);
+        return;
+      }
+    },
+  });
+}
 
-//           return;
-
-//           break;
-
-//         case "type":
-//           fncNotie(3, "Error: la imagen debe ser formato JPG, PNG o GIF");
-
-//           return;
-
-//           break;
-
-//         case "process":
-//           fncNotie(3, "Error en el proceso de subir la imagen");
-
-//           return;
-
-//           break;
-//       }
-
-//       $(".summernote").summernote("insertImage", response, function ($image) {
-//         $image.attr("class", "img-fluid");
-//         $image.css("width", "100%");
-//       });
-
-//       console.log("response", response);
-//     },
-
-//     error: function (jqXHR, textStatus, errorThrown) {
-//       console.log("jqXHR", jqXHR);
-
-//       if (response == "type") {
-//         fncNotie(3, textStatus + " " + errorThrown);
-
-//         return;
-//       }
-//     },
-//   });
-// }
+/* ------------------------ Subir imagen al servidor ------------------------ */
 
 /*=============================================
 Cambio de variante: Galería o video
