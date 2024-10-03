@@ -145,6 +145,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Summernote -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/summernote/summernote-bs4.min.css">
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/summernote/emoji.css">
+
+  <!-- CodeMirror -->
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/codemirror/codemirror.min.css">
+
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/adminlte/adminlte.min.css">
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/template/template.css">
@@ -234,6 +238,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="<?= $path ?>views/assets/js/plugins/summernote/summernote-code-beautify-plugin.js"></script>
   <script src="<?= $path ?>views/assets/js/plugins/summernote/emoji.config.js"></script>
   <script src="<?= $path ?>views/assets/js/plugins/summernote/tam-emoji.min.js"></script>
+
+  <!-- CodeMirror -->
+  <script src="<?= $path ?>views/assets/js/plugins/codemirror/codemirror.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/codemirror/xml.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/codemirror/formatting.min.js"></script>
 
   <!-- ------------------------------- JS PLUGINS ------------------------------- -->
 
