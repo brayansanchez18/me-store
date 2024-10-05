@@ -26,7 +26,24 @@ class ProductsController
           $saveImageProduct = $_POST['old_image_product'];
         }
 
-        $fields = 'name_product=' . trim(TemplateController::capitalize($_POST['name_product'])) . '&url_product=' . $_POST['url_product'] . '&image_product=' . $saveImageProduct . '&description_product=' . trim($_POST['description_product']) . '&keywords_product=' . strtolower($_POST['keywords_product']) . '&id_category_product=' . $_POST['id_category_product'] . '&id_subcategory_product=' . $_POST['id_subcategory_product'];
+        /* -------------------------------------------------------------------------- */
+        /*            MOVER TODOS LOS ARCHIVOS TEMPORALES AL DESTINO FINAL            */
+        /* -------------------------------------------------------------------------- */
+
+        if (is_dir('views/assets/img/temp')) {
+          $start = glob('views/assets/img/temp/*');
+
+          foreach ($start as $file) {
+            $archive = explode('/', $file);
+            copy($file, 'views/assets/img/products/' . $_POST['url_product'] . '/' . $archive[count($archive) - 1]);
+            unlink($file);
+          }
+        }
+
+        /* ---------- MOVER TODOS LOS ARCHIVOS TEMPORALES AL DESTINO FINAL ---------- */
+
+        $fields = 'name_product=' . trim(TemplateController::capitalize($_POST['name_product'])) . '&url_product=' . $_POST['url_product'] . '&image_product=' . $saveImageProduct . '&description_product=' . trim($_POST['description_product']) . '&keywords_product=' . strtolower($_POST['keywords_product']) . '&id_category_product=' . $_POST['id_category_product'] . '&id_subcategory_product=' . $_POST['id_subcategory_product'] . '&info_product=' . urlencode(trim(str_replace('src="/views/assets/img/temp', 'src="/views/assets/img/products/' . $_POST['url_product'], $_POST['info_product'])));
+
 
         $url = 'products?id=' . base64_decode($_POST['idProduct']) . '&nameId=id_product&token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
         $method = 'PUT';
@@ -159,6 +176,22 @@ class ProductsController
           return;
         }
 
+        /* -------------------------------------------------------------------------- */
+        /*            MOVER TODOS LOS ARCHIVOS TEMPORALES AL DESTINO FINAL            */
+        /* -------------------------------------------------------------------------- */
+
+
+        if (is_dir('views/assets/img/temp')) {
+          $start = glob('views/assets/img/temp/*');
+          foreach ($start as $file) {
+            $archive = explode('/', $file);
+            copy($file, 'views/assets/img/products/' . $_POST['url_product'] . '/' . $archive[count($archive) - 1]);
+            unlink($file);
+          }
+        }
+
+        /* ---------- MOVER TODOS LOS ARCHIVOS TEMPORALES AL DESTINO FINAL ---------- */
+
         /* ----------------------- VALIDAR Y GUARDAR LA IMAGEN ---------------------- */
 
         /* -------------------------------------------------------------------------- */
@@ -173,6 +206,7 @@ class ProductsController
           'keywords_product' => strtolower($_POST['keywords_product']),
           'id_category_product' => $_POST['id_category_product'],
           'id_subcategory_product' => $_POST['id_subcategory_product'],
+          'info_product' => trim(str_replace('src="/views/assets/img/temp', 'src="/views/assets/img/products/' . $_POST['url_product'], $_POST['info_product'])),
           'date_created_product' => date('Y-m-d')
         ];
 
@@ -188,7 +222,7 @@ class ProductsController
         /*                 AUMENTAR PRODUCTOS VINCULADOS EN CATEGORIA                 */
         /* -------------------------------------------------------------------------- */
 
-        $url = 'categories?equalTo=' . $_POST['id_category_product'] . '&linkTo=id_category$select=products_category';
+        $url = 'categories?equalTo=' . $_POST['id_category_product'] . '&linkTo=id_category&select=products_category';
         $method = 'GET';
         $fields = [];
         $products_category = CurlController::request($url, $method, $fields)->results[0]->products_category;

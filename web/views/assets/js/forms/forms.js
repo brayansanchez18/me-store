@@ -486,23 +486,25 @@ function upload(file) {
 
 /* ------------------------ Subir imagen al servidor ------------------------ */
 
-/*=============================================
-Cambio de variante: Galería o video
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                     Cambio de variante: Galería o video                    */
+/* -------------------------------------------------------------------------- */
 
-// function changeVariant(event, item) {
-//   if (event.target.value == "video") {
-//     $(".inputVideo_" + item).show();
-//     $(".iframeYoutube_" + item).show();
-//     $(".dropzone_" + item).hide();
-//     $(".galleryProduct_" + item).hide();
-//   } else {
-//     $(".inputVideo_" + item).hide();
-//     $(".iframeYoutube_" + item).hide();
-//     $(".dropzone_" + item).show();
-//     $(".galleryProduct_" + item).show();
-//   }
-// }
+function changeVariant(event, item) {
+  if (event.target.value == "video") {
+    $(".inputVideo_" + item).show();
+    $(".iframeYoutube_" + item).show();
+    $(".dropzone_" + item).hide();
+    $(".galleryProduct_" + item).hide();
+  } else {
+    $(".inputVideo_" + item).hide();
+    $(".iframeYoutube_" + item).hide();
+    $(".dropzone_" + item).show();
+    $(".galleryProduct_" + item).show();
+  }
+}
+
+/* ------------------- Cambio de variante: Galería o video ------------------ */
 
 /*=============================================
 DropZone

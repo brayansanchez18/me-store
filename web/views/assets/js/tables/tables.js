@@ -266,6 +266,8 @@ $(document).on("click", ".deleteItem", function () {
           cache: false,
           processData: false,
           success: function (response) {
+            // console.log(response);
+            // return;
             if (response == 200) {
               switch (table) {
                 case "admins":
