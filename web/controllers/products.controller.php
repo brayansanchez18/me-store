@@ -176,8 +176,8 @@ class ProductsController
               /*                      CUANDO NO SUBIMOS IMAGENES NUEVAS                     */
               /* -------------------------------------------------------------------------- */
 
-              if ($_POST['galleryProduct_' . $i] != '[]') {
-                foreach (json_decode($_POST['galleryProduct_' . $i], true) as $index => $item) {
+              if ($_POST['galleryOldProduct_' . $i] != '[]') {
+                foreach (json_decode($_POST['galleryOldProduct_' . $i], true) as $index => $item) {
                   $galleryOldCount++;
                   array_push($galleryProduct, $item);
 
@@ -388,68 +388,83 @@ class ProductsController
         /*                                  VARIANTES                                 */
         /* -------------------------------------------------------------------------- */
 
-        if ($_POST['type_variant_1'] == 'gallery') {
+        $totalVariants = $_POST['totalVariants'];
+        $countVariant = 0;
+        $readyVariant = 0;
 
-          $galleryProduct = [];
-          $galleryCount = 0;
+        for ($i = 1; $i <= $totalVariants; $i++) {
 
-          if (!empty($_POST['galleryProduct_1'])) {
-            foreach (json_decode($_POST['galleryProduct_1'], true) as $key => $value) {
-              // echo '<pre>' . print_r($value) . '</pre>';
+          $countVariant++;
 
-              $galleryCount++;
+          if ($_POST['type_variant_' . $i] == 'gallery') {
 
-              $image['tmp_name'] = $value['file'];
-              $image['type'] = $value['type'];
-              $image['mode'] = 'base64';
+            $galleryProduct = [];
+            $galleryCount = 0;
 
-              $folder = 'assets/img/products/' . $_POST['url_product'];
-              $name = mt_rand(10000, 99999);
-              $width = $value['width'];
-              $height = $value['height'];
+            if (!empty($_POST['galleryProduct_' . $i])) {
+              foreach (json_decode($_POST['galleryProduct_' . $i], true) as $key => $value) {
+                // echo '<pre>' . print_r($value) . '</pre>';
 
-              $saveImageGallery = TemplateController::saveImage($image, $folder, $name, $width, $height);
+                $galleryCount++;
 
-              array_push($galleryProduct, $saveImageGallery);
+                $image['tmp_name'] = $value['file'];
+                $image['type'] = $value['type'];
+                $image['mode'] = 'base64';
 
-              if (count(json_decode($_POST['galleryProduct_1'], true)) == $galleryCount) {
-                $media_variant = json_encode($galleryProduct);
+                $folder = 'assets/img/products/' . $_POST['url_product'];
+                $name = mt_rand(10000, 99999);
+                $width = $value['width'];
+                $height = $value['height'];
+
+                $saveImageGallery = TemplateController::saveImage($image, $folder, $name, $width, $height);
+
+                array_push($galleryProduct, $saveImageGallery);
+
+                if (count(json_decode($_POST['galleryProduct_' . $i], true)) == $galleryCount) {
+                  $media_variant = json_encode($galleryProduct);
+                }
               }
             }
+          } else {
+            $media_variant = $_POST['videoProduct_' . $i];
           }
-        } else {
-          $media_variant = $_POST['videoProduct_1'];
+
+          // return;
+
+          /* -------------------------------- VARIANTES ------------------------------- */
+
+          /* -------------------------------------------------------------------------- */
+          /*                            CAMPOS DE LA VARIANTE                           */
+          /* -------------------------------------------------------------------------- */
+
+          $fields = [
+            'id_product_variant' => $createData->results->lastId,
+            'type_variant' => $_POST['type_variant_' . $i],
+            'media_variant' => $media_variant,
+            'description_variant' => $_POST['description_variant_' . $i],
+            'cost_variant' => $_POST['cost_variant_' . $i],
+            'price_variant' => $_POST['price_variant_' . $i],
+            'offer_variant' => $_POST['offer_variant_' . $i],
+            'end_offer_variant' => $_POST['date_variant_' . $i],
+            'stock_variant' => $_POST['stock_variant_' . $i],
+            'date_created_variant' => date('Y-m-d')
+          ];
+
+          $url = 'variants?token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+          $method = 'POST';
+          $createVariant = CurlController::request($url, $method, $fields);
+
+          /* -------------------------- CAMPOS DE LA VARIANTE ------------------------- */
+
+          if ($countVariant == $totalVariants) {
+            $readyVariant = 200;
+          }
         }
 
-        // return;
-
-        /* -------------------------------- VARIANTES ------------------------------- */
-
-        /* -------------------------------------------------------------------------- */
-        /*                            CAMPOS DE LA VARIANTE                           */
-        /* -------------------------------------------------------------------------- */
-
-        $fields = [
-          'id_product_variant' => $createData->results->lastId,
-          'type_variant' => $_POST['type_variant_1'],
-          'media_variant' => $media_variant,
-          'description_variant' => $_POST['description_variant_1'],
-          'cost_variant' => $_POST['cost_variant_1'],
-          'price_variant' => $_POST['price_variant_1'],
-          'offer_variant' => $_POST['offer_variant_1'],
-          'end_offer_variant' => $_POST['date_variant_1'],
-          'stock_variant' => $_POST['stock_variant_1'],
-          'date_created_variant' => date('Y-m-d')
-        ];
-
-        $url = 'variants?token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
-        $method = 'POST';
-        $createVariant = CurlController::request($url, $method, $fields);
-
-        /* -------------------------- CAMPOS DE LA VARIANTE ------------------------- */
 
         if (
           $createData->status == 200 &&
+          $readyVariant == 200 &&
           $createVariant->status == 200 &&
           $updateCategory->status == 200 &&
           $updateSubcategory->status == 200

@@ -345,255 +345,268 @@ if (isset($_GET['product'])) {
                         name="idVariant_<?= ($key + 1) ?>"
                         value="<?= $value->id_variant ?>">
 
-                      <div class="form-group">
-                        <div class="d-flex justify-content-between">
-                          <label for="info_product">Variante <?= ($key + 1) ?><sup class="text-danger">*</sup></label>
-
-                          <div>
-                            <button type="button" class="btn btn-default btn-sm rounded-pill px-3 addVariant">
-                              <i class="fas fa-plus fa-xs"></i> Agregar otra variante
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="row row-cols-1 row-cols-md-2">
-                        <div class="col">
-
-                          <!-- ------------------------ Tipo de variante ------------------------ -->
-
+                      <div class="card">
+                        <div class="card-body">
                           <div class="form-group">
-                            <select class="custom-select" name="type_variant_<?= ($key + 1) ?>" onchange="changeVariant(event, <?= ($key + 1) ?>)">
-                              <option
-                                value="gallery"
-                                <?= ($value->type_variant == 'gallery') ? 'selected' : '' ?>>Galería de fotos</option>
-                              <option
-                                value="video"
-                                <?= ($value->type_variant == 'video') ? 'selected' : '' ?>>Video</option>
-                            </select>
+                            <div class="d-flex justify-content-between">
+                              <label for="info_product">Variante <?= ($key + 1) ?><sup class="text-danger">*</sup></label>
+
+                              <?php if (($key + 1) == 1): ?>
+                                <div>
+                                  <button type="button" class="btn btn-default btn-sm rounded-pill px-3 addVariant">
+                                    <i class="fas fa-plus fa-xs"></i> Agregar otra variante
+                                  </button>
+                                </div>
+                              <?php else: ?>
+                                <div>
+                                  <button type="button" class="btn btn-default btn-sm rounded-pill px-3 quitVariant">
+                                    <i class="fas fa-times fa-xs"></i> Eliminar variante
+                                  </button>
+                                </div>
+                              <?php endif ?>
+                            </div>
                           </div>
 
-                          <!--  ---------------------- Galería del Producto ---------------------- -->
-                          <?php if ($value->type_variant == 'gallery'): ?>
+                          <div class="row row-cols-1 row-cols-md-2">
+                            <div class="col">
 
-                            <div class="dropzone dropzone_<?= ($key + 1) ?> mb-3">
-                              <!-- ------------------------- Plugin Dropzone ------------------------ -->
+                              <!-- ------------------------ Tipo de variante ------------------------ -->
 
-                              <?php foreach (json_decode($value->media_variant, true) as $index => $item): ?>
+                              <div class="form-group">
+                                <select class="custom-select" name="type_variant_<?= ($key + 1) ?>" onchange="changeVariant(event, <?= ($key + 1) ?>)">
+                                  <option
+                                    value="gallery"
+                                    <?= ($value->type_variant == 'gallery') ? 'selected' : '' ?>>Galería de fotos</option>
+                                  <option
+                                    value="video"
+                                    <?= ($value->type_variant == 'video') ? 'selected' : '' ?>>Video</option>
+                                </select>
+                              </div>
 
-                                <div class="dz-preview dz-flie-preview">
-                                  <div class="dz-image">
-                                    <img
-                                      class="img-fluid"
-                                      src="<?= '/views/assets/img/products/' . $product->url_product . '/' . $item ?>">
+                              <!--  ---------------------- Galería del Producto ---------------------- -->
+                              <?php if ($value->type_variant == 'gallery'): ?>
+
+                                <div class="dropzone dropzone_<?= ($key + 1) ?> mb-3">
+                                  <!-- ------------------------- Plugin Dropzone ------------------------ -->
+
+                                  <?php foreach (json_decode($value->media_variant, true) as $index => $item): ?>
+
+                                    <div class="dz-preview dz-flie-preview">
+                                      <div class="dz-image">
+                                        <img
+                                          class="img-fluid"
+                                          src="<?= '/views/assets/img/products/' . $product->url_product . '/' . $item ?>">
+                                      </div>
+                                      <a
+                                        class="dz-remove"
+                                        data-dz-remove remove="<?= $item ?>"
+                                        onclick="removeGallery(this, <?= ($key + 1) ?>)">
+                                        Remove file
+                                      </a>
+                                    </div>
+
+                                  <?php endforeach ?>
+
+                                  <div class="dz-message">
+                                    Arrastra tus imágenes acá, tamaño máximo 400px * 450px
                                   </div>
-                                  <a
-                                    class="dz-remove"
-                                    data-dz-remove remove="<?= $item ?>"
-                                    onclick="removeGallery(this, <?= ($key + 1) ?>)">
-                                    Remove file
-                                  </a>
                                 </div>
 
-                              <?php endforeach ?>
+                                <input
+                                  type="hidden"
+                                  name="galleryProduct_<?= ($key + 1) ?>"
+                                  class="galleryProduct_<?= ($key + 1) ?>">
 
-                              <div class="dz-message">
-                                Arrastra tus imágenes acá, tamaño máximo 400px * 450px
+                                <input
+                                  type="hidden"
+                                  name="galleryOldProduct_<?= ($key + 1) ?>"
+                                  class="galleryOldProduct_<?= ($key + 1) ?>"
+                                  value='<?= $value->media_variant ?>'>
+
+                                <input
+                                  type="hidden"
+                                  name="deleteGalleryProduct_<?= ($key + 1) ?>"
+                                  class="deleteGalleryProduct_<?= ($key + 1) ?>"
+                                  value='[]'>
+
+                                <!-- --------------------- Insertar video Youtube --------------------- -->
+
+                                <div
+                                  class="input-group mb-3 inputVideo_<?= ($key + 1) ?>"
+                                  style="display:none">
+                                  <span class="input-group-text">
+                                    <i class="fas fa-clipboard-list"></i>
+                                  </span>
+
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="videoProduct_<?= ($key + 1) ?>"
+                                    placeholder="Ingresa la URL de YouTube"
+                                    onchange="changeVideo(event, <?= ($key + 1) ?>)">
+                                </div>
+
+                                <iframe
+                                  width="100%"
+                                  height="280"
+                                  src=""
+                                  frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                  allowfullscreen
+                                  class="mb-3 iframeYoutube_<?= ($key + 1) ?>"
+                                  style="display:none"></iframe>
+
+                              <?php else: ?>
+
+                                <!-- --------------------- Insertar video Youtube --------------------- -->
+
+                                <div
+                                  class="input-group mb-3 inputVideo_<?= ($key + 1) ?>">
+                                  <span class="input-group-text">
+                                    <i class="fas fa-clipboard-list"></i>
+                                  </span>
+
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="videoProduct_<?= ($key + 1) ?>"
+                                    value="<?= $value->media_variant ?>"
+                                    placeholder="Ingresa la URL de YouTube"
+                                    onchange="changeVideo(event, <?= ($key + 1) ?>)">
+                                </div>
+
+                                <?php
+                                $idYoutube = explode('/', $value->media_variant);
+                                $idYoutube = end($idYoutube);
+                                // echo $idYoutube;
+                                ?>
+
+                                <iframe
+                                  width="100%"
+                                  height="280"
+                                  src="https://www.youtube.com/embed/<?= $idYoutube ?>"
+                                  frameborder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                  allowfullscreen
+                                  class="mb-3 iframeYoutube_<?php echo ($key + 1) ?>"></iframe>
+
+                                <!--  ---------------------- Galería del Producto ---------------------- -->
+
+                                <div
+                                  class="dropzone dropzone_<?= ($key + 1) ?> mb-3"
+                                  style="display: none;">
+                                  <!-- ------------------------- Plugin Dropzone ------------------------ -->
+
+                                  <div class="dz-message">
+                                    Arrastra tus imágenes acá, tamaño máximo 400px * 450px
+                                  </div>
+                                </div>
+
+                                <input
+                                  type="hidden"
+                                  name="galleryProduct_<?= ($key + 1) ?>"
+                                  class="galleryProduct_<?= ($key + 1) ?>"
+                                  style="display: none;">
+
+                              <?php endif ?>
+                            </div>
+
+                            <div class="col">
+
+                              <!-- ------------------- Descripción de la variante ------------------- -->
+
+                              <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                  <i class="fas fa-clipboard-list"></i>
+                                </span>
+
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  name="description_variant_<?= ($key + 1) ?>"
+                                  placeholder="Descripción: Color Negro, talla S, Material Goma"
+                                  value="<?= $value->description_variant ?>">
+                              </div>
+
+                              <!-- ---------------------- Costo de la variante ---------------------- -->
+
+                              <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                  <i class="fas fa-hand-holding-usd"></i>
+                                </span>
+
+                                <input
+                                  type="number"
+                                  step="any"
+                                  class="form-control"
+                                  name="cost_variant_<?= ($key + 1) ?>"
+                                  placeholder="Costo de compra"
+                                  value="<?= $value->cost_variant ?>">
+                              </div>
+
+                              <!-- ---------------------- Precio de la variante --------------------- -->
+
+                              <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                  <i class="fas fa-funnel-dollar"></i>
+                                </span>
+
+                                <input
+                                  type="number"
+                                  step="any"
+                                  class="form-control"
+                                  name="price_variant_<?= ($key + 1) ?>"
+                                  placeholder="Precio de venta"
+                                  value="<?= $value->price_variant ?>">
+                              </div>
+
+                              <!-- ---------------------- Oferta de la variante --------------------- -->
+
+                              <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                  <i class="fas fa-tag"></i>
+                                </span>
+
+                                <input
+                                  type="number"
+                                  step="any"
+                                  class="form-control"
+                                  name="offer_variant_<?= ($key + 1) ?>"
+                                  placeholder="Precio de descuento"
+                                  value="<?= $value->offer_variant ?>">
+                              </div>
+
+                              <!-- ------------------ Fin de Oferta de la variante ------------------ -->
+
+                              <div class="input-group mb-3">
+                                <span class="input-group-text">Fin del descuento</span>
+                                <input
+                                  type="date"
+                                  class="form-control"
+                                  name="date_variant_<?= ($key + 1) ?>"
+                                  value="<?= $value->end_offer_variant ?>">
+                              </div>
+
+
+                              <!-- ---------------------- Stock de la variante ---------------------- -->
+
+                              <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                  <i class="fas fa-list"></i>
+                                </span>
+
+                                <input
+                                  type="number"
+                                  class="form-control"
+                                  name="stock_variant_<?= ($key + 1) ?>"
+                                  placeholder="Stock disponible"
+                                  value="<?= $value->stock_variant ?>">
                               </div>
                             </div>
-
-                            <input
-                              type="hidden"
-                              name="galleryProduct_<?= ($key + 1) ?>"
-                              class="galleryProduct_<?= ($key + 1) ?>">
-
-                            <input
-                              type="hidden"
-                              name="galleryOldProduct_<?= ($key + 1) ?>"
-                              class="galleryOldProduct_<?= ($key + 1) ?>"
-                              value='<?= $value->media_variant ?>'>
-
-                            <input
-                              type="hidden"
-                              name="deleteGalleryProduct_<?= ($key + 1) ?>"
-                              class="deleteGalleryProduct_<?= ($key + 1) ?>"
-                              value='[]'>
-
-                            <!-- --------------------- Insertar video Youtube --------------------- -->
-
-                            <div
-                              class="input-group mb-3 inputVideo_<?= ($key + 1) ?>"
-                              style="display:none">
-                              <span class="input-group-text">
-                                <i class="fas fa-clipboard-list"></i>
-                              </span>
-
-                              <input
-                                type="text"
-                                class="form-control"
-                                name="videoProduct_<?= ($key + 1) ?>"
-                                placeholder="Ingresa la URL de YouTube"
-                                onchange="changeVideo(event, <?= ($key + 1) ?>)">
-                            </div>
-
-                            <iframe
-                              width="100%"
-                              height="280"
-                              src=""
-                              frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                              allowfullscreen
-                              class="mb-3 iframeYoutube_<?= ($key + 1) ?>"
-                              style="display:none"></iframe>
-
-                          <?php else: ?>
-
-                            <!-- --------------------- Insertar video Youtube --------------------- -->
-
-                            <div
-                              class="input-group mb-3 inputVideo_<?= ($key + 1) ?>">
-                              <span class="input-group-text">
-                                <i class="fas fa-clipboard-list"></i>
-                              </span>
-
-                              <input
-                                type="text"
-                                class="form-control"
-                                name="videoProduct_<?= ($key + 1) ?>"
-                                value="<?= $value->media_variant ?>"
-                                placeholder="Ingresa la URL de YouTube"
-                                onchange="changeVideo(event, <?= ($key + 1) ?>)">
-                            </div>
-
-                            <?php
-                            $idYoutube = explode('/', $value->media_variant);
-                            $idYoutube = end($idYoutube);
-                            // echo $idYoutube;
-                            ?>
-
-                            <iframe
-                              width="100%"
-                              height="280"
-                              src="https://www.youtube.com/embed/<?= $idYoutube ?>"
-                              frameborder="0"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                              allowfullscreen
-                              class="mb-3 iframeYoutube_<?php echo ($key + 1) ?>"></iframe>
-
-                            <!--  ---------------------- Galería del Producto ---------------------- -->
-
-                            <div
-                              class="dropzone dropzone_<?= ($key + 1) ?> mb-3"
-                              style="display: none;">
-                              <!-- ------------------------- Plugin Dropzone ------------------------ -->
-
-                              <div class="dz-message">
-                                Arrastra tus imágenes acá, tamaño máximo 400px * 450px
-                              </div>
-                            </div>
-
-                            <input
-                              type="hidden"
-                              name="galleryProduct_<?= ($key + 1) ?>"
-                              class="galleryProduct_<?= ($key + 1) ?>"
-                              style="display: none;">
-
-                          <?php endif ?>
-                        </div>
-
-                        <div class="col">
-
-                          <!-- ------------------- Descripción de la variante ------------------- -->
-
-                          <div class="input-group mb-3">
-                            <span class="input-group-text">
-                              <i class="fas fa-clipboard-list"></i>
-                            </span>
-
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="description_variant_<?= ($key + 1) ?>"
-                              placeholder="Descripción: Color Negro, talla S, Material Goma"
-                              value="<?= $value->description_variant ?>">
-                          </div>
-
-                          <!-- ---------------------- Costo de la variante ---------------------- -->
-
-                          <div class="input-group mb-3">
-                            <span class="input-group-text">
-                              <i class="fas fa-hand-holding-usd"></i>
-                            </span>
-
-                            <input
-                              type="number"
-                              step="any"
-                              class="form-control"
-                              name="cost_variant_<?= ($key + 1) ?>"
-                              placeholder="Costo de compra"
-                              value="<?= $value->cost_variant ?>">
-                          </div>
-
-                          <!-- ---------------------- Precio de la variante --------------------- -->
-
-                          <div class="input-group mb-3">
-                            <span class="input-group-text">
-                              <i class="fas fa-funnel-dollar"></i>
-                            </span>
-
-                            <input
-                              type="number"
-                              step="any"
-                              class="form-control"
-                              name="price_variant_<?= ($key + 1) ?>"
-                              placeholder="Precio de venta"
-                              value="<?= $value->price_variant ?>">
-                          </div>
-
-                          <!-- ---------------------- Oferta de la variante --------------------- -->
-
-                          <div class="input-group mb-3">
-                            <span class="input-group-text">
-                              <i class="fas fa-tag"></i>
-                            </span>
-
-                            <input
-                              type="number"
-                              step="any"
-                              class="form-control"
-                              name="offer_variant_<?= ($key + 1) ?>"
-                              placeholder="Precio de descuento"
-                              value="<?= $value->offer_variant ?>">
-                          </div>
-
-                          <!-- ------------------ Fin de Oferta de la variante ------------------ -->
-
-                          <div class="input-group mb-3">
-                            <span class="input-group-text">Fin del descuento</span>
-                            <input
-                              type="date"
-                              class="form-control"
-                              name="date_variant_<?= ($key + 1) ?>"
-                              value="<?= $value->end_offer_variant ?>">
-                          </div>
-
-
-                          <!-- ---------------------- Stock de la variante ---------------------- -->
-
-                          <div class="input-group mb-3">
-                            <span class="input-group-text">
-                              <i class="fas fa-list"></i>
-                            </span>
-
-                            <input
-                              type="number"
-                              class="form-control"
-                              name="stock_variant_<?= ($key + 1) ?>"
-                              placeholder="Stock disponible"
-                              value="<?= $value->stock_variant ?>">
                           </div>
                         </div>
                       </div>
+
                     <?php endforeach ?>
                   <?php else: ?>
                     <input type="hidden" name="totalVariants" value="1">

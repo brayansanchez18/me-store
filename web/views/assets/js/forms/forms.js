@@ -512,73 +512,83 @@ function changeVariant(event, item) {
 
 Dropzone.autoDiscover = false;
 
-$(".dropzone").dropzone({
-  url: "/",
-  addRemoveLinks: true,
-  acceptedFiles: "image/jpeg, image/png, image/gif",
-  maxFilesize: 10,
-  maxFiles: 10,
-  init: function () {
-    var elem = $(this.element);
-    // console.log(elem);
-    var arrayFiles = [];
-    var countArrayFiles = 0;
+function initDropzone(item) {
+  $(".dropzone_" + item).dropzone({
+    url: "/",
+    addRemoveLinks: true,
+    acceptedFiles: "image/jpeg, image/png, image/gif",
+    maxFilesize: 10,
+    maxFiles: 10,
+    init: function () {
+      var elem = $(this.element);
+      var arrayFiles = [];
+      var countArrayFiles = 0;
 
-    this.on("addedfile", function (file) {
-      countArrayFiles++;
+      this.on("addedfile", function (file) {
+        countArrayFiles++;
 
-      setTimeout(function () {
-        arrayFiles.push({
-          file: file.dataURL,
-          type: file.type,
-          width: file.width,
-          height: file.height,
-        });
+        setTimeout(function () {
+          arrayFiles.push({
+            file: file.dataURL,
+            type: file.type,
+            width: file.width,
+            height: file.height,
+          });
 
-        elem
-          .parent()
-          .children(".galleryProduct_1")
-          // .children(".galleryProduct_" + item)
-          .val(JSON.stringify(arrayFiles));
-      }, 500 * countArrayFiles);
-    });
+          elem
+            .parent()
+            .children(".galleryProduct_" + item)
+            .val(JSON.stringify(arrayFiles));
+        }, 500 * countArrayFiles);
+      });
 
-    this.on("removedfile", function (file) {
-      countArrayFiles++;
+      this.on("removedfile", function (file) {
+        countArrayFiles++;
 
-      setTimeout(function () {
-        var index = arrayFiles.indexOf({
-          file: file.dataURL,
-          type: file.type,
-          width: file.width,
-          height: file.height,
-        });
+        setTimeout(function () {
+          var index = arrayFiles.indexOf({
+            file: file.dataURL,
+            type: file.type,
+            width: file.width,
+            height: file.height,
+          });
 
-        arrayFiles.splice(index, 1);
+          arrayFiles.splice(index, 1);
 
-        elem
-          .parent()
-          // .children(".galleryProduct_" + item)
-          .children(".galleryProduct_1")
-          .val(JSON.stringify(arrayFiles));
-      }, 500 * countArrayFiles);
-    });
+          elem
+            .parent()
+            .children(".galleryProduct_" + item)
+            .val(JSON.stringify(arrayFiles));
+        }, 500 * countArrayFiles);
+      });
 
-    myDropzone = this;
+      myDropzone = this;
 
-    $(".saveBtn").click(function () {
-      if (
-        arrayFiles.length == 0 &&
-        $("[name='type_variant_" + item + "']").val() == "gallery" &&
-        $(".idVariant").length == 0
-      ) {
-        fncToastr("error", "La galería no puede estar vacía");
-      } else {
-        myDropzone.processQueue();
-      }
-    });
-  },
-});
+      $(".saveBtn").click(function () {
+        // if (
+        //   arrayFiles.length == 0 &&
+        //   $("[name='type_variant_" + item + "']").val() == "gallery" &&
+        //   $(".idVariant").length == 0
+        // ) {
+        //   fncToastr("error", "La galería no puede estar vacía");
+        // } else {
+        //   myDropzone.processQueue();
+        // }
+
+        if (
+          arrayFiles.length >= 1 ||
+          $(".galleryOldProduct_" + item).val() != null ||
+          $(".type_variant_" + item).val() != "video"
+        ) {
+          myDropzone.processQueue();
+        } else {
+          fncToastr("error", "La galería no puede estar vacía");
+          return;
+        }
+      });
+    },
+  });
+}
 
 /* -------------------------------- DropZone -------------------------------- */
 
@@ -586,11 +596,11 @@ $(".dropzone").dropzone({
 Activar DropZone de acuerdo a la cantidad de galerías existentes
 =============================================*/
 
-// var numDropzone = $(".dropzone");
+var numDropzone = $(".dropzone");
 
-// for (var item = 1; item <= numDropzone.length; item++) {
-//   initDropzone(item);
-// }
+for (var item = 1; item <= numDropzone.length; item++) {
+  initDropzone(item);
+}
 
 /* -------------------------------------------------------------------------- */
 /*                          Insertar Video de youtube                         */
@@ -636,164 +646,121 @@ function removeGallery(elem, item) {
 
 /* --------------------------- Edición de Galeria --------------------------- */
 
-/*=============================================
-Adicionar Variante
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                             ADICIONAR VARIANTE                             */
+/* -------------------------------------------------------------------------- */
 
-// $(document).on("click", ".addVariant", function () {
-//   var variantItem = Number($('[name="totalVariants"]').val()) + 1;
+$(document).on("click", ".addVariant", function () {
+  var variantItem = Number($('[name="totalVariants"]').val()) + 1;
+  $(".variantList").append(`
+    <div class="col">
+      <div class="card variantCount">
+        <div class="card-body">
+          <div class="form-group">
+            <div class="d-flex justify-content-between">
+              <label for="info_product">Variante ${variantItem}<sup class="text-danger">*</sup></label>
 
-//   $(".variantList").append(`
+              <div>
+                <button type="button" class="btn btn-default btn-sm rounded-pill px-3 quitVariant"><i class="fas fa-times fa-xs"></i> Quitar esta variante</button>
+              </div>
+            </div>
+          </div>
+          <div class="row row-cols-1 row-cols-md-2">
+            <div class="col">
+              <div class="form-group">
+                <select
+                class="custom-select"
+                name="type_variant_${variantItem}"
+                onchange="changeVariant(event, ${variantItem})"
+                >
+                  <option value="gallery">Galería de fotos</option>
+                  <option value="video">Video</option>
+                </select>
+              </div>
 
-//     <div class="col">
+              <div class="dropzone dropzone_${variantItem} mb-3">
+                <div class="dz-message">
+                  Arrastra tus imágenes acá, tamaño máximo 400px * 450px
+                </div>
+              </div>
 
-//       <div class="card variantCount">
+              <input type="hidden" name="galleryProduct_${variantItem}" class="galleryProduct_${variantItem}">
+              <input type="hidden" name="galleryOldProduct_${variantItem}" class="galleryOldProduct_${variantItem}" value='[]'>
+              <input type="hidden" name="deleteGalleryProduct_${variantItem}" class="deleteGalleryProduct_${variantItem}" value='[]'>
 
-//         <div class="card-body">
+              <div class="input-group mb-3 inputVideo_${variantItem}" style="display:none">
+                <span class="input-group-text">
+                  <i class="fas fa-clipboard-list"></i>
+                </span>
 
-//           <div class="form-group">
+                <input
+                type="text"
+                class="form-control"
+                name="videoProduct_${variantItem}"
+                placeholder="Ingresa la URL de YouTube"
+                onchange="changeVideo(event, ${variantItem})"
+                >
+              </div>
 
-//             <div class="d-flex justify-content-between">
+              <iframe width="100%" height="280" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="mb-3 iframeYoutube_${variantItem}" style="display:none"></iframe>
+            </div>
 
-//               <label for="info_product">Variante ${variantItem}<sup class="text-danger">*</sup></label>
+            <div class="col">
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <i class="fas fa-clipboard-list"></i>
+                </span>
+                <input type="text" class="form-control" name="description_variant_${variantItem}" placeholder="Descripción: Color Negro, talla S, Material Goma">
+              </div>
 
-//               <div>
-//                 <button type="button" class="btn btn-default btn-sm rounded-pill px-3 quitVariant"><i class="fas fa-times fa-xs"></i> Quitar esta variante</button>
-//               </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <i class="fas fa-hand-holding-usd"></i>
+                </span>
 
-//             </div>
+                <input type="number" step="any" class="form-control" name="cost_variant_${variantItem}" placeholder="Costo de compra">
+              </div>
 
-//           </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <i class="fas fa-funnel-dollar"></i>
+                </span>
 
-//           <div class="row row-cols-1 row-cols-md-2">
+                <input type="number" step="any" class="form-control" name="price_variant_${variantItem}" placeholder="Precio de venta">
+              </div>
 
-//             <div class="col">
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <i class="fas fa-tag"></i>
+                </span>
 
-//               <div class="form-group">
+                <input type="number" step="any" class="form-control" name="offer_variant_${variantItem}" placeholder="Precio de descuento">
+              </div>
 
-//                 <select
-//                 class="custom-select"
-//                 name="type_variant_${variantItem}"
-//                 onchange="changeVariant(event, ${variantItem})"
-//                 >
+              <div class="input-group mb-3">
+                <span class="input-group-text">Fin del descuento</span>
+                <input type="date" class="form-control" name="date_variant_${variantItem}">
+              </div>
 
-//                   <option value="gallery">Galería de fotos</option>
-//                   <option value="video">Video</option>
+              <div class="input-group mb-3">
+                <span class="input-group-text">
+                  <i class="fas fa-list"></i>
+                </span>
 
-//                 </select>
+                <input type="number" class="form-control" name="stock_variant_${variantItem}" placeholder="Stock disponible">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `);
 
-//               </div>
+  $('[name="totalVariants"]').val(variantItem);
+  initDropzone(variantItem);
+});
 
-//               <div class="dropzone dropzone_${variantItem} mb-3">
-
-//                 <div class="dz-message">
-
-//                   Arrastra tus imágenes acá, tamaño máximo 400px * 450px
-
-//                 </div>
-
-//               </div>
-
-//               <input type="hidden" name="galleryProduct_${variantItem}" class="galleryProduct_${variantItem}">
-//               <input type="hidden" name="galleryOldProduct_${variantItem}" class="galleryOldProduct_${variantItem}" value='[]'>
-//               <input type="hidden" name="deleteGalleryProduct_${variantItem}" class="deleteGalleryProduct_${variantItem}" value='[]'>
-
-//               <div class="input-group mb-3 inputVideo_${variantItem}" style="display:none">
-
-//                 <span class="input-group-text">
-//                    <i class="fas fa-clipboard-list"></i>
-//                  </span>
-
-//                 <input
-//                 type="text"
-//                 class="form-control"
-//                 name="videoProduct_${variantItem}"
-//                 placeholder="Ingresa la URL de YouTube"
-//                 onchange="changeVideo(event, ${variantItem})"
-//                 >
-
-//               </div>
-
-//               <iframe width="100%" height="280" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="mb-3 iframeYoutube_${variantItem}" style="display:none"></iframe>
-
-//             </div>
-
-//             <div class="col">
-
-//               <div class="input-group mb-3">
-
-//                   <span class="input-group-text">
-//                     <i class="fas fa-clipboard-list"></i>
-//                   </span>
-
-//                 <input type="text" class="form-control" name="description_variant_${variantItem}" placeholder="Descripción: Color Negro, talla S, Material Goma">
-
-//               </div>
-
-//               <div class="input-group mb-3">
-
-//                   <span class="input-group-text">
-//                     <i class="fas fa-hand-holding-usd"></i>
-//                   </span>
-
-//                 <input type="number" step="any" class="form-control" name="cost_variant_${variantItem}" placeholder="Costo de compra">
-
-//               </div>
-
-//               <div class="input-group mb-3">
-
-//                   <span class="input-group-text">
-//                     <i class="fas fa-funnel-dollar"></i>
-//                   </span>
-
-//                 <input type="number" step="any" class="form-control" name="price_variant_${variantItem}" placeholder="Precio de venta">
-
-//               </div>
-
-//               <div class="input-group mb-3">
-
-//                   <span class="input-group-text">
-//                     <i class="fas fa-tag"></i>
-//                   </span>
-
-//                 <input type="number" step="any" class="form-control" name="offer_variant_${variantItem}" placeholder="Precio de descuento">
-
-//               </div>
-
-//               <div class="input-group mb-3">
-
-//                   <span class="input-group-text">Fin del descuento</span>
-
-//                 <input type="date" class="form-control" name="date_variant_${variantItem}">
-
-//               </div>
-
-//               <div class="input-group mb-3">
-
-//                   <span class="input-group-text">
-//                     <i class="fas fa-list"></i>
-//                   </span>
-
-//                 <input type="number" class="form-control" name="stock_variant_${variantItem}" placeholder="Stock disponible">
-
-//               </div>
-
-//             </div>
-
-//           </div>
-
-//         </div>
-
-//       </div>
-
-//     </div>
-
-//    `);
-
-//   $('[name="totalVariants"]').val(variantItem);
-
-//   initDropzone(variantItem);
-// });
+/* --------------------------- ADICIONAR VARIANTE --------------------------- */
 
 /*=============================================
 Quitar Variante
