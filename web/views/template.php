@@ -149,6 +149,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- CodeMirror -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/codemirror/codemirror.min.css">
 
+  <!-- Dropzone -->
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/dropzone/dropzone.css">
+
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/adminlte/adminlte.min.css">
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/template/template.css">
@@ -243,6 +246,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="<?= $path ?>views/assets/js/plugins/codemirror/codemirror.min.js"></script>
   <script src="<?= $path ?>views/assets/js/plugins/codemirror/xml.min.js"></script>
   <script src="<?= $path ?>views/assets/js/plugins/codemirror/formatting.min.js"></script>
+
+  <!-- Dropzone -->
+  <!-- https://www.dropzone.dev/ -->
+  <script src="<?= $path ?>views/assets/js/plugins/dropzone/dropzone.js"></script>
 
   <!-- ------------------------------- JS PLUGINS ------------------------------- -->
 

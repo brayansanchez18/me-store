@@ -214,31 +214,45 @@ class TemplateController
         $newName = $name . '.jpg';
         # definimos el destino donde queremos guardar el archivo
         $folderPath = $directory . '/' . $newName;
-        # Crear una copia de la imagen
-        $start = imagecreatefromjpeg($image['tmp_name']);
-        # Instrucciones para aplicar a la imagen definitiva
-        $end = imagecreatetruecolor($width, $height);
-        # redimencionar imagen
-        imagecopyresized($end,  $start,  0, 0,  0, 0, $width, $height, $lastWidth, $lastHeight);
-        # guardamos la imagen en el directorio establecido
-        imagejpeg($end, $folderPath);
+
+        if (isset($image['mode']) && $image['mode'] == 'base64') {
+          file_put_contents($folderPath, file_get_contents($image['tmp_name']));
+        } else {
+          # Crear una copia de la imagen
+          $start = imagecreatefromjpeg($image['tmp_name']);
+          # Instrucciones para aplicar a la imagen definitiva
+          $end = imagecreatetruecolor($width, $height);
+          # redimencionar imagen
+          imagecopyresized($end,  $start,  0, 0,  0, 0, $width, $height, $lastWidth, $lastHeight);
+          # guardamos la imagen en el directorio establecido
+          imagejpeg($end, $folderPath);
+        }
       }
 
       if ($image['type'] == 'image/png') {
         $newName  = $name . '.png';
         $folderPath = $directory . '/' . $newName;
-        $start = imagecreatefrompng($image['tmp_name']);
-        $end = imagecreatetruecolor($width, $height);
-        imagealphablending($end, FALSE);
-        imagesavealpha($end, TRUE);
-        imagecopyresampled($end, $start, 0, 0, 0, 0, $width, $height, $lastWidth, $lastHeight);
-        imagepng($end, $folderPath);
+
+        if (isset($image['mode']) && $image['mode'] == 'base64') {
+          file_put_contents($folderPath, file_get_contents($image['tmp_name']));
+        } else {
+          $start = imagecreatefrompng($image['tmp_name']);
+          $end = imagecreatetruecolor($width, $height);
+          imagealphablending($end, FALSE);
+          imagesavealpha($end, TRUE);
+          imagecopyresampled($end, $start, 0, 0, 0, 0, $width, $height, $lastWidth, $lastHeight);
+          imagepng($end, $folderPath);
+        }
       }
 
       if ($image['type'] == 'image/gif') {
         $newName = $name . '.gif';
         $folderPath = $directory . '/' . $newName;
-        move_uploaded_file($image['tmp_name'], $folderPath);
+        if (isset($image['mode']) && $image['mode'] == 'base64') {
+          file_put_contents($folderPath, file_get_contents($image['tmp_name']));
+        } else {
+          move_uploaded_file($image['tmp_name'], $folderPath);
+        }
       }
 
       /* ---------------- APLICAR FUNCIONES SEGUN EL TIPO DE IMAGEN --------------- */

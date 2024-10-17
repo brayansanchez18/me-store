@@ -1,1 +1,20 @@
-views/assets/img/temp/6546023218.jpg
+[17-Oct-2024 05:24:38 Europe/Berlin] PHP Warning:  Undefined variable $media_variant in C:\xampp\htdocs\me-store\web\controllers\products.controller.php on line 215
+[17-Oct-2024 05:24:39 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\me-store\web\views\pages\admin\productos\modules\gestion.php on line 382
+[17-Oct-2024 05:27:14 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\me-store\web\views\pages\admin\productos\modules\gestion.php on line 382
+[17-Oct-2024 05:27:41 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\me-store\web\views\pages\admin\productos\modules\gestion.php on line 382
+[17-Oct-2024 05:29:54 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\me-store\web\controllers\products.controller.php:164
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\admin\productos\modules\gestion.php(55): ProductsController->productManage()
+#1 C:\xampp\htdocs\me-store\web\views\pages\admin\productos\productos.php(25): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\views\pages\admin\admin.php(22): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\views\template.php(269): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\me-store\web\controllers\products.controller.php on line 164
+[17-Oct-2024 05:30:02 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\me-store\web\views\pages\admin\productos\modules\gestion.php on line 382
+[17-Oct-2024 05:30:04 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\me-store\web\views\pages\admin\productos\modules\gestion.php on line 382
+[17-Oct-2024 05:33:06 Europe/Berlin] PHP Warning:  unlink(views/assets/img/products/sistema-de-punto-de-ventas/26810.jpg): No such file or directory in C:\xampp\htdocs\me-store\web\controllers\products.controller.php on line 199
+[17-Oct-2024 05:33:06 Europe/Berlin] PHP Warning:  unlink(views/assets/img/products/sistema-de-punto-de-ventas/56744.jpg): No such file or directory in C:\xampp\htdocs\me-store\web\controllers\products.controller.php on line 199
+[17-Oct-2024 05:33:21 Europe/Berlin] PHP Warning:  unlink(views/assets/img/products/sistema-de-punto-de-ventas/26810.jpg): No such file or directory in C:\xampp\htdocs\me-store\web\controllers\products.controller.php on line 199
+[17-Oct-2024 05:33:21 Europe/Berlin] PHP Warning:  unlink(views/assets/img/products/sistema-de-punto-de-ventas/56744.jpg): No such file or directory in C:\xampp\htdocs\me-store\web\controllers\products.controller.php on line 199

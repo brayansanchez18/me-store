@@ -118,8 +118,139 @@ class ProductsController
 
         /* -------------- AGREGAR PRODUCTO VINCULADO A LA SUBCATEGORIA -------------- */
 
+        /* -------------------------------------------------------------------------- */
+        /*                                  VARIANTES                                 */
+        /* -------------------------------------------------------------------------- */
+
+        $totalVariants = $_POST['totalVariants'];
+        $countVariant = 0;
+        $readyVariant = 0;
+
+        for ($i = 1; $i <= $totalVariants; $i++) {
+
+          $countVariant++;
+
+          if ($_POST['type_variant_' . $i] == 'gallery') {
+
+            $galleryProduct = [];
+            $galleryCount = 0;
+            $galleryOldCount = 0;
+
+            if (!empty($_POST['galleryProduct_' . $i])) {
+              foreach (json_decode($_POST['galleryProduct_' . $i], true) as $key => $value) {
+                // echo '<pre>' . print_r($value) . '</pre>';
+
+                $galleryCount++;
+
+                $image['tmp_name'] = $value['file'];
+                $image['type'] = $value['type'];
+                $image['mode'] = 'base64';
+
+                $folder = 'assets/img/products/' . $_POST['url_product'];
+                $name = mt_rand(10000, 99999);
+                $width = $value['width'];
+                $height = $value['height'];
+
+                $saveImageGallery = TemplateController::saveImage($image, $folder, $name, $width, $height);
+
+                array_push($galleryProduct, $saveImageGallery);
+
+                if (count(json_decode($_POST['galleryProduct_' . $i], true)) == $galleryCount) {
+                  if ($_POST['galleryOldProduct_' . $i] != '[]') {
+                    foreach (json_decode($_POST['galleryProduct_' . $i], true) as $index => $item) {
+                      $galleryOldCount++;
+                      array_push($galleryProduct, $item);
+
+                      if (count(json_decode($_POST['galleryOldProduct_' . $i], true)) == $galleryOldCount) {
+                        $media_variant = json_encode($galleryProduct);
+                      }
+                    }
+                  } else {
+                    $media_variant = json_encode($galleryProduct);
+                  }
+                }
+              }
+            } else {
+
+              /* -------------------------------------------------------------------------- */
+              /*                      CUANDO NO SUBIMOS IMAGENES NUEVAS                     */
+              /* -------------------------------------------------------------------------- */
+
+              if ($_POST['galleryProduct_' . $i] != '[]') {
+                foreach (json_decode($_POST['galleryProduct_' . $i], true) as $index => $item) {
+                  $galleryOldCount++;
+                  array_push($galleryProduct, $item);
+
+                  if (count(json_decode($_POST['galleryOldProduct_' . $i], true)) == $galleryOldCount) {
+                    $media_variant = json_encode($galleryProduct);
+                  }
+                }
+              }
+
+              /* -------------------- CUANDO NO SUBIMOS IMAGENES NUEVAS ------------------- */
+            }
+
+            /* -------------------------------------------------------------------------- */
+            /*                    ELIMINAR ARCHIVOS BASURA DEL SERVIDOR                   */
+            /* -------------------------------------------------------------------------- */
+
+            if (!empty($_POST['deleteGalleryProduct_' . $i])) {
+              foreach (json_decode($_POST['deleteGalleryProduct_' . $i], true) as $key => $value) {
+                unlink('views/assets/img/products/' . $_POST['url_product'] . '/' . $value);
+              }
+            }
+
+            /* ------------------ ELIMINAR ARCHIVOS BASURA DEL SERVIDOR ----------------- */
+          } else {
+            $media_variant = $_POST['videoProduct_' . $i];
+          }
+
+          /* -------------------------------- VARIANTES ------------------------------- */
+
+          /* -------------------------------------------------------------------------- */
+          /*                            CAMPOS DE LA VARIANTE                           */
+          /* -------------------------------------------------------------------------- */
+
+          if (isset($_POST['idVariant_' . $i])) {
+            $fields = 'id_product_variant=' . base64_decode($_POST['idProduct']) . '&type_variant=' . $_POST['type_variant_' . $i] . '&media_variant=' . $media_variant . '&description_variant=' . $_POST['description_variant_' . $i] . '&cost_variant=' . $_POST['cost_variant_' . $i] . '&price_variant=' . $_POST['price_variant_' . $i] . '&offer_variant=' . $_POST['offer_variant_' . $i] . '&end_offer_variant=' . $_POST['date_variant_' . $i] . '&stock_variant=' . $_POST['stock_variant_' . $i];
+
+            $url = 'variants?id=' . $_POST['idVariant_' . $i] . '&nameId=id_variant&token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+            $method = 'PUT';
+
+
+            $editVariant = CurlController::request($url, $method, $fields);
+          } else {
+            $fields = [
+              'id_product_variant' => base64_decode($_POST['idProduct']),
+              'type_variant' => $_POST['type_variant_' . $i],
+              'media_variant' => $media_variant,
+              'description_variant' => $_POST['description_variant_' . $i],
+              'cost_variant' => $_POST['cost_variant_' . $i],
+              'price_variant' => $_POST['price_variant_' . $i],
+              'offer_variant' => $_POST['offer_variant_' . $i],
+              'end_offer_variant' => $_POST['date_variant_' . $i],
+              'stock_variant' => $_POST['stock_variant_' . $i],
+              'date_created_variant' => date('Y-m-d')
+            ];
+
+            $url = 'variants?token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+            $method = 'POST';
+            $editVariant = CurlController::request($url, $method, $fields);
+          }
+
+          /* -------------------------- CAMPOS DE LA VARIANTE ------------------------- */
+
+          if ($countVariant == $totalVariants) {
+            $readyVariant = 200;
+          }
+        }
+
+        // echo '<pre>' . print_r($updateData) . '</pre>';
+        // return;
+
         if (
           $updateData->status == 200 &&
+          $readyVariant == 200 &&
           $updateOldCategory->status == 200 &&
           $updateCategory->status == 200 &&
           $updateOldSubcategory->status == 200 &&
@@ -253,8 +384,73 @@ class ProductsController
 
         /* -------------- AUMENTAR PRODUCTOS VINCULADOS A SUBCATEGORIA -------------- */
 
+        /* -------------------------------------------------------------------------- */
+        /*                                  VARIANTES                                 */
+        /* -------------------------------------------------------------------------- */
+
+        if ($_POST['type_variant_1'] == 'gallery') {
+
+          $galleryProduct = [];
+          $galleryCount = 0;
+
+          if (!empty($_POST['galleryProduct_1'])) {
+            foreach (json_decode($_POST['galleryProduct_1'], true) as $key => $value) {
+              // echo '<pre>' . print_r($value) . '</pre>';
+
+              $galleryCount++;
+
+              $image['tmp_name'] = $value['file'];
+              $image['type'] = $value['type'];
+              $image['mode'] = 'base64';
+
+              $folder = 'assets/img/products/' . $_POST['url_product'];
+              $name = mt_rand(10000, 99999);
+              $width = $value['width'];
+              $height = $value['height'];
+
+              $saveImageGallery = TemplateController::saveImage($image, $folder, $name, $width, $height);
+
+              array_push($galleryProduct, $saveImageGallery);
+
+              if (count(json_decode($_POST['galleryProduct_1'], true)) == $galleryCount) {
+                $media_variant = json_encode($galleryProduct);
+              }
+            }
+          }
+        } else {
+          $media_variant = $_POST['videoProduct_1'];
+        }
+
+        // return;
+
+        /* -------------------------------- VARIANTES ------------------------------- */
+
+        /* -------------------------------------------------------------------------- */
+        /*                            CAMPOS DE LA VARIANTE                           */
+        /* -------------------------------------------------------------------------- */
+
+        $fields = [
+          'id_product_variant' => $createData->results->lastId,
+          'type_variant' => $_POST['type_variant_1'],
+          'media_variant' => $media_variant,
+          'description_variant' => $_POST['description_variant_1'],
+          'cost_variant' => $_POST['cost_variant_1'],
+          'price_variant' => $_POST['price_variant_1'],
+          'offer_variant' => $_POST['offer_variant_1'],
+          'end_offer_variant' => $_POST['date_variant_1'],
+          'stock_variant' => $_POST['stock_variant_1'],
+          'date_created_variant' => date('Y-m-d')
+        ];
+
+        $url = 'variants?token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+        $method = 'POST';
+        $createVariant = CurlController::request($url, $method, $fields);
+
+        /* -------------------------- CAMPOS DE LA VARIANTE ------------------------- */
+
         if (
           $createData->status == 200 &&
+          $createVariant->status == 200 &&
           $updateCategory->status == 200 &&
           $updateSubcategory->status == 200
         ) {

@@ -506,80 +506,81 @@ function changeVariant(event, item) {
 
 /* ------------------- Cambio de variante: Galería o video ------------------ */
 
-/*=============================================
-DropZone
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                                  DropZone                                  */
+/* -------------------------------------------------------------------------- */
 
-// Dropzone.autoDiscover = false;
+Dropzone.autoDiscover = false;
 
-// function initDropzone(item) {
-//   $(".dropzone_" + item).dropzone({
-//     url: "/",
-//     addRemoveLinks: true,
-//     acceptedFiles: "image/jpeg, image/png, image/gif",
-//     maxFilesize: 10,
-//     maxFiles: 10,
-//     init: function () {
-//       var elem = $(this.element);
+$(".dropzone").dropzone({
+  url: "/",
+  addRemoveLinks: true,
+  acceptedFiles: "image/jpeg, image/png, image/gif",
+  maxFilesize: 10,
+  maxFiles: 10,
+  init: function () {
+    var elem = $(this.element);
+    // console.log(elem);
+    var arrayFiles = [];
+    var countArrayFiles = 0;
 
-//       var arrayFiles = [];
+    this.on("addedfile", function (file) {
+      countArrayFiles++;
 
-//       var countArrayFiles = 0;
+      setTimeout(function () {
+        arrayFiles.push({
+          file: file.dataURL,
+          type: file.type,
+          width: file.width,
+          height: file.height,
+        });
 
-//       this.on("addedfile", function (file) {
-//         countArrayFiles++;
+        elem
+          .parent()
+          .children(".galleryProduct_1")
+          // .children(".galleryProduct_" + item)
+          .val(JSON.stringify(arrayFiles));
+      }, 500 * countArrayFiles);
+    });
 
-//         setTimeout(function () {
-//           arrayFiles.push({
-//             file: file.dataURL,
-//             type: file.type,
-//             width: file.width,
-//             height: file.height,
-//           });
+    this.on("removedfile", function (file) {
+      countArrayFiles++;
 
-//           elem
-//             .parent()
-//             .children(".galleryProduct_" + item)
-//             .val(JSON.stringify(arrayFiles));
-//         }, 500 * countArrayFiles);
-//       });
+      setTimeout(function () {
+        var index = arrayFiles.indexOf({
+          file: file.dataURL,
+          type: file.type,
+          width: file.width,
+          height: file.height,
+        });
 
-//       this.on("removedfile", function (file) {
-//         countArrayFiles++;
+        arrayFiles.splice(index, 1);
 
-//         setTimeout(function () {
-//           var index = arrayFiles.indexOf({
-//             file: file.dataURL,
-//             type: file.type,
-//             width: file.width,
-//             height: file.height,
-//           });
+        elem
+          .parent()
+          // .children(".galleryProduct_" + item)
+          .children(".galleryProduct_1")
+          .val(JSON.stringify(arrayFiles));
+      }, 500 * countArrayFiles);
+    });
 
-//           arrayFiles.splice(index, 1);
+    myDropzone = this;
 
-//           elem
-//             .parent()
-//             .children(".galleryProduct_" + item)
-//             .val(JSON.stringify(arrayFiles));
-//         }, 500 * countArrayFiles);
-//       });
+    $(".saveBtn").click(function () {
+      if (
+        arrayFiles.length == 0 &&
+        $("[name='type_variant_" + item + "']").val() == "gallery" &&
+        $(".idVariant").length == 0
+      ) {
+        fncToastr("error", "La galería no puede estar vacía");
+      } else {
+        myDropzone.processQueue();
+      }
+    });
+  },
+});
 
-//       myDropzone = this;
-
-//       $(".saveBtn").click(function () {
-//         if (
-//           arrayFiles.length == 0 &&
-//           $("[name='type_variant_" + item + "']").val() == "gallery" &&
-//           $(".idVariant").length == 0
-//         ) {
-//           fncToastr("error", "La galería no puede estar vacía");
-//         } else {
-//           myDropzone.processQueue();
-//         }
-//       });
-//     },
-//   });
-// }
+/* -------------------------------- DropZone -------------------------------- */
 
 /*=============================================
 Activar DropZone de acuerdo a la cantidad de galerías existentes
@@ -591,44 +592,49 @@ Activar DropZone de acuerdo a la cantidad de galerías existentes
 //   initDropzone(item);
 // }
 
-/*=============================================
-Insertar Video de youtube
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                          Insertar Video de youtube                         */
+/* -------------------------------------------------------------------------- */
 
-// function changeVideo(event, item) {
-//   var idYoutube = event.target.value.split("/").slice(-1);
-//   $(".iframeYoutube_" + item).attr(
-//     "src",
-//     "https://www.youtube.com/embed/" + idYoutube
-//   );
-// }
+function changeVideo(event, item) {
+  var idYoutube = event.target.value.split("/").slice(-1);
+  // console.log("idYoutube", idYoutube);
+  $(".iframeYoutube_" + item).attr(
+    "src",
+    "https://www.youtube.com/embed/" + idYoutube
+  );
+}
 
-/*=============================================
-Edición de Galeria
-=============================================*/
+/* ------------------------ Insertar Video de youtube ----------------------- */
 
-// var arrayFilesEdit = Array();
-// var arrayFilesDelete = Array();
+/* -------------------------------------------------------------------------- */
+/*                             Edición de Galeria                             */
+/* -------------------------------------------------------------------------- */
 
-// function removeGallery(elem, item) {
-//   $(elem).parent().remove();
+var arrayFilesEdit = [];
+var arrayFilesDelete = [];
 
-//   var index = JSON.parse($(".galleryOldProduct_" + item).val()).indexOf(
-//     $(elem).attr("remove")
-//   );
+function removeGallery(elem, item) {
+  $(elem).parent().remove();
 
-//   arrayFilesEdit = JSON.parse($(".galleryOldProduct_" + item).val());
+  var index = JSON.parse($(".galleryOldProduct_" + item).val()).indexOf(
+    $(elem).attr("remove")
+  );
 
-//   arrayFilesEdit.splice(index, 1);
+  arrayFilesEdit = JSON.parse($(".galleryOldProduct_" + item).val());
 
-//   $(".galleryOldProduct_" + item).val(JSON.stringify(arrayFilesEdit));
+  arrayFilesEdit.splice(index, 1);
 
-//   arrayFilesDelete = JSON.parse($(".deleteGalleryProduct_" + item).val());
+  $(".galleryOldProduct_" + item).val(JSON.stringify(arrayFilesEdit));
 
-//   arrayFilesDelete.push($(elem).attr("remove"));
+  arrayFilesDelete = JSON.parse($(".deleteGalleryProduct_" + item).val());
 
-//   $(".deleteGalleryProduct_" + item).val(JSON.stringify(arrayFilesDelete));
-// }
+  arrayFilesDelete.push($(elem).attr("remove"));
+
+  $(".deleteGalleryProduct_" + item).val(JSON.stringify(arrayFilesDelete));
+}
+
+/* --------------------------- Edición de Galeria --------------------------- */
 
 /*=============================================
 Adicionar Variante
