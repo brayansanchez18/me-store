@@ -762,39 +762,41 @@ $(document).on("click", ".addVariant", function () {
 
 /* --------------------------- ADICIONAR VARIANTE --------------------------- */
 
-/*=============================================
-Quitar Variante
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                               QUITAR VARIANTE                              */
+/* -------------------------------------------------------------------------- */
 
-// $(document).on("click", ".deleteVariant", function () {
-//   $(this).parent().parent().parent().parent().parent().remove();
+$(document).on("click", ".deleteVariant", function () {
+  $(this).parent().parent().parent().parent().parent().remove();
 
-//   var variantCount = $(".variantCount");
-//   $('[name="totalVariants"]').val(variantCount.length);
+  var variantCount = $(".variantCount");
+  $('[name="totalVariants"]').val(variantCount.length);
 
-//   if ($(this).attr("idVariant") != undefined) {
-//     var data = new FormData();
+  if ($(this).attr("idVariant") != undefined) {
+    var data = new FormData();
 
-//     data.append("token", localStorage.getItem("token-admin"));
-//     data.append("table", "variants");
-//     data.append("id", $(this).attr("idVariant"));
-//     data.append("nameId", "id_variant");
+    data.append("token", localStorage.getItem("token-admin"));
+    data.append("table", "variants");
+    data.append("id", $(this).attr("idVariant"));
+    data.append("nameId", "id_variant");
 
-//     $.ajax({
-//       url: "/ajax/delete-admin.ajax.php",
-//       method: "POST",
-//       data: data,
-//       contentType: false,
-//       cache: false,
-//       processData: false,
-//       success: function (response) {
-//         if (response == 200) {
-//           fncToastr("success", "Variante borrada correctamente");
-//         }
-//       },
-//     });
-//   }
-// });
+    $.ajax({
+      url: "/ajax/delete-admin.ajax.php",
+      method: "POST",
+      data: data,
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function (response) {
+        if (response == 200) {
+          fncToastr("success", "Variante Eliminada");
+        }
+      },
+    });
+  }
+});
+
+/* ----------------------------- QUITAR VARIANTE ---------------------------- */
 
 /*=============================================
 Agregar codigo telefónico

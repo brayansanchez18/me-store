@@ -345,7 +345,7 @@ if (isset($_GET['product'])) {
                         name="idVariant_<?= ($key + 1) ?>"
                         value="<?= $value->id_variant ?>">
 
-                      <div class="card">
+                      <div class="card variantCount">
                         <div class="card-body">
                           <div class="form-group">
                             <div class="d-flex justify-content-between">
@@ -359,7 +359,7 @@ if (isset($_GET['product'])) {
                                 </div>
                               <?php else: ?>
                                 <div>
-                                  <button type="button" class="btn btn-default btn-sm rounded-pill px-3 quitVariant">
+                                  <button type="button" class="btn btn-default btn-sm rounded-pill px-3 deleteVariant" idVariant="<?= base64_encode($value->id_variant) ?>">
                                     <i class="fas fa-times fa-xs"></i> Eliminar variante
                                   </button>
                                 </div>

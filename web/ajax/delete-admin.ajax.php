@@ -154,6 +154,34 @@ class DeleteController
 
     /* ----------------------------- BORRAR PRODUCTO ---------------------------- */
 
+    /* -------------------------------------------------------------------------- */
+    /*                               BORRAR VARIANTE                              */
+    /* -------------------------------------------------------------------------- */
+
+    if ($this->table == 'variants') {
+
+      $select = 'type_variant,media_variant,url_product';
+      $url = 'relations?rel=variants,products&type=variant,product&linkTo=id_variant&equalTo=' . base64_decode($this->id) . '&select=' . $select;
+      $method = 'GET';
+      $fields = [];
+
+      $dataItem = CurlController::request($url, $method, $fields)->results[0];
+
+      /* -------------------------------------------------------------------------- */
+      /*                        BORRAR IMAGENES DE LA GALERIA                       */
+      /* -------------------------------------------------------------------------- */
+
+      if ($dataItem->type_variant == 'gallery') {
+        foreach (json_decode($dataItem->media_variant) as $file) {
+          unlink('../views/assets/img/products/' . $dataItem->url_product . '/' . $file);
+        }
+      }
+
+      /* ---------------------- BORRA IMAGENES DE LA GALERIA ---------------------- */
+    }
+
+    /* ----------------------------- BORRAR VARIANTE ---------------------------- */
+
     $url = $this->table . '?id=' . base64_decode($this->id) . '&nameId=' . $this->nameId . '&token=' . $this->token . '&table=admins&suffix=admin';
     $method = 'DELETE';
     $fields = [];
@@ -166,7 +194,9 @@ class DeleteController
 if (isset($_POST['token'])) {
   $Delete = new DeleteController();
   $Delete->token = $_POST['token'];
-  $Delete->idAdmin = $_POST['idAdmin'];
+  if (isset($_POST['idAdmin'])) {
+    $Delete->idAdmin = $_POST['idAdmin'];
+  }
   $Delete->table = $_POST['table'];
   $Delete->id = $_POST['id'];
   $Delete->nameId = $_POST['nameId'];
