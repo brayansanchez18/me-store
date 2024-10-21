@@ -1,3 +1,19 @@
+<?php
+$select = 'id_category,name_category,url_category,icon_category';
+$url = 'categories?select=' . $select;
+$method = 'GET';
+$fields = [];
+
+$dataCategories = CurlController::request($url, $method, $fields);
+
+if ($dataCategories->status == 200) {
+  $dataCategories = $dataCategories->results;
+} else {
+  $dataCategories = [];
+}
+
+// echo print_r($dataCategories);
+?>
 <div class="container py-2 py-lg-4">
   <div class="row">
     <div class="col-12 col-lg-2 mt-1">
@@ -21,49 +37,82 @@
         </a>
 
         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-          <li class="dropdown-submenu dropdown-hover">
-            <a id="dropdownSubMenu0" href="/ropa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle text-uppercase" onclick="redirect('/ropa')">
-              <i class="fas fa-tshirt pe-2 fa-xs"></i> Ropa
-            </a>
+          <?php foreach ($dataCategories as $key => $value): ?>
+            <?php
+            $select = 'name_subcategory,url_subcategory';
+            $url = 'subcategories?linkTo=id_category_subcategory&equalTo=' . $value->id_category . '&select=' . $select;
+            $method = 'GET';
+            $fields = [];
+            $dataSubcategories = CurlController::request($url, $method, $fields);
 
-            <ul class="border-0 shadow py-3 ps-3 d-block d-lg-none">
-              <li>
-                <a tabindex="-1" href="/ropa-para-dama" class="dropdown-item">Ropa Para Dama</a>
-              </li>
+            if ($dataSubcategories->status == 200) {
+              $dataSubcategories = $dataSubcategories->results;
+            } else {
+              $dataSubcategories = [];
+            }
+            ?>
+            <li class="dropdown-submenu dropdown-hover">
+              <a
+                id="dropdownSubMenu<?= $key ?>"
+                href="/<?= $value->url_category ?>"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                class="dropdown-item dropdown-toggle text-uppercase"
+                onclick="redirect('/<?= $value->url_category ?>')">
+                <i class="<?= $value->icon_category ?> pe-2 fa-xs"></i> <?= $value->name_category ?>
+              </a>
 
-              <li>
-                <a tabindex="-1" href="/ropa-para-hombre" class="dropdown-item">Ropa Para Hombre</a>
-              </li>
+              <ul class="border-0 shadow py-3 ps-3 d-block d-lg-none">
+                <?php foreach ($dataSubcategories as $index => $item): ?>
+                  <li>
+                    <a
+                      tabindex="-1"
+                      href="/<?= $item->url_subcategory ?>"
+                      class="dropdown-item"><?= $item->name_subcategory ?></a>
+                  </li>
+                <?php endforeach ?>
 
-              <li>
-                <a tabindex="-1" href="/ropa-deportiva" class="dropdown-item">Ropa Deportiva</a>
-              </li>
+                <!-- <li>
+                  <a tabindex="-1" href="/ropa-para-hombre" class="dropdown-item">Ropa Para Hombre</a>
+                </li>
 
-              <li>
-                <a tabindex="-1" href="/ropa-infantil" class="dropdown-item">Ropa Infantil</a>
-              </li>
-            </ul>
+                <li>
+                  <a tabindex="-1" href="/ropa-deportiva" class="dropdown-item">Ropa Deportiva</a>
+                </li>
 
-            <ul aria-labelledby="dropdownSubMenu0" class="dropdown-menu border-0 shadow menuSubcategory">
-              <li>
-                <a tabindex="-1" href="/ropa-para-dama" class="dropdown-item">Ropa Para Dama</a>
-              </li>
+                <li>
+                  <a tabindex="-1" href="/ropa-infantil" class="dropdown-item">Ropa Infantil</a>
+                </li> -->
+              </ul>
 
-              <li>
-                <a tabindex="-1" href="/ropa-para-hombre" class="dropdown-item">Ropa Para Hombre</a>
-              </li>
+              <ul aria-labelledby="dropdownSubMenu0" class="dropdown-menu border-0 shadow menuSubcategory">
+                <?php foreach ($dataSubcategories as $index => $item): ?>
+                  <li>
+                    <a
+                      tabindex="-1"
+                      href="/<?= $item->url_subcategory ?>"
+                      class="dropdown-item"><?= $item->name_subcategory ?></a>
+                  </li>
+                <?php endforeach ?>
 
-              <li>
-                <a tabindex="-1" href="/ropa-deportiva" class="dropdown-item">Ropa Deportiva</a>
-              </li>
+                <!-- <li>
+                  <a tabindex="-1" href="/ropa-para-hombre" class="dropdown-item">Ropa Para Hombre</a>
+                </li>
 
-              <li>
-                <a tabindex="-1" href="/ropa-infantil" class="dropdown-item">Ropa Infantil</a>
-              </li>
-            </ul>
-          </li>
+                <li>
+                  <a tabindex="-1" href="/ropa-deportiva" class="dropdown-item">Ropa Deportiva</a>
+                </li>
 
-          <li class="dropdown-submenu dropdown-hover">
+                <li>
+                  <a tabindex="-1" href="/ropa-infantil" class="dropdown-item">Ropa Infantil</a>
+                </li> -->
+              </ul>
+            </li>
+          <?php endforeach ?>
+
+          <!-- <li class="dropdown-submenu dropdown-hover">
             <a id="dropdownSubMenu1" href="/calzado" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle text-uppercase" onclick="redirect('/calzado')">
               <i class="fas fa-shoe-prints pe-2 fa-xs"></i> Calzado
             </a>
@@ -205,7 +254,7 @@
                 <a tabindex="-1" href="/variedades" class="dropdown-item">Variedades</a>
               </li>
             </ul>
-          </li>
+          </li> -->
         </ul>
       </div>
 

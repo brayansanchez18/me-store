@@ -565,25 +565,14 @@ function initDropzone(item) {
       myDropzone = this;
 
       $(".saveBtn").click(function () {
-        // if (
-        //   arrayFiles.length == 0 &&
-        //   $("[name='type_variant_" + item + "']").val() == "gallery" &&
-        //   $(".idVariant").length == 0
-        // ) {
-        //   fncToastr("error", "La galería no puede estar vacía");
-        // } else {
-        //   myDropzone.processQueue();
-        // }
-
         if (
-          arrayFiles.length >= 1 ||
-          $(".galleryOldProduct_" + item).val() != null ||
-          $(".type_variant_" + item).val() != "video"
+          arrayFiles.length == 0 &&
+          $("[name='type_variant_" + item + "']").val() == "gallery" &&
+          $(".idVariant").length == 0
         ) {
-          myDropzone.processQueue();
-        } else {
           fncToastr("error", "La galería no puede estar vacía");
-          return;
+        } else {
+          myDropzone.processQueue();
         }
       });
     },

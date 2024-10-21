@@ -328,10 +328,7 @@ if (isset($_GET['product'])) {
                     }
                     ?>
 
-                  <?php else: $variants = array(); ?>
-
-
-
+                  <?php else: $variants = []; ?>
                   <?php endif ?>
 
                   <?php if (count($variants) > 0): ?>
@@ -342,6 +339,7 @@ if (isset($_GET['product'])) {
                       <!-- ---------------------------- Variantes --------------------------- -->
                       <input
                         type="hidden"
+                        class="idVariant"
                         name="idVariant_<?= ($key + 1) ?>"
                         value="<?= $value->id_variant ?>">
 
