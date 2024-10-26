@@ -251,6 +251,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- https://www.dropzone.dev/ -->
   <script src="<?= $path ?>views/assets/js/plugins/dropzone/dropzone.js"></script>
 
+  <!-- pagination -->
+  <!-- http://josecebe.github.io/twbs-pagination/ -->
+  <script src="<?= $path ?>views/assets/js/plugins/twbs-pagination/twbs-pagination.min.js"></script>
+
   <!-- ------------------------------- JS PLUGINS ------------------------------- -->
 
 </head>
@@ -268,7 +272,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
       if ($routesArray[0] == 'admin' || $routesArray[0] == 'salir') {
         include_once 'pages/' . $routesArray[0] . '/' . $routesArray[0] . '.php';
       } else {
-        include_once 'pages/404/404.php';
+        /* -------------------------------------------------------------------------- */
+        /*                   BUSCAR CONINCIDENCIA CON RUL CATEGORIA                   */
+        /* -------------------------------------------------------------------------- */
+
+        $url = 'categories?linkTo=url_category&equalTo=' . $routesArray[0] . '&select=url_category';
+        $category = CurlController::request($url, $method, $fields);
+
+        if ($category->status == 200) {
+          include_once 'pages/products/products.php';
+        } else {
+
+          $url = 'subcategories?linkTo=url_subcategory&equalTo=' . $routesArray[0] . '&select=url_subcategory';
+          $subcategory = CurlController::request($url, $method, $fields);
+
+          if ($subcategory->status == 200) {
+            include_once 'pages/products/products.php';
+          } else {
+            include_once 'pages/404/404.php';
+          }
+        }
+
+        /* ----------------- BUSCAR CONINCIDENCIA CON RUL CATEGORIA ----------------- */
       }
     } else {
       include_once 'pages/home/home.php';

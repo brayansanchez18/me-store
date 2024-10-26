@@ -79,3 +79,249 @@ Stack trace:
 [21-Oct-2024 06:34:45 Europe/Berlin] PHP Warning:  Attempt to read property "days" on null in C:\xampp\htdocs\me-store\web\views\pages\home\modules\free.php on line 73
 [21-Oct-2024 06:34:45 Europe/Berlin] PHP Warning:  Undefined variable $diff in C:\xampp\htdocs\me-store\web\views\pages\home\modules\free.php on line 73
 [21-Oct-2024 06:34:45 Europe/Berlin] PHP Warning:  Attempt to read property "days" on null in C:\xampp\htdocs\me-store\web\views\pages\home\modules\free.php on line 73
+[25-Oct-2024 03:49:42 Europe/Berlin] PHP Warning:  Undefined variable $totalProducts in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 213
+[25-Oct-2024 03:49:42 Europe/Berlin] PHP Warning:  Undefined variable $currentPage in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 215
+[25-Oct-2024 03:49:54 Europe/Berlin] PHP Warning:  Undefined variable $totalProducts in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 213
+[25-Oct-2024 03:49:54 Europe/Berlin] PHP Warning:  Undefined variable $currentPage in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 215
+[25-Oct-2024 04:15:38 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:222
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 222
+[25-Oct-2024 04:15:43 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:222
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 222
+[25-Oct-2024 04:16:47 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:221
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 221
+[25-Oct-2024 04:18:51 Europe/Berlin] PHP Parse error:  syntax error, unexpected token ";" in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 221
+[25-Oct-2024 04:28:07 Europe/Berlin] PHP Warning:  Undefined variable $startAt in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 14
+[25-Oct-2024 04:28:11 Europe/Berlin] PHP Warning:  Undefined variable $startAt in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 14
+[25-Oct-2024 04:28:22 Europe/Berlin] PHP Warning:  Undefined variable $startAt in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 14
+[25-Oct-2024 04:28:22 Europe/Berlin] PHP Warning:  Attempt to read property "id_product" on int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 40
+[25-Oct-2024 04:28:22 Europe/Berlin] PHP Warning:  Attempt to read property "type_variant" on string in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 43
+[25-Oct-2024 04:28:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:43
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 43
+[25-Oct-2024 04:29:02 Europe/Berlin] PHP Warning:  Undefined variable $startAt in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 14
+[25-Oct-2024 04:29:02 Europe/Berlin] PHP Warning:  Attempt to read property "id_product" on int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 40
+[25-Oct-2024 04:29:02 Europe/Berlin] PHP Warning:  Attempt to read property "type_variant" on string in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 43
+[25-Oct-2024 04:29:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:43
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 43
+[25-Oct-2024 04:29:26 Europe/Berlin] PHP Warning:  Undefined variable $startAt in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 14
+[25-Oct-2024 04:29:26 Europe/Berlin] PHP Warning:  Attempt to read property "id_product" on int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 40
+[25-Oct-2024 04:29:26 Europe/Berlin] PHP Warning:  Attempt to read property "type_variant" on string in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 43
+[25-Oct-2024 04:29:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:43
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 43
+[25-Oct-2024 04:30:04 Europe/Berlin] PHP Warning:  Attempt to read property "id_product" on int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 39
+[25-Oct-2024 04:30:04 Europe/Berlin] PHP Warning:  Attempt to read property "type_variant" on string in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 42
+[25-Oct-2024 04:30:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:42
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 42
+[25-Oct-2024 04:30:08 Europe/Berlin] PHP Warning:  Attempt to read property "id_product" on int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 39
+[25-Oct-2024 04:30:08 Europe/Berlin] PHP Warning:  Attempt to read property "type_variant" on string in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 42
+[25-Oct-2024 04:30:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:42
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 42
+[25-Oct-2024 07:15:45 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$total in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 13
+[25-Oct-2024 07:15:45 Europe/Berlin] PHP Warning:  Attempt to read property "id_product" on int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 41
+[25-Oct-2024 07:15:45 Europe/Berlin] PHP Warning:  Attempt to read property "type_variant" on string in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 44
+[25-Oct-2024 07:15:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:44
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 44
+[25-Oct-2024 07:16:48 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$total in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 13
+[25-Oct-2024 07:16:48 Europe/Berlin] PHP Warning:  Attempt to read property "id_product" on int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 41
+[25-Oct-2024 07:16:49 Europe/Berlin] PHP Warning:  Attempt to read property "type_variant" on string in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 44
+[25-Oct-2024 07:16:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:44
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 44
+[26-Oct-2024 03:06:51 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$total in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 13
+[26-Oct-2024 03:06:51 Europe/Berlin] PHP Warning:  Attempt to read property "id_product" on int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 41
+[26-Oct-2024 03:06:51 Europe/Berlin] PHP Warning:  Attempt to read property "type_variant" on string in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 44
+[26-Oct-2024 03:06:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:44
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 44
+[26-Oct-2024 03:14:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:234
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 234
+[26-Oct-2024 03:17:39 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:246
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 246
+[26-Oct-2024 03:18:07 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:246
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 246
+[26-Oct-2024 03:20:12 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:247
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 247
+[26-Oct-2024 03:22:05 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:251
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 251
+[26-Oct-2024 03:23:21 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:251
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 251
+[26-Oct-2024 03:23:38 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:251
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 251
+[26-Oct-2024 03:26:58 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:251
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 251
+[26-Oct-2024 03:33:33 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:284
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 284
+[26-Oct-2024 03:34:00 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:284
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 284
+[26-Oct-2024 03:36:16 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:286
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 286
+[26-Oct-2024 03:36:23 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:286
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 286
+[26-Oct-2024 03:38:08 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:283
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 283
+[26-Oct-2024 03:38:21 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:283
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 283
+[26-Oct-2024 03:38:49 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:283
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 283
+[26-Oct-2024 03:39:04 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:283
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 283
+[26-Oct-2024 03:39:06 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:283
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 283
+[26-Oct-2024 03:40:17 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:283
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 283
+[26-Oct-2024 03:40:24 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:283
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 283
+[26-Oct-2024 03:40:55 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:283
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(283): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 283
