@@ -289,7 +289,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
           if ($subcategory->status == 200) {
             include_once 'pages/products/products.php';
           } else {
-            include_once 'pages/404/404.php';
+            if (
+              $routesArray[0] == 'free' ||
+              $routesArray[0] == 'most-seen' ||
+              $routesArray[0] == 'most-sold'
+            ) {
+              include_once 'pages/products/products.php';
+            } else {
+              include_once 'pages/404/404.php';
+            }
           }
         }
 

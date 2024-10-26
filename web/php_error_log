@@ -325,3 +325,79 @@ Stack trace:
 #2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
 #3 {main}
   thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 283
+[26-Oct-2024 03:52:28 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:283
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(297): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 283
+[26-Oct-2024 04:10:02 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 161
+[26-Oct-2024 04:10:02 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 161
+[26-Oct-2024 04:10:02 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 161
+[26-Oct-2024 04:10:02 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 161
+[26-Oct-2024 04:10:02 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 259
+[26-Oct-2024 04:10:02 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 259
+[26-Oct-2024 04:10:02 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 259
+[26-Oct-2024 04:10:02 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 259
+[26-Oct-2024 04:12:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 161
+[26-Oct-2024 04:12:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 161
+[26-Oct-2024 04:12:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 161
+[26-Oct-2024 04:12:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 161
+[26-Oct-2024 04:12:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 259
+[26-Oct-2024 04:12:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 259
+[26-Oct-2024 04:12:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 259
+[26-Oct-2024 04:12:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 259
+[26-Oct-2024 04:13:10 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 160
+[26-Oct-2024 04:13:10 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 160
+[26-Oct-2024 04:13:10 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 160
+[26-Oct-2024 04:13:10 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 160
+[26-Oct-2024 04:13:10 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 258
+[26-Oct-2024 04:13:10 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 258
+[26-Oct-2024 04:13:10 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 258
+[26-Oct-2024 04:13:10 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 258
+[26-Oct-2024 04:13:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 258
+[26-Oct-2024 04:13:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 258
+[26-Oct-2024 04:13:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 258
+[26-Oct-2024 04:13:32 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$date_created_variant in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 258
+[26-Oct-2024 04:14:25 Europe/Berlin] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 237
+[26-Oct-2024 04:14:25 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 237
+[26-Oct-2024 04:14:25 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:312
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 312
+[26-Oct-2024 04:18:25 Europe/Berlin] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 241
+[26-Oct-2024 04:18:25 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 241
+[26-Oct-2024 04:18:25 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:320
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(297): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 320
+[26-Oct-2024 04:19:39 Europe/Berlin] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 241
+[26-Oct-2024 04:19:39 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 241
+[26-Oct-2024 04:19:39 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:320
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(297): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 320
+[26-Oct-2024 07:42:47 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:375
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 375
+[26-Oct-2024 07:42:50 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: stdClass / int in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:375
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(290): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 375
