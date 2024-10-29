@@ -11,8 +11,6 @@ if ($dataCategories->status == 200) {
 } else {
   $dataCategories = [];
 }
-
-// echo print_r($dataCategories);
 ?>
 <div class="container py-2 py-lg-4">
   <div class="row">
@@ -73,18 +71,6 @@ if ($dataCategories->status == 200) {
                       class="dropdown-item"><?= $item->name_subcategory ?></a>
                   </li>
                 <?php endforeach ?>
-
-                <!-- <li>
-                  <a tabindex="-1" href="/ropa-para-hombre" class="dropdown-item">Ropa Para Hombre</a>
-                </li>
-
-                <li>
-                  <a tabindex="-1" href="/ropa-deportiva" class="dropdown-item">Ropa Deportiva</a>
-                </li>
-
-                <li>
-                  <a tabindex="-1" href="/ropa-infantil" class="dropdown-item">Ropa Infantil</a>
-                </li> -->
               </ul>
 
               <ul aria-labelledby="dropdownSubMenu0" class="dropdown-menu border-0 shadow menuSubcategory">
@@ -96,165 +82,9 @@ if ($dataCategories->status == 200) {
                       class="dropdown-item"><?= $item->name_subcategory ?></a>
                   </li>
                 <?php endforeach ?>
-
-                <!-- <li>
-                  <a tabindex="-1" href="/ropa-para-hombre" class="dropdown-item">Ropa Para Hombre</a>
-                </li>
-
-                <li>
-                  <a tabindex="-1" href="/ropa-deportiva" class="dropdown-item">Ropa Deportiva</a>
-                </li>
-
-                <li>
-                  <a tabindex="-1" href="/ropa-infantil" class="dropdown-item">Ropa Infantil</a>
-                </li> -->
               </ul>
             </li>
           <?php endforeach ?>
-
-          <!-- <li class="dropdown-submenu dropdown-hover">
-            <a id="dropdownSubMenu1" href="/calzado" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle text-uppercase" onclick="redirect('/calzado')">
-              <i class="fas fa-shoe-prints pe-2 fa-xs"></i> Calzado
-            </a>
-
-            <ul class="border-0 shadow py-3 ps-3 d-block d-lg-none">
-              <li>
-                <a tabindex="-1" href="/calzado-para-dama" class="dropdown-item">Calzado Para Dama</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/calzado-para-hombre" class="dropdown-item">Calzado Para Hombre</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/calzado-deportivo" class="dropdown-item">Calzado Deportivo</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/calzado-infantil" class="dropdown-item">Calzado Infantil</a>
-              </li>
-            </ul>
-
-            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow menuSubcategory">
-              <li>
-                <a tabindex="-1" href="/calzado-para-dama" class="dropdown-item">Calzado Para Dama</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/calzado-para-hombre" class="dropdown-item">Calzado Para Hombre</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/calzado-deportivo" class="dropdown-item">Calzado Deportivo</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/calzado-infantil" class="dropdown-item">Calzado Infantil</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown-submenu dropdown-hover">
-            <a id="dropdownSubMenu2" href="/tecnologia" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle text-uppercase" onclick="redirect('/tecnologia')">
-              <i class="fas fa-laptop pe-2 fa-xs"></i> Tecnología
-            </a>
-
-            <ul class="border-0 shadow py-3 ps-3 d-block d-lg-none">
-              <li>
-                <a tabindex="-1" href="/telefonos-movil" class="dropdown-item">Teléfonos Móvil</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/tabletas-electronicas" class="dropdown-item">Tabletas Electrónicas</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/computadoras" class="dropdown-item">Computadoras</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/auriculares" class="dropdown-item">Auriculares</a>
-              </li>
-            </ul>
-
-            <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow menuSubcategory">
-              <li>
-                <a tabindex="-1" href="/telefonos-movil" class="dropdown-item">Teléfonos Móvil</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/tabletas-electronicas" class="dropdown-item">Tabletas Electrónicas</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/computadoras" class="dropdown-item">Computadoras</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/auriculares" class="dropdown-item">Auriculares</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown-submenu dropdown-hover">
-            <a id="dropdownSubMenu3" href="/cursos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle text-uppercase" onclick="redirect('/cursos')">
-              <i class="fas fa-graduation-cap pe-2 fa-xs"></i> Cursos
-            </a>
-
-            <ul class="border-0 shadow py-3 ps-3 d-block d-lg-none">
-              <li>
-                <a tabindex="-1" href="/desarrollo-web" class="dropdown-item">Desarrollo Web</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/aplicaciones-moviles" class="dropdown-item">Aplicaciones Móviles</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/diseno-grafico" class="dropdown-item">Diseño Gráfico</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/marketing-digital" class="dropdown-item">Marketing Digital</a>
-              </li>
-            </ul>
-
-            <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow menuSubcategory">
-              <li>
-                <a tabindex="-1" href="/desarrollo-web" class="dropdown-item">Desarrollo Web</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/aplicaciones-moviles" class="dropdown-item">Aplicaciones Móviles</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/diseno-grafico" class="dropdown-item">Diseño Gráfico</a>
-              </li>
-
-              <li>
-                <a tabindex="-1" href="/marketing-digital" class="dropdown-item">Marketing Digital</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown-submenu dropdown-hover">
-            <a id="dropdownSubMenu4" href="/accesorios" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle text-uppercase" onclick="redirect('/accesorios')">
-              <i class="fas fa-anchor pe-2 fa-xs"></i> Accesorios
-            </a>
-
-            <ul class="border-0 shadow py-3 ps-3 d-block d-lg-none">
-              <li>
-                <a tabindex="-1" href="/variedades" class="dropdown-item">Variedades</a>
-              </li>
-            </ul>
-
-            <ul aria-labelledby="dropdownSubMenu4" class="dropdown-menu border-0 shadow menuSubcategory">
-              <li>
-                <a tabindex="-1" href="/variedades" class="dropdown-item">Variedades</a>
-              </li>
-            </ul>
-          </li> -->
         </ul>
       </div>
 

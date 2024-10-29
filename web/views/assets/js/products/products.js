@@ -68,58 +68,62 @@ if (target.length > 0) {
 
 /* ------------------------------- PAGINACION ------------------------------- */
 
-/*=============================================
-Función para buscar productos
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                              BUSCAR PRODUCTOS                              */
+/* -------------------------------------------------------------------------- */
 
-// $(document).on("click", ".btnSearch", function () {
-//   var value = $(this)
-//     .parent()
-//     .parent()
-//     .children(".inputSearch")
-//     .val()
-//     .toLowerCase();
+$(document).on("click", ".btnSearch", function () {
+  var value = $(this)
+    .parent()
+    .parent()
+    .children(".inputSearch")
+    .val()
+    .toLowerCase();
 
-//   value = value.replace(
-//     /[#\\;\\$\\&\\%\\=\\(\\)\\:\\,\\'\\"\\.\\¿\\¡\\!\\?\\]/g,
-//     ""
-//   );
-//   value = value.replace(/[ ]/g, "-");
-//   value = value.replace(/[á]/g, "a");
-//   value = value.replace(/[é]/g, "e");
-//   value = value.replace(/[í]/g, "i");
-//   value = value.replace(/[ó]/g, "o");
-//   value = value.replace(/[ú]/g, "u");
-//   value = value.replace(/[ñ]/g, "n");
+  value = value.replace(
+    /[#\\;\\$\\&\\%\\=\\(\\)\\:\\,\\'\\"\\.\\¿\\¡\\!\\?\\]/g,
+    ""
+  );
+  value = value.replace(/[ ]/g, "-");
+  value = value.replace(/[á]/g, "a");
+  value = value.replace(/[é]/g, "e");
+  value = value.replace(/[í]/g, "i");
+  value = value.replace(/[ó]/g, "o");
+  value = value.replace(/[ú]/g, "u");
+  value = value.replace(/[ñ]/g, "n");
 
-//   window.location = "/" + value;
-// });
+  window.location = "/" + value;
+});
 
-/*=============================================
-Función para buscar productos con tecla ENTER
-=============================================*/
+/* ---------------------------- BUSCAR PRODUCTOS ---------------------------- */
 
-// $(".inputSearch").keyup(function (event) {
-//   event.preventDefault();
+/* -------------------------------------------------------------------------- */
+/*                         BUSCAR PRODUCTOS CON ENTER                         */
+/* -------------------------------------------------------------------------- */
 
-//   if (event.keyCode == 13 && $(".inputSearch").val() != "") {
-//     var value = $(".inputSearch").val().toLowerCase();
+$(".inputSearch").keyup(function (event) {
+  event.preventDefault();
 
-//     value = value.replace(
-//       /[#\\;\\$\\&\\%\\=\\(\\)\\:\\,\\'\\"\\.\\¿\\¡\\!\\?\\]/g,
-//       ""
-//     );
-//     value = value.replace(/[ ]/g, "-");
-//     value = value.replace(/[á]/g, "a");
-//     value = value.replace(/[é]/g, "e");
-//     value = value.replace(/[í]/g, "i");
-//     value = value.replace(/[ó]/g, "o");
-//     value = value.replace(/[ú]/g, "u");
-//     value = value.replace(/[ñ]/g, "n");
+  if (event.keyCode == 13 && $(".inputSearch").val() != "") {
+    var value = $(".inputSearch").val().toLowerCase();
 
-//     window.location = "/" + value;
-//   }
-// });
+    value = value.replace(
+      /[#\\;\\$\\&\\%\\=\\(\\)\\:\\,\\'\\"\\.\\¿\\¡\\!\\?\\]/g,
+      ""
+    );
+    value = value.replace(/[ ]/g, "-");
+    value = value.replace(/[á]/g, "a");
+    value = value.replace(/[é]/g, "e");
+    value = value.replace(/[í]/g, "i");
+    value = value.replace(/[ó]/g, "o");
+    value = value.replace(/[ú]/g, "u");
+    value = value.replace(/[ñ]/g, "n");
+
+    window.location = "/" + value;
+  }
+});
+
+/* ----------------------- BUSCAR PRODUCTOS CON ENTER ----------------------- */
 
 /*=============================================
 Adicionar a favoritos
