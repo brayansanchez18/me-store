@@ -30,11 +30,23 @@ if (!empty($product)) {
 /* ----------------- TRAEMOS LAS VARIANTES DE LOS PRODUCTOS ----------------- */
 ?>
 
+<link rel="stylesheet" href="<?= $path ?>views/assets/css/product/product.css">
+
 <div class="container-fluid bg-white">
   <hr style="color:#000">
 
   <div class="container py-4">
     <div class="row row-cols-1 row-cols-md-2">
+      <!-- -------------------------------------------------------------------------- */
+      /*                           TITULLO PRODUCTO MOVIL                           */
+      /* -------------------------------------------------------------------------- -->
+
+      <h1 class="d-block d-md-none text-center">
+        <?= $product->name_product ?>
+      </h1>
+
+      <!-- -------------------------- TITULO PRODUCTO MOVIL ------------------------- -->
+
       <!-- -------------------------------------------------------------------------- */
       /*                               BLOQUE GALERIA                               */
       /* -------------------------------------------------------------------------- -->
@@ -113,11 +125,6 @@ if (!empty($product)) {
           </div>
 
           <!-- -------------------------- DESCONTADOR DE TIEMPO ------------------------- -->
-          <div id="script-container">
-
-          </div>
-
-
           <div
             class="container-fluid countdown"
             dsize="col-12"
@@ -208,29 +215,49 @@ if (!empty($product)) {
 
         <!-- -------------------------------- VARIANTES ------------------------------- -->
 
+        <!-- ---------------------------------- STOCK --------------------------------- -->
+
+        <?php if ($product->variants[0]->type_variant == "gallery"): ?>
+          <div class="blockStock">
+            <p class="lead font-weight-bold">
+              Unidades disponibles: <?= $product->variants[0]->stock_variant ?>
+            </p>
+          </div>
+        <?php endif ?>
+
+        <!-- ---------------------------------- STOCK --------------------------------- -->
+
         <!-- ----------------------------- BOTON DE COMPRA ---------------------------- -->
         <div class="row my-4">
-          <div class="col-12 col-md-3">
-            <div class="input-group mb-3 mt-2">
-              <span class="input-group-text btnInc" type="btnMin">
-                <i class="fas fa-minus"></i>
-              </span>
-              <input
-                type="number"
-                class="form-control text-center showQuantity"
-                onwheel="return false;"
-                value="1">
-              <span class="input-group-text btnInc" type="btnMax">
-                <i class="fas fa-plus"></i>
-              </span>
+          <?php if ($product->variants[0]->type_variant == "gallery"): ?>
+            <div class="col-12 col-md-3 blockQuantity">
+              <div class="input-group mb-3 mt-2">
+                <span class="input-group-text btnInc" type="btnMin">
+                  <i class="fas fa-minus"></i>
+                </span>
+                <input
+                  type="number"
+                  class="form-control text-center showQuantity"
+                  onwheel="return false;"
+                  value="1">
+                <span class="input-group-text btnInc" type="btnMax">
+                  <i class="fas fa-plus"></i>
+                </span>
+              </div>
             </div>
-          </div>
 
-          <div class="col-12 col-md-9">
-            <button class="btn btn-dark btn-block font-weight-bold py-3">
-              AGREGAR AL CARRITO
-            </button>
-          </div>
+            <div class="col-12 col-md-9">
+              <button class="btn btn-dark btn-block font-weight-bold py-3 pulseAnimation">
+                AGREGAR AL CARRITO
+              </button>
+            </div>
+          <?php else: ?>
+            <div class="col-12">
+              <button class="btn btn-dark btn-block font-weight-bold py-3 pulseAnimation">
+                AGREGAR AL CARRITO
+              </button>
+            </div>
+          <?php endif ?>
         </div>
         <!-- ----------------------------- BOTON DE COMPRA ---------------------------- -->
 

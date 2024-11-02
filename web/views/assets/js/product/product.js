@@ -29,6 +29,35 @@ activateFlexSlider();
 /* ------------------------------- FLEX SLIDER ------------------------------ */
 
 /* -------------------------------------------------------------------------- */
+/*                                   STICKY                                   */
+/* -------------------------------------------------------------------------- */
+
+if (window.matchMedia("(min-width:768px)").matches) {
+  var sticky = new Sticky(".blockMedia");
+  var topMedia = $(".blockMedia").offset().top;
+
+  $(window).scroll(function (event) {
+    var scrollTop = $(window).scrollTop();
+    var footerTop = $(".footerBlock").offset().top;
+    var blockMedia = $(".blockMedia").height();
+
+    if (scrollTop > footerTop - blockMedia) {
+      $(".blockMedia")[0].sticky.active = false;
+
+      $(".blockMedia").css({
+        position: "relative",
+        left: "0px",
+        top: footerTop - (blockMedia + topMedia) + "px",
+      });
+    } else {
+      $(".blockMedia")[0].sticky.active = true;
+    }
+  });
+}
+
+/* --------------------------------- STICKY --------------------------------- */
+
+/* -------------------------------------------------------------------------- */
 /*                              CAMBIAR VARIANTE                              */
 /* -------------------------------------------------------------------------- */
 
@@ -148,42 +177,29 @@ $(document).on("change", ".changeVariant", function () {
     $(".countdown").hide();
   }
 
-  /*=============================================
-  Cambiar stock
-  =============================================*/
+  /* -------------------------------------------------------------------------- */
+  /*                                CAMBIAR STOCK                               */
+  /* -------------------------------------------------------------------------- */
 
-  // if (variant.stock_variant > 0) {
-  //   $(".blockStock").html(`
+  if (variant.stock_variant > 0) {
+    $(".blockStock").html(`
+  
+          <p class="lead font-weight-bold">
+          Unidades disponibles: ${variant.stock_variant}
+          </p>
+  
+      `);
+  } else {
+    $(".blockStock").html(`
+  
+          <p class="lead font-weight-bold text-danger">
+          Sin unidades disponibles
+          </p>
+  
+      `);
+  }
 
-  // 			<p class="text-center lead font-weight-bold">🔥 ¡Sólo ${variant.stock_variant} unidades disponibles! 🔥</p>
-
-  // 			<div class="progress">
-  // 			  <div class="progress-bar bg-danger" style="width:30%"></div>
-  // 			</div>
-
-  //   `);
-  // } else {
-  //   function numeroAleatorio(min, max) {
-  //     return Math.round(Math.random() * (max - min) + min);
-  //   }
-
-  //   var sales = numeroAleatorio(300, 500);
-  //   var stock = numeroAleatorio(10, 20);
-
-  //   $(".blockStock").html(`
-
-  // 			<p class="text-center lead font-weight-bold">
-
-  // 			🔥 ¡${sales} vendidos - Sólo ${stock} unidades disponibles! 🔥 </p>
-
-  // 			<div class="progress">
-  // 		  		<div class="progress-bar bg-danger" style="width:${
-  //             (stock * 100) / (sales / 5)
-  //           }%"></div>
-  // 			</div>
-
-  // 	`);
-  // }
+  /* ------------------------------ CAMBIAR STOCK ----------------------------- */
 
   /*=============================================
   Agregar ID de variante al botón addCart
@@ -207,58 +223,30 @@ $(document).on("change", ".changeVariant", function () {
 /* ---------------------------- CAMBIAR VARIANTE ---------------------------- */
 
 /* -------------------------------------------------------------------------- */
-/*                                   STICKY                                   */
+/*                        AUMENTAR Y DISMINUIR CANTIDAD                       */
 /* -------------------------------------------------------------------------- */
 
-if (window.matchMedia("(min-width:768px)").matches) {
-  var sticky = new Sticky(".blockMedia");
-  var topMedia = $(".blockMedia").offset().top;
-
-  $(window).scroll(function (event) {
-    var scrollTop = $(window).scrollTop();
-    var footerTop = $(".footerBlock").offset().top;
-    var blockMedia = $(".blockMedia").height();
-
-    if (scrollTop > footerTop - blockMedia) {
-      $(".blockMedia")[0].sticky.active = false;
-
-      $(".blockMedia").css({
-        position: "relative",
-        left: "0px",
-        top: footerTop - (blockMedia + topMedia) + "px",
-      });
-    } else {
-      $(".blockMedia")[0].sticky.active = true;
+$(".btnInc").click(function () {
+  if ($(this).attr("type") == "btnMin") {
+    if (Number($(".showQuantity").val()) > 1) {
+      $(".showQuantity").val(Number($(".showQuantity").val()) - 1);
     }
-  });
-}
+  }
 
-/* --------------------------------- STICKY --------------------------------- */
+  if ($(this).attr("type") == "btnMax") {
+    $(".showQuantity").val(Number($(".showQuantity").val()) + 1);
+  }
 
-/*=============================================
-Aumentar y disminuir la cantidad
-=============================================*/
+  if ($(".addCart").length > 0) {
+    var addCart = $(".addCart");
 
-// $(".btnInc").click(function () {
-//   if ($(this).attr("type") == "btnMin") {
-//     if (Number($(".showQuantity").val()) > 1) {
-//       $(".showQuantity").val(Number($(".showQuantity").val()) - 1);
-//     }
-//   }
+    addCart.each((i) => {
+      $(addCart[i]).attr("quantity", $(".showQuantity").val());
+    });
+  }
+});
 
-//   if ($(this).attr("type") == "btnMax") {
-//     $(".showQuantity").val(Number($(".showQuantity").val()) + 1);
-//   }
-
-//   if ($(".addCart").length > 0) {
-//     var addCart = $(".addCart");
-
-//     addCart.each((i) => {
-//       $(addCart[i]).attr("quantity", $(".showQuantity").val());
-//     });
-//   }
-// });
-
+/* ---------------------- AUMENTAR Y DISMINUIR CANTIDAD --------------------- */
 /*=============================================
 Agregar al carrito de compras
 =============================================*/
