@@ -81,7 +81,7 @@ class TemplateController
           ' . $message . '
 
           <a
-            href="' . TemplateController::path() . 'admin"
+            href="' . $link . '"
             target="_blank"
             style="text-decoration: none"
           >
@@ -264,4 +264,18 @@ class TemplateController
   }
 
   /* --------------------- FUNCION PARA ALMACENAR IMAGENES -------------------- */
+
+  /* -------------------------------------------------------------------------- */
+  /*                           GENERAR TEXTO ALEATORIO                          */
+  /* -------------------------------------------------------------------------- */
+
+  static public function genPassword($length)
+  {
+    $password = '';
+    $chain = '0123456789abcdefghijklmnopqrstuvwxyz';
+    $password = substr(str_shuffle($chain), 0, $length);
+    return $password;
+  }
+
+  /* ------------------------- GENERAR TEXTO ALEATORIO ------------------------ */
 }

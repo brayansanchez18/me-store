@@ -114,16 +114,7 @@ class AdminsControllers
 
         if ($admin->status == 200) {
 
-          function genPassword($length)
-          {
-            $password = '';
-            $chain = '0123456789abcdefghijklmnopqrstuvwxyz';
-
-            $password = substr(str_shuffle($chain), 0, $length);
-            return $password;
-          }
-
-          $newPassword = genPassword(11);
+          $newPassword = TemplateController::genPassword(11);
           $crypt = crypt($newPassword, '$2a$07$azybxcags23425sdg23sdfhsd$');
 
           /* -------------------------------------------------------------------------- */

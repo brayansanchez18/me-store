@@ -155,6 +155,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- FlexSlider -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/flexslider/flexslider.css">
 
+  <!-- Preload -->
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/preload/preload.css">
+
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/adminlte/adminlte.min.css">
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/template/template.css">
@@ -262,6 +265,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- http://flexslider.woothemes.com/thumbnail-controlnav.html -->
   <script src="<?= $path ?>views/assets/js/plugins/flexslider/jquery.flexslider.js"></script>
 
+  <!-- Preload -->
+  <!-- https://codepen.io/tutorialesatualcance/pen/oNqObGL -->
+  <!-- https://youtu.be/6_lg2D_-GSk -->
+  <script src="<?= $path ?>views/assets/js/plugins/preload/preload.js"></script>
+
   <!-- sticky -->
   <!-- https://rgalus.github.io/sticky-js/ -->
   <script src="<?= $path ?>views/assets/js/plugins/sticky/sticky.min.js"></script>
@@ -271,6 +279,50 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 
 <body class="hold-transition sidebar-collapse layout-top-nav">
+
+  <!-- -------------------------------------------------------------------------- */
+  /*                          VERIFICACION DE USUARIOS                          */
+  /* -------------------------------------------------------------------------- -->
+
+  <?php
+
+  if (isset($_GET['confirm'])) {
+
+    $url = 'users?linkTo=confirm_user&equalTo=' . $_GET['confirm'];
+    $method = 'GET';
+    $fields = [];
+
+    $confirm = CurlController::request($url, $method, $fields);
+
+    if ($confirm->status == 200) {
+
+      $url = 'users?id=' . $confirm->results[0]->id_user . '&nameId=id_user&token=no&except=verification_user';
+      $method = 'PUT';
+      $fields = 'verification_user=1';
+
+      $verification = CurlController::request($url, $method, $fields);
+
+      if ($verification->status == 200) {
+        if (isset($_SESSION['user'])) {
+          $_SESSION['user']->verification_user = 1;
+        }
+
+        echo '<script>
+        fncSweetAlert("success", "Felicidades su cuenta ha sido verificada, ya puede ingresar al sistema!", "/");
+        </script>';
+      }
+    } else {
+
+      echo '<script>
+        fncSweetAlert("error", "El código de verificación esta mal escrito", "");
+        </script>';
+    }
+  }
+
+  ?>
+
+  <!-- ------------------------ VERIFICACION_DE_USUARIOS ------------------------ -->
+
   <input type="hidden" id="urlPath" value="<?= $path ?>">
   <div class="wrapper">
 
@@ -378,6 +430,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     }
 
     include_once 'modules/footer.php';
+    include_once 'modules/modals.php';
     ?>
   </div>
   <!-- ./wrapper -->

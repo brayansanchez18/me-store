@@ -38,13 +38,13 @@ if ($socials->status == 200) {
       <div class="p-2">
         <div class="d-flex justify-content-center small">
           <div class="p-2">
-            <a href="/perfil" class="text-white">
+            <a href="#login" class="text-white" data-bs-toggle="modal">
               Ingresar
             </a>
           </div>
           <div class="p-2">|</div>
           <div class="p-2">
-            <a href="/salir" class="text-white">
+            <a href="#register" class="text-white" data-bs-toggle="modal">
               Crear Cuenta
             </a>
           </div>
