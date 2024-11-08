@@ -218,6 +218,12 @@
           </p>
 
           <button class="btn btn-block bg-default templateColor">Ingresar</button>
+
+          <?php
+          require_once "controllers/users.controller.php";
+          $login = new UsersController();
+          $login->login();
+          ?>
         </form>
 
         <!-- --------------------------- FORMULARIO DE LOGIN -------------------------- -->
@@ -277,6 +283,12 @@
               <button type="submit" class="btn btn-default templateColor btn-block py-2">Recibir nueva contraseña</button>
             </div>
           </div>
+
+          <?php
+          require_once 'controllers/users.controller.php';
+          $reset = new UsersController();
+          $reset->resetPassword();
+          ?>
         </form>
       </div>
 
@@ -290,4 +302,4 @@
 
 <!-- -------------------------- RECUPERAR CONTRASEÑA -------------------------- -->
 
-<script src="<?php echo $path ?>views/assets/js/forms/forms.js"></script>
+<script src="<?= $path ?>views/assets/js/forms/forms.js"></script>

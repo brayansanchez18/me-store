@@ -158,6 +158,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Preload -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/preload/preload.css">
 
+  <!-- Select2 -->
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/select2/select2.min.css">
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/select2/select2-bootstrap4.min.css">
+
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/adminlte/adminlte.min.css">
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/template/template.css">
@@ -270,6 +274,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- https://youtu.be/6_lg2D_-GSk -->
   <script src="<?= $path ?>views/assets/js/plugins/preload/preload.js"></script>
 
+  <!-- Select2 -->
+  <!-- https://github.com/select2/select2 -->
+  <script src="<?= $path ?>views/assets/js/plugins/select2/select2.full.min.js"></script>
+
+  <!-- InputMask -->
+  <!-- https://github.com/RobinHerbots/Inputmask -->
+  <script src="<?= $path ?>views/assets/js/plugins/input-mask/moment.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/input-mask/jquery.inputmask.min.js"></script>
+
   <!-- sticky -->
   <!-- https://rgalus.github.io/sticky-js/ -->
   <script src="<?= $path ?>views/assets/js/plugins/sticky/sticky.min.js"></script>
@@ -295,6 +308,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     $confirm = CurlController::request($url, $method, $fields);
 
     if ($confirm->status == 200) {
+
+      if (isset($_SESSION['user'])) {
+        $_SESSION['user']->verification_user = 1;
+      }
 
       $url = 'users?id=' . $confirm->results[0]->id_user . '&nameId=id_user&token=no&except=verification_user';
       $method = 'PUT';
@@ -334,6 +351,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     if (!empty($routesArray[0])) {
       if (
         $routesArray[0] == 'admin' ||
+        $routesArray[0] == 'perfil' ||
         $routesArray[0] == 'salir' ||
         $routesArray[0] == 'no-found'
       ) {

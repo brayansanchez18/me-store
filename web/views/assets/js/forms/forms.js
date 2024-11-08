@@ -210,6 +210,21 @@ function validateJS(event, type) {
       $(".metaTags").html(event.target.value);
     }
   }
+
+  if (type == "number") {
+    var pattern = /^[0-9]{1,}$/;
+
+    if (!pattern.test(event.target.value)) {
+      $(event.target)
+        .parent()
+        .children(".invalid-feedback")
+        .html("El campo solo puede llevar numeros");
+
+      event.target.value = "";
+
+      return;
+    }
+  }
 }
 
 /* -------------------- Función para validar formularios -------------------- */
@@ -795,18 +810,22 @@ Agregar codigo telefónico
 //   $(".dialCode").html(event.target.value.split("_")[1]);
 // }
 
-/*=============================================
-Activar select 2
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                               ACTIVAR SELECT2                              */
+/* -------------------------------------------------------------------------- */
 
-// if ($(".select2").length > 0) {
-//   $(".select2").select2();
-// }
+if ($(".select2").length > 0) {
+  $(".select2").select2();
+}
 
-/*=============================================
-Activar Input Mask
-=============================================*/
+/* ----------------------------- ACTIVAR SELECT2 ---------------------------- */
 
-// if ($("[data-mask]").length > 0) {
-//   $("[data-mask]").inputmask();
-// }
+/* -------------------------------------------------------------------------- */
+/*                                 INPUT MASK                                 */
+/* -------------------------------------------------------------------------- */
+
+if ($("[data-mask]").length > 0) {
+  $("[data-mask]").inputmask();
+}
+
+/* ------------------------------- INPUT MASK ------------------------------- */

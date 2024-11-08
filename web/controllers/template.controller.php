@@ -278,4 +278,19 @@ class TemplateController
   }
 
   /* ------------------------- GENERAR TEXTO ALEATORIO ------------------------ */
+
+  /* -------------------------------------------------------------------------- */
+  /*                   REDIRECCIONAR A LA PAGINA DONDE ESTABA                   */
+  /* -------------------------------------------------------------------------- */
+
+  static public function urlRedirect()
+  {
+    if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
+      return 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    } else {
+      return 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    }
+  }
+
+  /* ----------------- REDIRECCIONAR A LA PAGINA DONDE ESTABA ----------------- */
 }
