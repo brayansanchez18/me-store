@@ -356,4 +356,169 @@ class UsersController
   }
 
   /* -------------------------- RECUPERAR CONTRASEÑA -------------------------- */
+
+  /* -------------------------------------------------------------------------- */
+  /*                         CONEXION CON REDES SOCIALES                        */
+  /* -------------------------------------------------------------------------- */
+
+  static public function socialConnect($type, $urlRedirect)
+  {
+    // if ($type == 'facebook') {
+
+    //   /* -------------------------------------------------------------------------- */
+    //   /*                       CONEXION CON LA APP DE FACEBOOK                      */
+    //   /* -------------------------------------------------------------------------- */
+
+    //   $fb = new \Facebook\Facebook([
+    //     'app_id' => '1111047793596332',
+    //     'app_secret' => 'd74fe710bdd7f09b42979dd0fa5f6fd6',
+    //     'default_graph_version' => 'v2.10',
+    //     //'default_access_token' => '{access-token}', // optional
+    //   ]);
+
+    //   /* --------------------- CONEXION CON LA APP DE FACEBOOK -------------------- */
+
+    //   /* -------------------------------------------------------------------------- */
+    //   /*                  CREAR LA REDIRECCION A LA API DE FACEBOOK                 */
+    //   /* -------------------------------------------------------------------------- */
+
+    //   $handler = $fb->getRedirectLoginHelper();
+
+    //   /* ---------------- CREAR LA REDIRECCION A LA API DE FACEBOOK --------------- */
+
+    //   /* -------------------------------------------------------------------------- */
+    //   /* ACTIVAMOS LA URL DE FACEBOOK CON LOS DOS PARAMETROS:
+    //   URL DE REGRESO
+    //   Y LOS DATOS QUE SOLICITAMOS */
+    //   /* -------------------------------------------------------------------------- */
+
+    //   $data = ['email'];
+
+    //   if (!isset($_GET['code'])) {
+
+    //     $fullUrl = $handler->getLoginUrl(TemplateController::urlRedirect(), $data);
+
+    //     /* ----------------------- REDIRECCIONAMOS A FACEBOOK ----------------------- */
+
+    //     echo '<script>
+    // 			window.location = "' . $fullUrl . '";
+    // 		</script>';
+    //   } else {
+
+    //     /* ----------------- SOLICITAMOS EL ACCESS TOKEN DE FACEBOOK ---------------- */
+
+
+    //     try {
+    //       $accessToken = $handler->getAccessToken();
+    //     } catch (\Facebook\Exceptions\FacebookResponseException $e) {
+
+    //       echo '<script>
+    // 					fncNotie("error", "Response Exception: ' . $e->getMessage() . '");
+    // 				</script>
+    // 			';
+    //       exit();
+    //     } catch (\Facebook\Exceptions\FacebookSDKException $e) {
+
+    //       echo '<script>
+    // 					fncNotie("error", "SDK Exception: ' . $e->getMessage() . '");
+    // 				</script>
+    // 			';
+    //       exit();
+    //     }
+
+    //     $oAuth2Client = $fb->getOAuth2Client();
+    //     $userData = null;
+
+    //     if (!$accessToken->isLongLived()) {
+    //       $accessToken = $oAuth2Client->getLongLivedAccesToken($accessToken);
+    //       $response = $fb->get("/me?fields=id, first_name, last_name, email, picture.type(large)", $accessToken);
+    //       $userData = $response->getGraphNode()->asArray();
+    //     }
+
+    //     if (!empty($userData)) {
+
+    //       /* -------------------------------------------------------------------------- */
+    //       /*                PREGUNTAMOS SI EL USUARIO YA ESTA REGISTRADO                */
+    //       /* -------------------------------------------------------------------------- */
+
+    //       $url = 'users?linkTo=email_user&equalTo=' . $userData['email'];
+    //       $method = "GET";
+    //       $fields = array();
+
+    //       $user = CurlController::request($url, $method, $fields);
+
+    //       /* -------------------- SI EL USUARIO NO ESTA REGISTRADO -------------------- */
+
+    //       if ($user->status != 200) {
+
+    //         $url = 'users?register=true&suffix=user';
+    //         $method = 'POST';
+    //         $fields = [
+    //           'name_user' => $userData['first_name'] . ' ' . $userData['last_name'],
+    //           'email_user'  => $userData['email'],
+    //           'method_user' => 'facebook',
+    //           'verification_user' => 1,
+    //           'date_created_user' => date('Y-m-d')
+    //         ];
+
+    //         $register = CurlController::request($url, $method, $fields);
+
+    //         if ($register->status == 200) {
+
+    //           $url = 'users?linkTo=email_user&equalTo=' . $userData['email'];
+    //           $method = 'GET';
+    //           $fields = [];
+
+    //           $login = CurlController::request($url, $method, $fields);
+
+    //           if ($login->status == 200) {
+    //             $_SESSION['user'] = $login->results[0];
+
+    //             echo '<script>
+    // 							localStorage.setItem("token-user", "' . $login->results[0]->token_user . '")
+    // 							window.location="' . $urlRedirect . '"
+    // 						</script>';
+    //           }
+    //         }
+    //       } else {
+
+    //         if ($user->results[0]->method_user != 'facebook') {
+    //           echo '<script>
+    // 						fncFormatInputs();
+    // 						fncMatPreloader("off");
+    // 						fncSweetAlert("error", "Su correo electrónico ya está registrado con el método de ingreso ' . $user->results[0]->method_user . '","' . $urlRedirect . '");
+    // 					</script>';
+    //           return;
+    //         }
+
+    //         // $url = 'users?login=true&suffix=user';
+    //         // $method = 'POST';
+    //         // $fields = [
+    //         //   'email_user' => $user->results[0]->email_user,
+    //         //   'password_user' => ''
+    //         // ];
+
+    //         // $login = CurlController::request($url, $method, $fields);
+
+    //         // if ($login->status == 200) {
+    //         // $_SESSION['user'] = $login->results[0];
+    //         $_SESSION['user'] = $user->results[0];
+
+    //         echo '<script>
+    // 							localStorage.setItem("token-user", "' . $user->results[0]->token_user . '")
+    // 							window.location="' . $urlRedirect . '"
+    // 						</script>';
+    //         // }
+    //       }
+
+    //       /* -------------- PREGUNTAMOS SI EL USUARIO YA ESTA REGISTRADO -------------- */
+    //     }
+    //   }
+    // }
+
+    if ($type == 'google') {
+    }
+  }
+
+  /* ----------------------- CONEXION CON REDES SOCIALES ---------------------- */
 }

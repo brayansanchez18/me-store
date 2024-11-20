@@ -11,12 +11,20 @@ class ComposerStaticInitc934005f2537e7135bd5cbdf4337ec44
         array (
             'PHPMailer\\PHPMailer\\' => 20,
         ),
+        'F' => 
+        array (
+            'Facebook\\' => 9,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'Facebook\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/facebook/graph-sdk/src/Facebook',
         ),
     );
 

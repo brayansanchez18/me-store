@@ -9,6 +9,32 @@ session_start();
 /* ----------------------- INICIAR VARIABLES DE SESION ---------------------- */
 
 /* -------------------------------------------------------------------------- */
+/*                      VALIDAR SI EL TOKEN ESTA EXPIRADO                     */
+/* -------------------------------------------------------------------------- */
+
+if (isset($_SESSION['user'])) {
+  date_default_timezone_set('America/Mexico_City');
+
+  $url = 'users?id=' . $_SESSION['user']->id_user . '&nameId=id_user&token=' . $_SESSION['user']->token_user . '&table=users&suffix=user';
+  $method = 'PUT';
+  $fields = 'date_updated_user=' . date('Y-m-d G:i:s');
+
+  $update = CurlController::request($url, $method, $fields);
+
+  if ($update->status == 303) {
+    session_destroy();
+
+    echo '<script>
+      window.location = "/";
+    </script>';
+
+    return;
+  }
+}
+
+/* -------------------- VALIDAR SI EL TOKEN ESTA EXPIRADO ------------------- */
+
+/* -------------------------------------------------------------------------- */
 /*                                VARIABLE PATH                               */
 /* -------------------------------------------------------------------------- */
 
@@ -28,6 +54,41 @@ foreach ($routesArray as $key => $value) {
 }
 
 /* ------------------------- CAPTURAR LAS RUTAS URL ------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                         CUANDO UTILIZAMOS LOCALHOST                        */
+/* -------------------------------------------------------------------------- */
+
+if ($_SERVER['SERVER_NAME'] == 'localhost') {
+  $routesArray = array_slice($routesArray, 2);
+  $path = $path . 'me-store/web/';
+  // echo '<pre>'; print_r($routesArray); echo '</pre>';
+}
+
+foreach ($routesArray as $key => $value) {
+  $routesArray[$key] = explode('?', $value)[0];
+}
+
+/* ----------------------- CUANDO UTILIZAMOS LOCALHOST ---------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                        INGRESO CON FACEBOOK Y GOOGLE                       */
+/* -------------------------------------------------------------------------- */
+
+// if (!empty($routesArray[0])) {
+
+//   // https://github.com/facebookarchive/php-graph-sdk/
+//   if ($routesArray[0] == 'facebook') {
+
+//     require_once 'controllers/users.controller.php';
+//     $response = UsersController::socialConnect($routesArray[0], $_GET['urlRedirect']);
+//     echo '<pre>';
+//     print_r($response);
+//     echo '</pre>';
+//   }
+// }
+
+/* ---------------------- INGRESO CON FACEBOOK Y GOOGLE --------------------- */
 
 /* -------------------------------------------------------------------------- */
 /*                          SOLICITUD GET DE TEMPLATE                         */
