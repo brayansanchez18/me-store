@@ -106,6 +106,10 @@
                   <option value="<?= $_SESSION['user']->state_user ?>">
                     <?= $_SESSION['user']->state_user ?>
                   </option>
+
+                  <?php foreach ($states as $key => $value): ?>
+                    <option value="<?= $value['nombre'] ?>"><?= $value['nombre'] ?></option>
+                  <?php endforeach ?>
                 <?php else: ?>
                   <option value="">Seleccionar Estado</option>
 

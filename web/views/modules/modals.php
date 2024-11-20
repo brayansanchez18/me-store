@@ -26,7 +26,8 @@
           <!-- ---------------------------- REGISTRO FACEBOOK --------------------------- -->
 
           <div class="col-sm-6 col-xs-12 text-center p-0 rounded-0">
-            <a href="<?= $path ?>facebook?urlRedirect=<?= TemplateController::urlRedirect() ?>">
+            <!-- <a href="<?= $path ?>facebook?urlRedirect=<?= TemplateController::urlRedirect() ?>"> -->
+            <a href="#">
               <p class="py-3 facebook mx-2">
                 <i class="fab fa-facebook mr-3"></i>
                 Registro con Facebook
@@ -157,7 +158,8 @@
           <!-- ---------------------------- INGRESO FACEBOOK ---------------------------- -->
 
           <div class="col-sm-6 col-xs-12 text-center p-0 rounded-0">
-            <a href="<?= $path ?>facebook?urlRedirect=<?= TemplateController::urlRedirect() ?>">
+            <!-- <a href="<?= $path ?>facebook?urlRedirect=<?= TemplateController::urlRedirect() ?>"> -->
+            <a href="#">
               <p class="py-3 facebook mx-2">
                 <i class="fab fa-facebook mr-3"></i>
                 Ingreso con Facebook

@@ -1,0 +1,2 @@
+[20-Nov-2024 05:03:22 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\me-store\web\views\pages\perfil\perfil.php on line 19
+[20-Nov-2024 05:03:22 Europe/Berlin] PHP Warning:  Attempt to read property "verification_user" on null in C:\xampp\htdocs\me-store\web\views\pages\perfil\perfil.php on line 19

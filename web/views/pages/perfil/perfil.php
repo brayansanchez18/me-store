@@ -1,3 +1,21 @@
+<?php
+if (!isset($_SESSION['user'])) {
+  echo '<script>
+    window.location = "' . $path . '404";
+  </script>';
+}
+?>
+
+<div class="container-fluid bg-light border mb-2">
+  <div class="container py-3">
+    <div class="d-flex flex-row-reverse lead small">
+      <div class="px-1 font-weight-bold">Perfil</div>
+      <div class="px-1">/</div>
+      <div class="px-1"><a href="/">Inicio</a></div>
+    </div>
+  </div>
+</div>
+
 <?php if ($_SESSION['user']->verification_user == 0): ?>
   <div class="container my-5">
     <div class="jumbotron bg-white shadow-lg text-center">
