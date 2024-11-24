@@ -215,10 +215,27 @@ if (!empty($products) && !isset($products[0]->check_variant)) {
     $products[$key]->offer_variant = $variant->offer_variant;
     $products[$key]->end_offer_variant = $variant->end_offer_variant;
     $products[$key]->stock_variant = $variant->stock_variant;
+
+    if (isset($_SESSION['user'])) {
+      $select = 'id_favorite';
+      $url = 'favorites?linkTo=id_product_favorite,id_user_favorite&equalTo=' . $value->id_product . ',' . $_SESSION['user']->id_user . '&select=' . $select;
+      $favorite = CurlController::request($url, $method, $fields);
+
+      // echo '<pre>' . print_r($favorite) . '</pre>';
+
+      if ($favorite->status == 200) {
+        $products[$key]->id_favorite = $favorite->results[0]->id_favorite;
+      } else {
+        $products[$key]->id_favorite = 0;
+      }
+    } else {
+      $products[$key]->id_favorite = 0;
+    }
   }
 }
 
 /* -------------- TRAEMOS LA PRIMERA VARIANTE DE LOS PRODUCTOS -------------- */
+
 
 ?>
 
@@ -298,7 +315,7 @@ if (!empty($products) && !isset($products[0]->check_variant)) {
           <p class="small">
             <?php
             $date1 = new DateTime($value->date_created_product);
-            $date2 = new DateTime(date("Y-m-d"));
+            $date2 = new DateTime(date('Y-m-d'));
             $diff = $date1->diff($date2);
             ?>
 
@@ -341,8 +358,20 @@ if (!empty($products) && !isset($products[0]->check_variant)) {
 
             <span class="float-end">
               <div class="btn-group btn-group-sm">
-                <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#login" idProduct="21" idFavorite="0" pageFavorite="no">
-                  <i class="fas fa-heart"></i>
+                <button
+                  type="button"
+                  class="btn btn-light border 
+                  <?= (isset($_SESSION['user']) && $value->id_favorite == 0) ? 'addFavorite' : '' ?>
+                  <?= (isset($_SESSION['user']) && $value->id_favorite > 0) ? 'remFavorite' : '' ?>"
+                  <?= (!isset($_SESSION['user'])) ? 'data-bs-toggle="modal" data-bs-target="#login"' : '' ?>
+                  idProduct="<?= $value->id_product ?>"
+                  idFavorite="<?= $value->id_favorite ?>"
+                  pageFavorite="no">
+                  <?php if ($value->id_favorite > 0): ?>
+                    <i class="fas fa-heart" style="color:#dc3545"></i>
+                  <?php else: ?>
+                    <i class="fas fa-heart"></i>
+                  <?php endif ?>
                 </button>
 
                 <button
@@ -417,8 +446,20 @@ if (!empty($products) && !isset($products[0]->check_variant)) {
 
               <span class="float-end">
                 <div class="btn-group btn-group-sm">
-                  <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#login" idProduct="21" idFavorite="0" pageFavorite="no">
-                    <i class="fas fa-heart"></i>
+                  <button
+                    type="button"
+                    class="btn btn-light border 
+                  <?= (isset($_SESSION['user']) && $value->id_favorite == 0) ? 'addFavorite' : '' ?>
+                  <?= (isset($_SESSION['user']) && $value->id_favorite > 0) ? 'remFavorite' : '' ?>"
+                    <?= (!isset($_SESSION['user'])) ? 'data-bs-toggle="modal" data-bs-target="#login"' : '' ?>
+                    idProduct="<?= $value->id_product ?>"
+                    idFavorite="<?= $value->id_favorite ?>"
+                    pageFavorite="no">
+                    <?php if ($value->id_favorite > 0): ?>
+                      <i class="fas fa-heart" style="color:#dc3545"></i>
+                    <?php else: ?>
+                      <i class="fas fa-heart"></i>
+                    <?php endif ?>
                   </button>
 
                   <button
