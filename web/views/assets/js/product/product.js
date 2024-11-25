@@ -183,41 +183,39 @@ $(document).on("change", ".changeVariant", function () {
 
   if (variant.stock_variant > 0) {
     $(".blockStock").html(`
-  
           <p class="lead font-weight-bold">
           Unidades disponibles: ${variant.stock_variant}
           </p>
-  
       `);
   } else {
     $(".blockStock").html(`
-  
           <p class="lead font-weight-bold text-danger">
           Sin unidades disponibles
           </p>
-  
       `);
   }
 
   /* ------------------------------ CAMBIAR STOCK ----------------------------- */
 
-  /*=============================================
-  Agregar ID de variante al botón addCart
-  =============================================*/
+  /* -------------------------------------------------------------------------- */
+  /*            AGREGAR ID DE VARIANTE AL BOTON DE AGREGAR AL CARRITO           */
+  /* -------------------------------------------------------------------------- */
 
-  // if ($(".addCart").length > 0) {
-  //   var addCart = $(".addCart");
+  if ($(".addCart").length > 0) {
+    var addCart = $(".addCart");
 
-  //   addCart.each((i) => {
-  //     $(addCart[i]).attr("idVariant", variant.id_variant);
+    addCart.each((i) => {
+      $(addCart[i]).attr("idVariant", variant.id_variant);
 
-  //     if (variant.offer_variant > 0) {
-  //       $(addCart[i]).attr("priceVariant", variant.offer_variant);
-  //     } else {
-  //       $(addCart[i]).attr("priceVariant", variant.price_variant);
-  //     }
-  //   });
-  // }
+      if (variant.offer_variant > 0) {
+        $(addCart[i]).attr("priceVariant", variant.offer_variant);
+      } else {
+        $(addCart[i]).attr("priceVariant", variant.price_variant);
+      }
+    });
+  }
+
+  /* ---------- AGREGAR ID DE VARIANTE AL BOTON DE AGREGAR AL CARRITO --------- */
 });
 
 /* ---------------------------- CAMBIAR VARIANTE ---------------------------- */
@@ -247,50 +245,53 @@ $(".btnInc").click(function () {
 });
 
 /* ---------------------- AUMENTAR Y DISMINUIR CANTIDAD --------------------- */
-/*=============================================
-Agregar al carrito de compras
-=============================================*/
 
-// $(document).on("click", ".addCart", function () {
-//   var idProduct = $(this).attr("idProduct");
-//   var idVariant = $(this).attr("idVariant");
-//   var quantity = $(this).attr("quantity");
-//   var priceVariant = $(this).attr("priceVariant");
+/* -------------------------------------------------------------------------- */
+/*                        AGREGAR AL CARRITO DE COMRPAS                       */
+/* -------------------------------------------------------------------------- */
 
-//   var data = new FormData();
-//   data.append("token", localStorage.getItem("token-user"));
-//   data.append("idProductCart", idProduct);
-//   data.append("idVariantCart", idVariant);
-//   data.append("quantityCart", quantity);
+$(document).on("click", ".addCart", function () {
+  var idProduct = $(this).attr("idProduct");
+  var idVariant = $(this).attr("idVariant");
+  var quantity = $(this).attr("quantity");
+  var priceVariant = $(this).attr("priceVariant");
 
-//   $.ajax({
-//     url: "/ajax/forms.ajax.php",
-//     method: "POST",
-//     data: data,
-//     contentType: false,
-//     cache: false,
-//     processData: false,
-//     success: function (response) {
-//       if (response == 200) {
-//         var shoppingBasket = $("#shoppingBasket").html();
-//         var totalShop = $("#totalShop").html();
+  var data = new FormData();
+  data.append("token", localStorage.getItem("token-user"));
+  data.append("idProductCart", idProduct);
+  data.append("idVariantCart", idVariant);
+  data.append("quantityCart", quantity);
 
-//         $("#shoppingBasket").html(Number(shoppingBasket) + Number(quantity));
-//         $("#totalShop").html(
-//           (Number(totalShop) + Number(quantity) * Number(priceVariant)).toFixed(
-//             2
-//           )
-//         );
+  $.ajax({
+    url: "/ajax/forms.ajax.php",
+    method: "POST",
+    data: data,
+    contentType: false,
+    cache: false,
+    processData: false,
+    success: function (response) {
+      if (response == 200) {
+        var shoppingBasket = $("#shoppingBasket").html();
+        var totalShop = $("#totalShop").html();
 
-//         fncSweetAlert(
-//           "footer",
-//           "Producto agregado a tu carrito de compras",
-//           "/carrito"
-//         );
-//       }
-//     },
-//   });
-// });
+        $("#shoppingBasket").html(Number(shoppingBasket) + Number(quantity));
+        $("#totalShop").html(
+          (Number(totalShop) + Number(quantity) * Number(priceVariant)).toFixed(
+            2
+          )
+        );
+
+        fncSweetAlert(
+          "footer",
+          "Producto agregado a tu carrito de compras",
+          "/carrito"
+        );
+      }
+    },
+  });
+});
+
+/* ---------------------- AGREGAR AL CARRITO DE COMPRAS --------------------- */
 
 /*=============================================
 Whatsapp

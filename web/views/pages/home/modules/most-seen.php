@@ -16,6 +16,30 @@ if ($viewsProducts->status == 200) {
 if (count($viewsProducts) == 0) {
   return;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                            SI EXISTEN FAVORITOS                            */
+/* -------------------------------------------------------------------------- */
+
+if (!empty($viewsProducts)) {
+  foreach ($viewsProducts as $key => $value) {
+    if (isset($_SESSION['user'])) {
+      $select = 'id_favorite';
+      $url = 'favorites?linkTo=id_product_favorite,id_user_favorite&equalTo=' . $value->id_product . ',' . $_SESSION['user']->id_user . '&select=' . $select;
+      $favorite = CurlController::request($url, $method, $fields);
+
+      if ($favorite->status == 200) {
+        $viewsProducts[$key]->id_favorite = $favorite->results[0]->id_favorite;
+      } else {
+        $viewsProducts[$key]->id_favorite = 0;
+      }
+    } else {
+      $viewsProducts[$key]->id_favorite = 0;
+    }
+  }
+}
+
+/* -------------------------- SI EXISTEN FAVORITOS -------------------------- */
 ?>
 
 <div class="container-fluid bg-light border">
@@ -107,8 +131,20 @@ if (count($viewsProducts) == 0) {
 
             <span class="float-end">
               <div class="btn-group btn-group-sm">
-                <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#login" idProduct="21" idFavorite="0" pageFavorite="no">
-                  <i class="fas fa-heart"></i>
+                <button
+                  type="button"
+                  class="btn btn-light border 
+                  <?= (isset($_SESSION['user']) && $value->id_favorite == 0) ? 'addFavorite' : '' ?>
+                  <?= (isset($_SESSION['user']) && $value->id_favorite > 0) ? 'remFavorite' : '' ?>"
+                  <?= (!isset($_SESSION['user'])) ? 'data-bs-toggle="modal" data-bs-target="#login"' : '' ?>
+                  idProduct="<?= $value->id_product ?>"
+                  idFavorite="<?= $value->id_favorite ?>"
+                  pageFavorite="no">
+                  <?php if ($value->id_favorite > 0): ?>
+                    <i class="fas fa-heart" style="color:#dc3545"></i>
+                  <?php else: ?>
+                    <i class="fas fa-heart"></i>
+                  <?php endif ?>
                 </button>
 
                 <button
@@ -180,8 +216,20 @@ if (count($viewsProducts) == 0) {
 
               <span class="float-end">
                 <div class="btn-group btn-group-sm">
-                  <button type="button" class="btn btn-light border" data-bs-toggle="modal" data-bs-target="#login" idProduct="21" idFavorite="0" pageFavorite="no">
-                    <i class="fas fa-heart"></i>
+                  <button
+                    type="button"
+                    class="btn btn-light border 
+                    <?= (isset($_SESSION['user']) && $value->id_favorite == 0) ? 'addFavorite' : '' ?>
+                    <?= (isset($_SESSION['user']) && $value->id_favorite > 0) ? 'remFavorite' : '' ?>"
+                    <?= (!isset($_SESSION['user'])) ? 'data-bs-toggle="modal" data-bs-target="#login"' : '' ?>
+                    idProduct="<?= $value->id_product ?>"
+                    idFavorite="<?= $value->id_favorite ?>"
+                    pageFavorite="no">
+                    <?php if ($value->id_favorite > 0): ?>
+                      <i class="fas fa-heart" style="color:#dc3545"></i>
+                    <?php else: ?>
+                      <i class="fas fa-heart"></i>
+                    <?php endif ?>
                   </button>
 
                   <button

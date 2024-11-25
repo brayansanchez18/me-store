@@ -247,15 +247,25 @@ if (!empty($product)) {
             </div>
 
             <div class="col-12 col-md-9">
-              <button class="btn btn-dark btn-block font-weight-bold py-3 pulseAnimation">
-                AGREGAR AL CARRITO
-              </button>
+              <button
+                class="btn btn-dark btn-block font-weight-bold py-3 pulseAnimation 
+                <?= (isset($_SESSION['user'])) ? 'addCart' : '' ?>"
+                <?= (!isset($_SESSION['user'])) ? 'data-bs-toggle="modal" data-bs-target="#login"' : '' ?>
+                idProduct="<?= $product->id_product ?>"
+                idVariant="<?= $product->variants[0]->id_variant ?>"
+                priceVariant="<?= ($product->variants[0]->offer_variant > 0) ? $product->variants[0]->offer_variant : $product->variants[0]->price_variant ?>"
+                quantity="1">AGREGAR AL CARRITO</button>
             </div>
           <?php else: ?>
             <div class="col-12">
-              <button class="btn btn-dark btn-block font-weight-bold py-3 pulseAnimation">
-                AGREGAR AL CARRITO
-              </button>
+              <button
+                class="btn btn-dark btn-block font-weight-bold py-3 pulseAnimation 
+                <?= (isset($_SESSION['user'])) ? 'addCart' : '' ?>"
+                <?= (!isset($_SESSION['user'])) ? 'data-bs-toggle="modal" data-bs-target="#login"' : '' ?>
+                idProduct="<?= $product->id_product ?>"
+                idVariant="<?= $product->variants[0]->id_variant ?>"
+                priceVariant="<?= ($product->variants[0]->offer_variant > 0) ? $product->variants[0]->offer_variant : $product->variants[0]->price_variant ?>"
+                quantity="1">AGREGAR AL CARRITO</button>
             </div>
           <?php endif ?>
         </div>

@@ -103,7 +103,7 @@ function fncSweetAlert(type, text, url) {
       Swal.fire({
         icon: "success",
         title: text,
-        confirmButtonText: "¡Continuar comprando!",
+        confirmButtonText: "Continuar comprando",
         footer: '<a href="' + url + '">Ir al carrito de compras</a>',
       });
 

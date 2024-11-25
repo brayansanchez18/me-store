@@ -95,6 +95,42 @@ class FormsController
   }
 
   /* ---------------------- QUITAR PRODUCTO DE FAVORITOS ---------------------- */
+
+  /* -------------------------------------------------------------------------- */
+  /*                   AGREGAR AL CARRITO DE COMPRAS EN LA BD                   */
+  /* -------------------------------------------------------------------------- */
+
+  public $idProductCart;
+  public $idVariantCart;
+  public $quantityCart;
+
+  public function addCart()
+  {
+    $select = 'id_user';
+    $url = 'users?linkTo=token_user&equalTo=' . $this->token . '&select=' . $select;
+    $method = 'GET';
+    $fields = [];
+
+    $data = CurlController::request($url, $method, $fields);
+
+    if ($data->status == 200) {
+      $url = 'carts?token=' . $this->token . '&table=users&suffix=user';
+      $method = 'POST';
+      $fields = [
+        'id_user_cart' => $data->results[0]->id_user,
+        'id_product_cart' => $this->idProductCart,
+        'id_variant_cart' => $this->idVariantCart,
+        'quantity_cart' => $this->quantityCart,
+        'date_created_cart' => date('Y-m-d')
+      ];
+
+      $addCart = CurlController::request($url, $method, $fields);
+
+      echo $addCart->status;
+    }
+  }
+
+  /* ----------------- AGREGAR AL CARRITO DE COMPRAS EN LA BD ----------------- */
 }
 
 /* -------------------------------------------------------------------------- */
@@ -148,3 +184,18 @@ if (isset($_POST['idFavorite'])) {
 }
 
 /* ---------------------- QUITAR PRODUCTO DE FAVORITOS ---------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                   AGREGAR AL CARRITO DE COMPRAS EN LA BD                   */
+/* -------------------------------------------------------------------------- */
+
+if (isset($_POST['idProductCart'])) {
+  $addCart = new FormsController();
+  $addCart->token = $_POST['token'];
+  $addCart->idProductCart = $_POST['idProductCart'];
+  $addCart->idVariantCart = $_POST['idVariantCart'];
+  $addCart->quantityCart = $_POST['quantityCart'];
+  $addCart->addCart();
+}
+
+/* ----------------- AGREGAR AL CARRITO DE COMPRAS EN LA BD ----------------- */
