@@ -488,3 +488,4 @@ Stack trace:
 [24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 69
 [24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$offer_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 80
 [24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 83
+[25-Nov-2024 20:06:17 America/Mexico_City] PHP Parse error:  syntax error, unexpected token ")" in C:\xampp\htdocs\me-store\web\views\pages\carrito\carrito.php on line 39

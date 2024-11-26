@@ -395,13 +395,11 @@ if (!empty($products)) {
         <div class="media border-bottom px-3 pt-4 pb-3 pb-lg-2">
           <a href="/<?= $value->url_product ?>">
             <figure class="imgProduct">
-              <figure class="imgProduct">
-                <?php if ($value->type_variant == 'gallery'): ?>
-                  <img src="<?= $path ?>views/assets/img/products/<?= $value->url_product ?>/<?php echo json_decode($value->media_variant)[0] ?>" class="img-fluid" alt="<?= $value->name_product ?>" style="width:150px">
-                <?php else: $arrayYT = explode("/", $value->media_variant) ?>
-                  <img src="http://img.youtube.com/vi/<?php echo end($arrayYT) ?>/maxresdefault.jpg" class="img-fluid bg-light" alt="<?= $value->name_product ?>" style="width:150px">
-                <?php endif ?>
-              </figure>
+              <?php if ($value->type_variant == 'gallery'): ?>
+                <img src="<?= $path ?>views/assets/img/products/<?= $value->url_product ?>/<?php echo json_decode($value->media_variant)[0] ?>" class="img-fluid" alt="<?= $value->name_product ?>" style="width:150px">
+              <?php else: $arrayYT = explode("/", $value->media_variant) ?>
+                <img src="http://img.youtube.com/vi/<?php echo end($arrayYT) ?>/maxresdefault.jpg" class="img-fluid bg-light" alt="<?= $value->name_product ?>" style="width:150px">
+              <?php endif ?>
             </figure>
           </a>
 
