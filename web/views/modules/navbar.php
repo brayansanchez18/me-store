@@ -11,6 +11,30 @@ if ($dataCategories->status == 200) {
 } else {
   $dataCategories = [];
 }
+
+/* -------------------------------------------------------------------------- */
+/*                             CARRITO DE COMPRAS                             */
+/* -------------------------------------------------------------------------- */
+
+if (isset($_SESSION['user'])) {
+  $select = 'id_cart,url_product,type_variant,media_variant,name_product,description_variant,quantity_cart,offer_variant,price_variant';
+  $url = 'relations?rel=carts,variants,products&type=cart,variant,product&linkTo=id_user_cart&equalTo=' . $_SESSION['user']->id_user . '&select=' . $select;
+  $method = 'GET';
+  $fields = [];
+
+  $carts = CurlController::request($url, $method, $fields);
+
+  if ($carts->status == 200) {
+    $carts = $carts->results;
+  } else {
+    $carts = [];
+  }
+} else {
+  $carts = [];
+}
+
+
+/* --------------------------- CARRITO DE COMPRAS --------------------------- */
 ?>
 <div class="container py-2 py-lg-4">
   <div class="row">
@@ -108,8 +132,27 @@ if ($dataCategories->status == 200) {
           </button>
         </a>
 
+        <?php
+
+        $shoppingBasket = 0;
+        $totalShop = 0;
+
+        if (!empty($carts)) {
+          foreach ($carts as $key => $value) {
+            $shoppingBasket += $value->quantity_cart;
+
+            if ($value->offer_variant > 0) {
+              $totalShop += $value->quantity_cart * $value->offer_variant;
+            } else {
+              $totalShop += $value->quantity_cart * $value->price_variant;
+            }
+          }
+        }
+
+        ?>
+
         <div class="small border float-start ps-2 pe-5 w-100">
-          TU CESTA <span id="shoppingBasket">0</span><br> USD $<span id="totalShop">0.00</span>
+          TU CESTA <span id="shoppingBasket"><?= $shoppingBasket ?></span><br> MXN $<span id="totalShop"><?= number_format($totalShop, 2) ?></span>
         </div>
       </div>
     </div>

@@ -155,8 +155,8 @@ $(document).on("change", ".changeVariant", function () {
       $(".countdown").attr("ddate", variant.end_offer_variant);
 
       countDown();
-      const el = document.querySelector("#contenedor-contador");
-      el.classList.remove("d-none");
+      // const el = document.querySelector("#contenedor-contador");
+      // el.classList.remove("d-none");
     } else {
       var day = new Date().getDate();
       day = ("0" + day).slice(-2);
@@ -170,8 +170,8 @@ $(document).on("change", ".changeVariant", function () {
       );
 
       countDown();
-      const el = document.querySelector("#contenedor-contador");
-      el.classList.remove("d-none");
+      // const el = document.querySelector("#contenedor-contador");
+      // el.classList.remove("d-none");
     }
   } else {
     $(".countdown").hide();
