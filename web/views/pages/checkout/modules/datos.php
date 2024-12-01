@@ -135,6 +135,6 @@
       id="address"
       rows="5"
       onchange="validateJS(event,'complete')"
-      name="address_user"><?php echo $_SESSION["user"]->address_user ?></textarea>
+      name="address_user"><?= $_SESSION['user']->address_user ?></textarea>
   </div>
 </div>

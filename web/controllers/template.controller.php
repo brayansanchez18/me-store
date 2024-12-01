@@ -293,4 +293,16 @@ class TemplateController
   }
 
   /* ----------------- REDIRECCIONAR A LA PAGINA DONDE ESTABA ----------------- */
+
+  /* -------------------------------------------------------------------------- */
+  /*              FUNCION PARA GENERAR CODIGO NUMERICOS ALEATORIOS              */
+  /* -------------------------------------------------------------------------- */
+
+  static public function genCodec($length)
+  {
+    $codec = rand(1 * $length, (10 * $length) - 1) . Time();
+    return $codec;
+  }
+
+  /* ------------- FUNCION PARA GENERAR CODIGO NUMERICOS ALATORIOS ------------ */
 }

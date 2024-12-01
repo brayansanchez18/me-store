@@ -508,3 +508,6 @@ Stack trace:
 [01-Dec-2024 14:20:08 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$department_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 102
 [01-Dec-2024 14:20:08 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$city_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 124
 [01-Dec-2024 14:20:08 America/Mexico_City] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 159
+[01-Dec-2024 16:58:44 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$country_user in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 40
+[01-Dec-2024 16:58:44 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$city_user in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 41
+[01-Dec-2024 16:58:44 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$department_user in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 41

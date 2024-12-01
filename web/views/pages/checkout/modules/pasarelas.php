@@ -34,5 +34,11 @@
     </div>
 
     <button type="submit" class="btn btn-default btn-block templateColor border-0 rounded py-2">Pagar</button>
+
+    <?php
+    require_once "controllers/payments.controller.php";
+    $payment = new PaymentsController();
+    $payment->payment();
+    ?>
   </div>
 </div>
