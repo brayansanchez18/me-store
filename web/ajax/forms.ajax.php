@@ -131,6 +131,42 @@ class FormsController
   }
 
   /* ----------------- AGREGAR AL CARRITO DE COMPRAS EN LA BD ----------------- */
+
+  /* -------------------------------------------------------------------------- */
+  /*              ACTUALIZAR CANTIDAD DEL CARRITO EN BASE DE DATOS              */
+  /* -------------------------------------------------------------------------- */
+
+  public $idCartUpdate;
+  public $quantityCartUpdate;
+
+  public function updateCart()
+  {
+    $url = 'carts?id=' . $this->idCartUpdate . '&nameId=id_cart&token=' . $this->token . '&table=users&suffix=user';
+    $method = 'PUT';
+    $fields = 'quantity_cart=' . $this->quantityCartUpdate;
+    $updateCart = CurlController::request($url, $method, $fields);
+    echo $updateCart->status;
+  }
+
+  /* ------------ ACTUALIZAR CANTIDAD DEL CARRITO EN BASE DE DATOS ------------ */
+
+  /* -------------------------------------------------------------------------- */
+  /*              REMOVER PRODUCTO DEL CARRITO EN LA BASE DE DATOS              */
+  /* -------------------------------------------------------------------------- */
+
+  public $idCartDelete;
+
+  public function remCart()
+  {
+    $url = 'carts?id=' . $this->idCartDelete . '&nameId=id_cart&token=' . $this->token . '&table=users&suffix=user';
+    $method = 'DELETE';
+    $fields = [];
+    $remCart = CurlController::request($url, $method, $fields);
+    echo $remCart->status;
+  }
+
+
+  /* ------------ REMOVER PRODUCTO DEL CARRITO EN LA BASE DE DATOS ------------ */
 }
 
 /* -------------------------------------------------------------------------- */
@@ -199,3 +235,30 @@ if (isset($_POST['idProductCart'])) {
 }
 
 /* ----------------- AGREGAR AL CARRITO DE COMPRAS EN LA BD ----------------- */
+
+/* -------------------------------------------------------------------------- */
+/*              ACTUALIZAR CANTIDAD DEL CARRITO EN BASE DE DATOS              */
+/* -------------------------------------------------------------------------- */
+
+if (isset($_POST['idCartUpdate'])) {
+  $updateCart = new FormsController();
+  $updateCart->token = $_POST['token'];
+  $updateCart->idCartUpdate = $_POST['idCartUpdate'];
+  $updateCart->quantityCartUpdate = $_POST['quantityCartUpdate'];
+  $updateCart->updateCart();
+}
+
+/* ------------ ACTUALIZAR CANTIDAD DEL CARRITO EN BASE DE DATOS ------------ */
+
+/* -------------------------------------------------------------------------- */
+/*              REMOVER PRODUCTO DEL CARRITO EN LA BASE DE DATOS              */
+/* -------------------------------------------------------------------------- */
+
+if (isset($_POST['idCartDelete'])) {
+  $remCart = new FormsController();
+  $remCart->token = $_POST['token'];
+  $remCart->idCartDelete = $_POST['idCartDelete'];
+  $remCart->remCart();
+}
+
+  /* ------------ REMOVER PRODUCTO DEL CARRITO EN LA BASE DE DATOS ------------ */
