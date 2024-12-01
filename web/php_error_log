@@ -489,3 +489,22 @@ Stack trace:
 [24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$offer_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 80
 [24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 83
 [25-Nov-2024 20:06:17 America/Mexico_City] PHP Parse error:  syntax error, unexpected token ")" in C:\xampp\htdocs\me-store\web\views\pages\carrito\carrito.php on line 39
+[01-Dec-2024 14:00:23 America/Mexico_City] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 270
+[01-Dec-2024 14:00:23 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:270
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(446): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 270
+[01-Dec-2024 14:15:05 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$country_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 63
+[01-Dec-2024 14:15:05 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$department_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 98
+[01-Dec-2024 14:15:05 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$city_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 120
+[01-Dec-2024 14:15:05 America/Mexico_City] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 155
+[01-Dec-2024 14:16:32 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$country_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 63
+[01-Dec-2024 14:16:32 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$department_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 98
+[01-Dec-2024 14:16:32 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$city_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 120
+[01-Dec-2024 14:16:32 America/Mexico_City] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 155
+[01-Dec-2024 14:20:08 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$department_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 102
+[01-Dec-2024 14:20:08 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$city_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 124
+[01-Dec-2024 14:20:08 America/Mexico_City] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 159
