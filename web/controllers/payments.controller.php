@@ -108,9 +108,37 @@ class PaymentsController
 
           /* ----------------------- PASARELA DE PAGOS DLOCAL GO ---------------------- */
           if ($_POST['optradio'] == 'dlocal') {
-            echo '<script>
-              window.location ="' . TemplateController::path() . 'thanks?ref=' . $ref . '"
-            </script>';
+            $url = 'v1/payments';
+            $method = 'POST';
+            $fields = '{
+              "amount": ' . $totalCart . ',
+              "currency": "MXN",
+              "country": "MX",
+              "success_url":"' . TemplateController::path() . 'thanks?ref=' . $ref . '",
+              "back_url": "' . TemplateController::path() . 'checkout"
+						}';
+
+            $dlocal = CurlController::dlocal($url, $method, $fields);
+
+            if ($dlocal->status == 'PENDING') {
+              $count = 0;
+
+              foreach ($carts as $key => $value) {
+                $url = 'carts?id=' . $value->id_cart . '&nameId=id_cart&token=' . $_SESSION['user']->token_user . '&table=users&suffix=user';
+                $method = 'PUT';
+                $fields = 'ref_cart=' . $ref . '&order_cart=' . $dlocal->id . '&method_cart=' . $_POST['optradio'] . '&price_cart=' . $totalCart;
+
+                $updateCart = CurlController::request($url, $method, $fields);
+
+                $count++;
+
+                if ($count == count($carts)) {
+                  echo '<script>
+										window.location ="' . $dlocal->redirect_url . '"
+									</script>';
+                }
+              }
+            }
           }
 
           /* --------------------- PASARELA DE PAGOS MERCADO PAGO --------------------- */

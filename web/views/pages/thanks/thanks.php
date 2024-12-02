@@ -26,6 +26,16 @@ if (isset($_GET['ref'])) {
         $status = 'ok';
       }
     }
+
+    /* ------------------------- VALIDAR PAGO CON DLOCAL ------------------------ */
+    if ($refs->results[0]->method_cart == 'dlocal') {
+      $url = 'v1/payments/' . $refs->results[0]->order_cart;
+      $dlocal = CurlController::dlocal($url, $method, $fields);
+
+      if ($dlocal->status == 'PAID') {
+        $status = 'ok';
+      }
+    }
   }
 
   /* -------------------------- CONSULTAR REFERENCIA -------------------------- */

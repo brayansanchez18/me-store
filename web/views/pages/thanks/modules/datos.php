@@ -44,11 +44,15 @@ $status = 'ok';
 
     <div class="col my-3">
       <?php
-      $methodCart = 'Mercado Pago';
+      // if (isset($carts[0]->method_cart)) {
+      //   $methodCart = $carts[0]->method_cart;
+      // } else {
+      //   $methodCart = $carts[0]->method_order;
+      // }
       ?>
 
       <p class="small m-0 p-0"><strong>Método de pago</strong></p>
-      <p class="small m-0 p-0">Pasarela de pagos <span class="text-uppercase"><?= $methodCart ?></span></p>
+      <p class="small m-0 p-0">Pasarela de pagos <span class="text-uppercase"><?= $refs->results[0]->method_cart ?></span></p>
     </div>
   </div>
 </div>

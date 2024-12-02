@@ -195,3 +195,5 @@ Stack trace:
 #2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
 #3 {main}
   thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 22
+[01-Dec-2024 20:37:52 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$status in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 123
+[01-Dec-2024 20:48:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 50
