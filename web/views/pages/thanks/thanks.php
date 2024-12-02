@@ -1,6 +1,34 @@
 <?php
 
 if (isset($_GET['ref'])) {
+  $status = 'pending';
+
+  /* -------------------------------------------------------------------------- */
+  /*                            CONSULTAR REFERENCIA                            */
+  /* -------------------------------------------------------------------------- */
+
+  $url = 'carts?linkTo=ref_cart&equalTo=' . $_GET['ref'];
+  // $url = "relations?rel=carts,variants,products&type=cart,variant,product&linkTo=ref_cart&equalTo=" . $_GET["ref"];
+  $method = 'GET';
+  $fields = [];
+
+  $refs = CurlController::request($url, $method, $fields);
+  // $carts = CurlController::request($url, $method, $fields);
+
+  if ($refs->status == 200) {
+
+    /* ----------------------- VALIDAR EL PAGO CON PAYPAL ----------------------- */
+    if ($refs->results[0]->method_cart == 'paypal') {
+      $url = 'v2/checkout/orders/' . $refs->results[0]->order_cart;
+      $paypal = CurlController::paypal($url, $method, $fields);
+
+      if ($paypal->status == 'APPROVED') {
+        $status = 'ok';
+      }
+    }
+  }
+
+  /* -------------------------- CONSULTAR REFERENCIA -------------------------- */
 } else {
   echo '<script>
     window.location = "' . $path . '404";

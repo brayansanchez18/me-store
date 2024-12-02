@@ -1,513 +1,197 @@
-[20-Nov-2024 05:03:22 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\me-store\web\views\pages\perfil\perfil.php on line 19
-[20-Nov-2024 05:03:22 Europe/Berlin] PHP Warning:  Attempt to read property "verification_user" on null in C:\xampp\htdocs\me-store\web\views\pages\perfil\perfil.php on line 19
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:30 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[24-Nov-2024 02:55:40 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 19:55:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:03:24 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:36 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:20:46 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:07 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:29 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:29 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:29 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:21:29 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:21:29 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:21:29 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:23:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:23:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:23:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:23:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 347
-[23-Nov-2024 20:23:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 348
-[23-Nov-2024 20:23:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 351
-[23-Nov-2024 20:26:28 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 362
-[23-Nov-2024 20:26:28 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 363
-[23-Nov-2024 20:26:28 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:27:53 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 362
-[23-Nov-2024 20:27:53 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 363
-[23-Nov-2024 20:27:53 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:27:53 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 368
-[23-Nov-2024 20:28:06 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 362
-[23-Nov-2024 20:28:06 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 363
-[23-Nov-2024 20:28:06 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:28:06 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 368
-[23-Nov-2024 20:33:06 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 364
-[23-Nov-2024 20:33:06 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 365
-[23-Nov-2024 20:33:06 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 368
-[23-Nov-2024 20:33:06 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:33:32 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 364
-[23-Nov-2024 20:33:32 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 365
-[23-Nov-2024 20:33:32 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 368
-[23-Nov-2024 20:33:32 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:34:33 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 364
-[23-Nov-2024 20:34:33 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 365
-[23-Nov-2024 20:34:33 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 368
-[23-Nov-2024 20:34:33 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:35:13 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:35:13 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:35:13 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:35:13 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:35:41 America/Mexico_City] PHP Warning:  Undefined array key "id_favorite" in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 240
-[23-Nov-2024 20:35:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:35:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:35:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:35:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:35:55 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:240
+[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
+[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
+[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
+[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
+[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
+[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
+[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
+[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:08:53 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
 Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\template.php(444): include_once()
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
+[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_order" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 6
+[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 17
+[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 23
+[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 27
+[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 38
+[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 60
+[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 63
+[01-Dec-2024 19:09:59 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:72
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 72
+[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_order" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 6
+[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 17
+[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 23
+[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 27
+[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 38
+[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 60
+[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 63
+[01-Dec-2024 19:10:25 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:72
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 72
+[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
+[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
+[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
+[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
+[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
+[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
+[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
+[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:11:58 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
+[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
+[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
+[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
+[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
+[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
+[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
+[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
+[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:12:00 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
+[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
+[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
+[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
+[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
+[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
+[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
+[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
+[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:12:53 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
+[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
+[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
+[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
+[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
+[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
+[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
+[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
+[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:13:02 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
+[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
+[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
+[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
+[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
+[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
+[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
+[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
+[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:14:20 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
+[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
+[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
+[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
+[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
+[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
+[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
+[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
+[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:14:29 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
+[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
+[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
+[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
+[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
+[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
+[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
+[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
+[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
+[01-Dec-2024 19:14:30 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
+[01-Dec-2024 19:25:50 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:21
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
 #1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
 #3 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 240
-[23-Nov-2024 20:36:00 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:00 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:00 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:00 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 367
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 370
-[23-Nov-2024 20:36:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 372
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 365
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 369
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 371
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 365
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 369
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 371
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 365
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 366
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 369
-[23-Nov-2024 20:38:43 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_favorite in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 371
-[24-Nov-2024 19:30:48 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\template.php on line 103
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 31
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$media_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 35
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$offer_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 65
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$stock_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 69
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 69
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$offer_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 80
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 83
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 31
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$media_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 35
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$offer_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 65
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$stock_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 69
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 69
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$offer_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 80
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 83
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 31
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$media_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 35
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$offer_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 65
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$stock_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 69
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 69
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$offer_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 80
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 83
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 31
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$media_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 35
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$offer_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 65
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$stock_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 69
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 69
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$offer_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 80
-[24-Nov-2024 12:47:17 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_variant in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\favoritos.php on line 83
-[25-Nov-2024 20:06:17 America/Mexico_City] PHP Parse error:  syntax error, unexpected token ")" in C:\xampp\htdocs\me-store\web\views\pages\carrito\carrito.php on line 39
-[01-Dec-2024 14:00:23 America/Mexico_City] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 270
-[01-Dec-2024 14:00:23 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:270
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 21
+[01-Dec-2024 19:26:59 America/Mexico_City] PHP Parse error:  Unmatched '}' in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 32
+[01-Dec-2024 19:27:21 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:21
 Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\template.php(446): include_once()
+#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
 #1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
 #3 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 270
-[01-Dec-2024 14:15:05 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$country_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 63
-[01-Dec-2024 14:15:05 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$department_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 98
-[01-Dec-2024 14:15:05 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$city_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 120
-[01-Dec-2024 14:15:05 America/Mexico_City] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 155
-[01-Dec-2024 14:16:32 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$country_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 63
-[01-Dec-2024 14:16:32 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$department_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 98
-[01-Dec-2024 14:16:32 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$city_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 120
-[01-Dec-2024 14:16:32 America/Mexico_City] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 155
-[01-Dec-2024 14:20:08 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$department_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 102
-[01-Dec-2024 14:20:08 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$city_user in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 124
-[01-Dec-2024 14:20:08 America/Mexico_City] PHP Warning:  Undefined array key 1 in C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\datos.php on line 159
-[01-Dec-2024 16:58:44 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$country_user in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 40
-[01-Dec-2024 16:58:44 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$city_user in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 41
-[01-Dec-2024 16:58:44 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$department_user in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 41
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 21
+[01-Dec-2024 19:27:52 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:22
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 22
+[01-Dec-2024 19:27:54 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:22
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 22
