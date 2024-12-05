@@ -143,9 +143,48 @@ class PaymentsController
 
           /* --------------------- PASARELA DE PAGOS MERCADO PAGO --------------------- */
           if ($_POST['optradio'] == 'mercado_pago') {
-            echo '<script>
-              window.location ="' . TemplateController::path() . 'thanks?ref=' . $ref . '"
-            </script>';
+            $url = 'checkout/preferences';
+            $method = 'POST';
+            $fields = '{
+                "auto_return":"approved",
+                "back_urls": {
+                  "success":"' . TemplateController::path() . 'thanks?ref=' . $ref . '",
+                  "pending":"' . TemplateController::path() . 'thanks?ref=' . $ref . '",
+                  "failure":"' . TemplateController::path() . 'checkout"
+                },
+                "expires": false,
+                "items": [
+                  {
+                    "title": "Pago en ME-STORE",
+                    "quantity": 1,
+                    "currency_id": "MXN",
+                    "unit_price": ' . round($totalCart) . '
+                  }
+                ],
+              "notification_url":"' . TemplateController::path() . 'thanks"
+            }';
+
+            $mercadoPago = CurlController::mercadoPago($url, $method, $fields);
+
+            if ($mercadoPago->auto_return == 'approved') {
+
+              $count = 0;
+
+              foreach ($carts as $key => $value) {
+                $url = 'carts?id=' . $value->id_cart . '&nameId=id_cart&token=' . $_SESSION['user']->token_user . '&table=users&suffix=user';
+                $method = 'PUT';
+                $fields = 'ref_cart=' . $ref . '&order_cart=' . null . '&method_cart=' . $_POST['optradio'] . '&price_cart=' . $totalCart;
+                $updateCart = CurlController::request($url, $method, $fields);
+
+                $count++;
+
+                if ($count == count($carts)) {
+                  echo '<script>
+										window.location ="' . $mercadoPago->init_point . '"
+									</script>';
+                }
+              }
+            }
           }
         }
       }

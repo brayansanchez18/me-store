@@ -197,3 +197,38 @@ Stack trace:
   thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 22
 [01-Dec-2024 20:37:52 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$status in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 123
 [01-Dec-2024 20:48:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 50
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 2
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "id_user" on null in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 2
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "name_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 15
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "email_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 36
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "name_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 38
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "address_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 39
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "municipality_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 40
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "zip_code_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 41
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "state_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 41
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "phone_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 42
+[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "method_cart" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 55
+[04-Dec-2024 20:15:01 America/Mexico_City] PHP Warning:  Attempt to read property "method_cart" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 55
+[05-Dec-2024 15:37:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$status in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 73
+[05-Dec-2024 15:38:24 America/Mexico_City] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:72
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 72
+[05-Dec-2024 15:38:43 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:72
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(72): json_decode(Object(stdClass))
+#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#4 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 72
+[05-Dec-2024 15:38:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:72
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 72

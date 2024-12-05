@@ -36,6 +36,45 @@ if (isset($_GET['ref'])) {
         $status = 'ok';
       }
     }
+
+    /* -------------------- VALIDAR EL PAGO CON MERCADO PAGO -------------------- */
+    if ($refs->results[0]->method_cart == 'mercado_pago') {
+      if ($refs->results[0]->order_cart == '') {
+        if (isset($_GET['payment_id'])) {
+          $count = 0;
+
+          foreach ($carts as $key => $value) {
+            $count++;
+            $url = 'carts?id=' . $value->id_cart . '&nameId=id_cart&token=' . $_SESSION['user']->token_user . '&table=users&suffix=user';
+            $method = 'PUT';
+            $fields = 'order_cart=' . $_GET['payment_id'];
+            // $value->order_cart = $_GET['payment_id'];
+            $updateCart = CurlController::request($url, $method, $fields);
+
+            if ($count == count($carts)) {
+              $url = 'v1/payments/' . $_GET['payment_id'];
+              $method = 'GET';
+              $fields = [];
+
+              $mercadoPago = CurlController::mercadoPago($url, $method, $fields);
+
+              if ($mercadoPago->status == 'approved') {
+                $status = 'ok';
+              }
+            }
+          }
+        }
+      } else {
+        $url = 'v1/payments/' . $refs->results[0]->order_cart;
+        $method = 'GET';
+        $fields = [];
+        $mercadoPago = CurlController::mercadoPago($url, $method, $fields);
+
+        if ($mercadoPago->status == 'approved') {
+          $status = 'ok';
+        }
+      }
+    }
   }
 
   /* -------------------------- CONSULTAR REFERENCIA -------------------------- */

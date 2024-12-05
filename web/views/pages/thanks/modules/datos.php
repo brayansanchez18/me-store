@@ -4,8 +4,6 @@ $method = 'GET';
 $fields = [];
 
 $user = CurlController::request($url, $method, $fields)->results[0];
-
-$status = 'ok';
 ?>
 
 <div class="d-flex p-3">
