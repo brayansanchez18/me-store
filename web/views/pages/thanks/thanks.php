@@ -43,7 +43,7 @@ if (isset($_GET['ref'])) {
         if (isset($_GET['payment_id'])) {
           $count = 0;
 
-          foreach ($carts as $key => $value) {
+          foreach ($refs->results as $key => $value) {
             $count++;
             $url = 'carts?id=' . $value->id_cart . '&nameId=id_cart&token=' . $_SESSION['user']->token_user . '&table=users&suffix=user';
             $method = 'PUT';
@@ -51,7 +51,7 @@ if (isset($_GET['ref'])) {
             // $value->order_cart = $_GET['payment_id'];
             $updateCart = CurlController::request($url, $method, $fields);
 
-            if ($count == count($carts)) {
+            if ($count == count($refs->results)) {
               $url = 'v1/payments/' . $_GET['payment_id'];
               $method = 'GET';
               $fields = [];
@@ -75,6 +75,81 @@ if (isset($_GET['ref'])) {
         }
       }
     }
+
+    /* -------------------------------------------------------------------------- */
+    /*             CREAR ORDEN DE COMPRA Y ELIMINAR DATOS DEL CARRITO             */
+    /* -------------------------------------------------------------------------- */
+
+    if ($status == 'ok') {
+      $count = 0;
+
+      foreach ($refs->results as $key => $value) {
+
+        // if ($value->type_variant == 'gallery') {
+        //   $process_order = 0;
+        // } else {
+        //   $process_order = 2;
+        // }
+
+        $url = 'orders?token=' . $_SESSION['user']->token_user . '&table=users&suffix=user';
+        $method = 'POST';
+        $fields = [
+          'id_user_order' => $value->id_user_cart,
+          'uniqid_order' => uniqid(),
+          'id_product_order' => $value->id_product_cart,
+          'id_variant_order' => $value->id_variant_cart,
+          'quantity_order' => $value->quantity_cart,
+          'price_order' => $value->price_cart,
+          'ref_order' => $value->ref_cart,
+          'number_order' => $value->order_cart,
+          'method_order' => $value->method_cart,
+          'warranty_order' => 7, // TODO: TRAER DE FORMA DINAMICA LOS DIAS DE GARANTIA
+          // 'process_order' =>  $process_order,
+          'start_date_order' => date('Y-m-d'),
+          'date_created_order' => date('Y-m-d')
+        ];
+
+        $orders = CurlController::request($url, $method, $fields);
+
+        if ($orders->status == 200) {
+
+          /* -------------------------------------------------------------------------- */
+          /*                  ELIMINAR PRODUCTOS DEL CARRITO DE COMPRAS                 */
+          /* -------------------------------------------------------------------------- */
+
+          $url = 'carts?id=' . $value->id_cart . '&nameId=id_cart&token=' . $_SESSION['user']->token_user . '&table=users&suffix=user';
+          $method = 'DELETE';
+          $fields = [];
+          $deleteCart = CurlController::request($url, $method, $fields);
+
+          /* ---------------- ELIMINAR PRODUCTOS DEL CARRITO DE COMPRAS --------------- */
+        }
+      }
+    }
+
+    /* ----------- CREAR ORDEN DE COMRPA Y ELIMINAR DATOS DEL CARRITO ----------- */
+  } else {
+
+    /* -------------------------------------------------------------------------- */
+    /*                           TRAER ORDENES DE COMRPA                          */
+    /* -------------------------------------------------------------------------- */
+
+    $url = 'relations?rel=orders,variants,products&type=order,variant,product&linkTo=ref_order&equalTo=' . $_GET['ref'];
+    $method = 'GET';
+    $fields = [];
+
+    $carts = CurlController::request($url, $method, $fields);
+
+    if ($carts->status == 200) {
+      $carts = $carts->results;
+      $status = 'ok';
+    } else {
+      echo '<script>
+        window.location = "' . $path . '404";
+      </script>';
+    }
+
+    /* ------------------------- TRAER ORDENES DE COMPRA ------------------------ */
   }
 
   /* -------------------------- CONSULTAR REFERENCIA -------------------------- */

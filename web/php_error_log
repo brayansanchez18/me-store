@@ -1,234 +1,133 @@
-[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
-[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
-[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
-[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
-[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
-[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
-[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
-[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:08:53 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:08:53 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_user_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 90
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_product_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 92
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_variant_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 93
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 95
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$ref_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 96
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$order_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 97
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 98
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined variable $process_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 100
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 107
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_user_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 90
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_product_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 92
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_variant_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 93
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 95
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$ref_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 96
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$order_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 97
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 98
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined variable $process_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 100
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 107
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_user_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 90
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_product_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 92
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_variant_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 93
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 95
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$ref_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 96
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$order_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 97
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 98
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined variable $process_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 100
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 107
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:09:27 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_user_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 90
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_product_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 92
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_variant_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 93
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 95
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$ref_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 96
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$order_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 97
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 98
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined variable $process_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 100
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 107
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_user_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 90
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_product_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 92
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_variant_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 93
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 95
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$ref_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 96
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$order_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 97
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 98
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined variable $process_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 100
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 107
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_user_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 90
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_product_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 92
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$id_variant_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 93
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$price_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 95
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$ref_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 96
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$order_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 97
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 98
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined variable $process_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 100
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 107
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:10:49 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:12:15 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php:45
 Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(171): include()
 #1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
 #3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
 #4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
-[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_order" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 6
-[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 17
-[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 23
-[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 27
-[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 38
-[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 60
-[01-Dec-2024 19:09:59 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 63
-[01-Dec-2024 19:09:59 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:72
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 45
+[05-Dec-2024 18:12:21 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php:45
 Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(171): include()
 #1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
 #3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
 #4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 72
-[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_order" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 6
-[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 17
-[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 23
-[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 27
-[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 38
-[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 60
-[01-Dec-2024 19:10:25 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 63
-[01-Dec-2024 19:10:25 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:72
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 45
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined variable $process_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 100
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined variable $process_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 100
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined variable $process_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 100
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:12:25 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:13:09 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:13:09 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:13:09 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:13:09 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:13:09 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:13:09 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:13:09 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 26
+[05-Dec-2024 18:13:09 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 39
+[05-Dec-2024 18:13:09 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$quantity in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 54
+[05-Dec-2024 18:15:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 88
+[05-Dec-2024 18:15:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 88
+[05-Dec-2024 18:15:41 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$type_variant in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 88
+[05-Dec-2024 18:15:42 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:18:02 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:19:43 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php:48
 Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
+#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(178): include()
 #1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
 #3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
 #4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 72
-[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
-[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
-[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
-[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
-[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
-[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
-[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
-[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:11:58 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:11:58 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
-#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
-[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
-[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
-[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
-[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
-[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
-[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
-[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
-[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:12:00 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:12:00 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
-#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
-[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
-[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
-[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
-[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
-[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
-[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
-[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
-[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:12:53 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:12:53 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
-#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
-[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
-[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
-[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
-[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
-[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
-[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
-[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
-[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:13:02 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:13:02 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
-#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
-[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
-[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
-[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
-[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
-[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
-[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
-[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
-[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:14:20 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:14:20 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
-#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
-[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
-[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
-[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
-[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
-[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
-[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
-[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
-[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:14:29 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:14:29 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
-#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
-[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "url_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 9
-[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "type_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 12
-[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "media_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 14
-[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 20
-[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "description_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 21
-[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 22
-[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "offer_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 34
-[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "quantity_cart" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:14:30 America/Mexico_City] PHP Warning:  Attempt to read property "price_variant" on int in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 37
-[01-Dec-2024 19:14:30 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php:43
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(47): include()
-#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\carrito.php on line 43
-[01-Dec-2024 19:25:50 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:21
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
-#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#3 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 21
-[01-Dec-2024 19:26:59 America/Mexico_City] PHP Parse error:  Unmatched '}' in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 32
-[01-Dec-2024 19:27:21 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:21
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
-#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#3 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 21
-[01-Dec-2024 19:27:52 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:22
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
-#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#3 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 22
-[01-Dec-2024 19:27:54 America/Mexico_City] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:22
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
-#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#3 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 22
-[01-Dec-2024 20:37:52 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$status in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 123
-[01-Dec-2024 20:48:23 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 50
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Undefined array key "user" in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 2
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "id_user" on null in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 2
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "name_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 15
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "email_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 36
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "name_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 38
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "address_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 39
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "municipality_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 40
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "zip_code_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 41
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "state_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 41
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "phone_user" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 42
-[05-Dec-2024 03:14:33 Europe/Berlin] PHP Warning:  Attempt to read property "method_cart" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 55
-[04-Dec-2024 20:15:01 America/Mexico_City] PHP Warning:  Attempt to read property "method_cart" on string in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 55
-[05-Dec-2024 15:37:30 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$status in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 73
-[05-Dec-2024 15:38:24 America/Mexico_City] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:72
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
-#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#3 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 72
-[05-Dec-2024 15:38:43 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, stdClass given in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:72
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php(72): json_decode(Object(stdClass))
-#1 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#3 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#4 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 72
-[05-Dec-2024 15:38:48 America/Mexico_City] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php:72
-Stack trace:
-#0 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once()
-#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
-#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
-#3 {main}
-  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\thanks.php on line 72
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:20:22 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:24:53 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:26:56 America/Mexico_City] PHP Warning:  Undefined array key "method_order" in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:27:11 America/Mexico_City] PHP Warning:  Attempt to read property "method_order" on array in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:27:13 America/Mexico_City] PHP Warning:  Attempt to read property "method_order" on array in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 48
+[05-Dec-2024 18:30:34 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 49
+[05-Dec-2024 18:30:34 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 50
+[05-Dec-2024 18:32:12 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 46

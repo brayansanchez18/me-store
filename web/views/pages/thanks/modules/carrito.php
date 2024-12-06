@@ -2,6 +2,10 @@
   <?php if (!empty($carts)): $totalCart = 0; ?>
     <div class="card-body">
       <?php foreach ($carts as $key => $value): ?>
+
+        <?php if (isset($value->quantity_cart)): $quantity = $value->quantity_cart ?>
+        <?php else: $quantity = $value->quantity_order ?>
+        <?php endif ?>
         <div class="row" style="position:relative;">
           <!-- -------------------------------- PRODUCTO -------------------------------- -->
 
@@ -19,7 +23,7 @@
                 <div class="media-body">
                   <p class="m-0 font-weight-bold"><?php echo $value->name_product ?> </p>
                   <small class="m-0"><?= $value->description_variant ?></small> x
-                  <small class="m-0"><?= $value->quantity_cart ?></small>
+                  <small class="m-0"><?= $quantity ?></small>
                 </div>
               </div>
             </a>
@@ -32,9 +36,9 @@
 
               <?php
               if ($value->offer_variant > 0) {
-                echo number_format(($value->quantity_cart * $value->offer_variant), 2);
+                echo number_format(($quantity * $value->offer_variant), 2);
               } else {
-                echo number_format(($value->quantity_cart * $value->price_variant), 2);
+                echo number_format(($quantity * $value->price_variant), 2);
               }
               ?>
             </span>
@@ -47,9 +51,9 @@
 
         <?php
         if ($value->offer_variant > 0) {
-          $totalCart += $value->quantity_cart * $value->offer_variant;
+          $totalCart += $quantity * $value->offer_variant;
         } else {
-          $totalCart += $value->quantity_cart * $value->price_variant;
+          $totalCart += $quantity * $value->price_variant;
         }
         ?>
       <?php endforeach ?>
@@ -68,7 +72,7 @@
 </div>
 
 
-<?php if (isset($_SESSION["user"])): ?>
+<?php if (isset($_SESSION['user'])): ?>
   <a href="/perfil/shopping" class="mt-4 btn btn-default btn-block templateColor border-0 rounded py-2 text-uppercase">Ir a mis compras</a>
 <?php else: ?>
   <a href="#login" class="mt-4 btn btn-default btn-block templateColor border-0 rounded py-2 text-uppercase" data-bs-toggle="modal">Ir a mis compras</a>
