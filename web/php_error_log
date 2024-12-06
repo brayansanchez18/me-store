@@ -144,3 +144,4 @@ Stack trace:
 [05-Dec-2024 20:53:22 America/Mexico_City] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\compras.php on line 192
 [05-Dec-2024 20:54:10 America/Mexico_City] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\compras.php on line 192
 [05-Dec-2024 20:55:44 America/Mexico_City] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\compras.php on line 192
+[05-Dec-2024 21:12:20 America/Mexico_City] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\compras.php on line 142
