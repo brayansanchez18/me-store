@@ -131,3 +131,16 @@ Stack trace:
 [05-Dec-2024 18:30:34 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 49
 [05-Dec-2024 18:30:34 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_order in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 50
 [05-Dec-2024 18:32:12 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$method_cart in C:\xampp\htdocs\me-store\web\views\pages\thanks\modules\datos.php on line 46
+[05-Dec-2024 18:48:09 America/Mexico_City] PHP Fatal error:  Uncaught ArgumentCountError: date_default_timezone_set() expects exactly 1 argument, 0 given in C:\xampp\htdocs\me-store\web\controllers\template.controller.php:316
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(316): date_default_timezone_set()
+#1 C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\compras.php(135): TemplateController::formatDate(1, '2024-12-05')
+#2 C:\xampp\htdocs\me-store\web\views\pages\perfil\perfil.php(64): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\views\template.php(422): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#6 {main}
+  thrown in C:\xampp\htdocs\me-store\web\controllers\template.controller.php on line 316
+[05-Dec-2024 20:53:22 America/Mexico_City] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\compras.php on line 192
+[05-Dec-2024 20:54:10 America/Mexico_City] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\compras.php on line 192
+[05-Dec-2024 20:55:44 America/Mexico_City] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\compras.php on line 192

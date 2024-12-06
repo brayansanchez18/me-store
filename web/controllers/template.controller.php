@@ -305,4 +305,33 @@ class TemplateController
   }
 
   /* ------------- FUNCION PARA GENERAR CODIGO NUMERICOS ALATORIOS ------------ */
+
+  /* -------------------------------------------------------------------------- */
+  /*                    FUNCION PARA DAR FORMATO A LAS FECHAS                   */
+  /* -------------------------------------------------------------------------- */
+
+  static public function formatDate($type, $value)
+  {
+
+    date_default_timezone_set('America/Mexico_City');
+    setlocale(LC_TIME, 'es_VE.UTF-8', 'esp'); //Para traer dias y meses en español
+
+    if ($type == 1) {
+      return strftime("%d %B, %Y", strtotime($value));
+    }
+
+    if ($type == 2) {
+      return strftime("%b %Y", strtotime($value));
+    }
+
+    if ($type == 3) {
+      return strftime("%d - %m - %Y", strtotime($value));
+    }
+
+    if ($type == 4) {
+      return strftime("%d/%m/%Y", strtotime($value));
+    }
+  }
+
+  /* ------------------ FUNCION PARA DAR FORMATO A LAS FECHAS ----------------- */
 }
