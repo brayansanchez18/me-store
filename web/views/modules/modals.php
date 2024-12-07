@@ -25,29 +25,29 @@
 
           <!-- ---------------------------- REGISTRO FACEBOOK --------------------------- -->
 
-          <div class="col-sm-6 col-xs-12 text-center p-0 rounded-0">
+          <!-- <div class="col-sm-6 col-xs-12 text-center p-0 rounded-0">
             <!-- <a href="<?= $path ?>facebook?urlRedirect=<?= TemplateController::urlRedirect() ?>"> -->
-            <a href="#">
+          <!-- <a href="#">
               <p class="py-3 facebook mx-2">
                 <i class="fab fa-facebook mr-3"></i>
                 Registro con Facebook
               </p>
-            </a>
-          </div>
+            </a> 
+          </div> -->
 
           <!-- --------------------------- REGISTRO CON GOOGLE -------------------------- -->
 
-          <div class="col-sm-6 col-xs-12 text-center p-0 rounded-0">
+          <!-- <div class="col-sm-6 col-xs-12 text-center p-0 rounded-0">
             <a href="#">
               <p class="py-3 google mx-2">
                 <i class="fab fa-google mr-3"></i>
                 Registro con Google
               </p>
             </a>
-          </div>
+          </div> -->
         </div>
 
-        <hr class="p-0 mb-3" style="margin:0; border:1px solid #999">
+        <!-- <hr class="p-0 mb-3" style="margin:0; border:1px solid #999"> -->
 
         <!-- -------------------------------------------------------------------------- */
         /*                       FORMULARIO DE REGISTRO DIRECTO                       */
@@ -157,29 +157,29 @@
 
           <!-- ---------------------------- INGRESO FACEBOOK ---------------------------- -->
 
-          <div class="col-sm-6 col-xs-12 text-center p-0 rounded-0">
-            <!-- <a href="<?= $path ?>facebook?urlRedirect=<?= TemplateController::urlRedirect() ?>"> -->
-            <a href="#">
+          <!-- <div class="col-sm-6 col-xs-12 text-center p-0 rounded-0"> -->
+          <!-- <a href="<?= $path ?>facebook?urlRedirect=<?= TemplateController::urlRedirect() ?>"> -->
+          <!-- <a href="#">
               <p class="py-3 facebook mx-2">
                 <i class="fab fa-facebook mr-3"></i>
                 Ingreso con Facebook
               </p>
             </a>
-          </div>
+          </div> -->
 
           <!-- --------------------------- INGRESO CON GOOGLE --------------------------- -->
 
-          <div class="col-sm-6 col-xs-12 text-center p-0 rounded-0">
+          <!-- <div class="col-sm-6 col-xs-12 text-center p-0 rounded-0">
             <a href="#">
               <p class="py-3 google mx-2">
                 <i class="fab fa-google mr-3"></i>
                 Ingreso con Google
               </p>
             </a>
-          </div>
+          </div> -->
         </div>
 
-        <hr class="p-0 mb-3" style="margin:0; border:1px solid #999">
+        <!-- <hr class="p-0 mb-3" style="margin:0; border:1px solid #999"> -->
 
         <!-- -------------------------------------------------------------------------- */
         /*                             FORMULARIO DE LOGIN                            */
