@@ -22,22 +22,22 @@ if ($(".adminsTable").length > 0) {
 Tabla para plantillas
 =============================================*/
 
-// if ($(".templatesTable").length > 0) {
-//   var url = "/ajax/data-templates.ajax.php";
+if ($(".templatesTable").length > 0) {
+  var url = "/ajax/data-templates.ajax.php";
 
-//   var columns = [
-//     { data: "id_template" },
-//     { data: "active_template" },
-//     { data: "logo_template" },
-//     { data: "icon_template" },
-//     { data: "cover_template" },
-//     { data: "title_template" },
-//     { data: "description_template" },
-//     { data: "actions", orderable: false, searchable: false },
-//   ];
+  var columns = [
+    { data: "id_template" },
+    { data: "active_template" },
+    { data: "logo_template" },
+    { data: "icon_template" },
+    { data: "cover_template" },
+    { data: "title_template" },
+    { data: "description_template" },
+    { data: "actions", orderable: false, searchable: false },
+  ];
 
-//   var order = [0, "desc"];
-// }
+  var order = [0, "desc"];
+}
 
 /*=============================================
 Tabla para categorias
