@@ -279,6 +279,8 @@ $(document).on("click", ".deleteItem", function () {
                   var rutaDir = "subcategorias";
                 case "products":
                   var rutaDir = "productos";
+                case "templates":
+                  var rutaDir = "plantillas";
                 default:
                   break;
               }

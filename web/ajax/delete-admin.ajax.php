@@ -182,6 +182,53 @@ class DeleteController
 
     /* ----------------------------- BORRAR VARIANTE ---------------------------- */
 
+    /* -------------------------------------------------------------------------- */
+    /*                              BORRAR PLANTILLAS                             */
+    /* -------------------------------------------------------------------------- */
+
+    if ($this->table == "templates") {
+
+      $url = "templates?select=id_template";
+      $method = "GET";
+      $fields = array();
+
+      $totalTemplates = CurlController::request($url, $method, $fields)->total;
+
+      if ($totalTemplates == 1) {
+
+        echo "no-borrar";
+        return;
+      }
+
+      $select = "id_template,logo_template,icon_template,cover_template,active_template";
+      $url = "templates?linkTo=id_template&equalTo=" . base64_decode($this->id) . "&select=" . $select;
+      $method = "GET";
+      $fields = array();
+
+      $dataItem = CurlController::request($url, $method, $fields)->results[0];
+
+      if ($dataItem->active_template == "ok") {
+
+        echo "no-borrar";
+        return;
+      }
+
+      /*=============================================
+            Borrar Imagenes
+            =============================================*/
+
+      unlink("../views/assets/img/template/" . $dataItem->id_template . "/" . $dataItem->logo_template);
+      unlink("../views/assets/img/template/" . $dataItem->id_template . "/" . $dataItem->icon_template);
+      unlink("../views/assets/img/template/" . $dataItem->id_template . "/" . $dataItem->cover_template);
+
+      /*=============================================
+            Borrar Directorio
+            =============================================*/
+
+      rmdir("../views/assets/img/template/" . $dataItem->id_template);
+    }
+
+    /* ---------------------------- BORRAR PLANTILLAS --------------------------- */
     $url = $this->table . '?id=' . base64_decode($this->id) . '&nameId=' . $this->nameId . '&token=' . $this->token . '&table=admins&suffix=admin';
     $method = 'DELETE';
     $fields = [];

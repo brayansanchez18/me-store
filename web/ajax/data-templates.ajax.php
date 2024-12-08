@@ -112,7 +112,7 @@ class DatatableController
                             <i class='fas fa-pencil-alt text-white'></i>
                         </a>
 
-                        <button class='btn btn-danger border-0 rounded-pill mr-2 btn-sm px-3 deleteItem' rol='admin' table='templates' column='template' idItem='" . base64_encode($value->id_template) . "'>
+                        <button class='btn btn-danger border-0 rounded-pill mr-2 btn-sm px-3 deleteItem' rol='admin' table='templates' colum='template' idItem='" . base64_encode($value->id_template) . "'>
                             <i class='fas fa-trash-alt text-white'></i>
                         </button>
                     </div>";

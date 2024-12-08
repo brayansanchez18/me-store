@@ -1,12 +1,35 @@
+<?php
+
+if (isset($_GET['template'])) {
+  $url = 'templates?linkTo=id_template&equalTo=' . base64_decode($_GET['template']);
+  $method = 'GET';
+  $fields = [];
+  $template = CurlController::request($url, $method, $fields);
+
+  if ($template->status == 200) {
+    $template = $template->results[0];
+  } else {
+    $template = null;
+  }
+} else {
+  $template = null;
+}
+
+?>
+
 <div class="content pb-5">
   <div class="container">
     <div class="card">
       <form method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+        <?php if (!empty($template)): ?>
+          <input type="hidden" name="idTemplate" value="<?= base64_encode($template->id_template) ?>">
+        <?php endif ?>
+
         <div class="card-header">
           <div class="container">
             <div class="row">
               <div class="col-12 col-lg-6 text-center text-lg-left">
-                <h4 class="mt-3">Agregar Plantilla</h4>
+                <h4 class="mt-3"><?= (!empty($template)) ? 'Editar' : 'Agregar' ?> Plantilla</h4>
               </div>
 
               <div class="col-12 col-lg-6 mt-2 d-none d-lg-block">
@@ -64,7 +87,7 @@
                       id="title_template"
                       name="title_template"
                       onchange="validateJS(event,'text')"
-                      value=""
+                      value="<?= (!empty($template)) ? $template->title_template : '' ?>"
                       required>
 
                     <div class="valid-feedback">Válido.</div>
@@ -82,7 +105,7 @@
                       id="description_template"
                       name="description_template"
                       onchange="validateJS(event,'complete')"
-                      required></textarea>
+                      required><?= (!empty($template)) ? $template->description_template : '' ?></textarea>
 
                     <div class="valid-feedback">Válido.</div>
                     <div class="invalid-feedback">Por favor llena este campo correctamente.</div>
@@ -100,7 +123,7 @@
                       id="keywords_template"
                       name="keywords_template"
                       onchange="validateJS(event,'complete-tags')"
-                      value=""
+                      value="<?= (!empty($template)) ? $template->keywords_template : '' ?>"
                       required>
 
                     <div class="valid-feedback">Válido.</div>
@@ -118,7 +141,7 @@
                         class="form-control"
                         id="fontFamily"
                         rows="7"
-                        required></textarea>
+                        required><?= (!empty($template)) ? htmlspecialchars(urldecode(json_decode($template->fonts_template)->fontFamily)) : '' ?></textarea>
 
                       <div class="valid-feedback">Válido.</div>
                       <div class="invalid-feedback">Por favor llena este campo correctamente.</div>
@@ -135,7 +158,7 @@
                             placeholder="Font Family"
                             id="fontBody"
                             name="fontBody"
-                            value=""
+                            value="<?= (!empty($template)) ? json_decode($template->fonts_template)->fontBody : '' ?>"
                             required>
 
                           <div class="valid-feedback">Válido.</div>
@@ -153,7 +176,7 @@
                             placeholder="Font Family"
                             id="fontSlide"
                             name="fontSlide"
-                            value=""
+                            value="<?= (!empty($template)) ? json_decode($template->fonts_template)->fontSlide : '' ?>"
                             required>
 
                           <div class="valid-feedback">Válido.</div>
@@ -177,7 +200,7 @@
                             class="form-control form-control-color border"
                             id="topColor"
                             name="topColor"
-                            value=""
+                            value="<?= (!empty($template)) ? json_decode($template->colors_template)[0]->top->color : '' ?>"
                             required>
 
                           <div class="valid-feedback">Válido.</div>
@@ -194,7 +217,7 @@
                             class="form-control form-control-color border"
                             id="topBackground"
                             name="topBackground"
-                            value=""
+                            value="<?= (!empty($template)) ? json_decode($template->colors_template)[0]->top->background : '' ?>"
                             required>
 
                           <div class="valid-feedback">Válido.</div>
@@ -213,7 +236,7 @@
                             class="form-control form-control-color border"
                             id="templateColor"
                             name="templateColor"
-                            value=""
+                            value="<?= (!empty($template)) ? json_decode($template->colors_template)[1]->template->color : '' ?>"
                             required>
 
                           <div class="valid-feedback">Válido.</div>
@@ -230,7 +253,7 @@
                             class="form-control form-control-color border"
                             id="templateBackground"
                             name="templateBackground"
-                            value=""
+                            value="<?= (!empty($template)) ? json_decode($template->colors_template)[1]->template->background : '' ?>"
                             required>
 
                           <div class="valid-feedback">Válido.</div>
@@ -252,7 +275,12 @@
                     <label class="pb-3 float-left">Logo de la plantilla<sup class="text-danger">*</sup></label>
 
                     <label for="logo_template">
-                      <img src="/views/assets/img/template/default/default-logo.jpg" class="img-fluid changeLogo">
+                      <?php if (!empty($template)): ?>
+                        <input type="hidden" value="<?= $template->logo_template ?>" name="old_logo_template">
+                        <img src="/views/assets/img/template/<?= $template->id_template ?>/<?= $template->logo_template ?>" class="img-fluid changeLogo">
+                      <?php else: ?>
+                        <img src="/views/assets/img/template/default/default-logo.jpg" class="img-fluid changeLogo">
+                      <?php endif ?>
 
                       <p class="help-block small mt-3">Dimensiones recomendadas: 500 x 100 pixeles | Peso Max. 2MB | Formato: PNG o JPG</p>
                     </label>
@@ -279,7 +307,12 @@
                     <label class="pb-3 float-left">Icono de la plantilla<sup class="text-danger">*</sup></label>
 
                     <label for="icon_template">
-                      <img src="/views/assets/img/template/default/default-icon.jpg" class="img-fluid changeIcon">
+                      <?php if (!empty($template)): ?>
+                        <input type="hidden" value="<?= $template->icon_template ?>" name="old_icon_template">
+                        <img src="/views/assets/img/template/<?= $template->id_template ?>/<?= $template->icon_template ?>" class="img-fluid changeIcon">
+                      <?php else: ?>
+                        <img src="/views/assets/img/template/default/default-icon.jpg" class="img-fluid changeIcon">
+                      <?php endif ?>
                       <p class="help-block small mt-3">Dimensiones recomendadas: 100 x 100 pixeles | Peso Max. 2MB | Formato: PNG o JPG</p>
                     </label>
 
@@ -305,7 +338,12 @@
                     <label class="pb-3 float-left">Imagen de la plantilla<sup class="text-danger">*</sup></label>
 
                     <label for="cover_template">
-                      <img src="/views/assets/img/template/default/default-image.jpg" class="img-fluid changeCover">
+                      <?php if (!empty($template)): ?>
+                        <input type="hidden" value="<?= $template->cover_template ?>" name="old_cover_template">
+                        <img src="/views/assets/img/template/<?= $template->id_template ?>/<?= $template->cover_template ?>" class="img-fluid changeCover">
+                      <?php else: ?>
+                        <img src="/views/assets/img/template/default/default-image.jpg" class="img-fluid changeCover">
+                      <?php endif ?>
 
                       <p class="help-block small mt-3">Dimensiones recomendadas: 1000 x 600 pixeles | Peso Max. 2MB | Formato: PNG o JPG</p>
                     </label>
