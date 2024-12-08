@@ -266,7 +266,8 @@ getEmail();
 
 function addIcon(event) {
   $("#myIcon").show();
-  $("#mySocial").modal("hide");
+  // $("#mySocial").modal("hide");
+  $("#mySocial").hide();
 
   $(document).ready(function () {
     $(".myInputIcon").on("keyup", function () {
@@ -284,7 +285,8 @@ function addIcon(event) {
     $(".iconView").html(`<i class="` + $(this).attr("mode") + `"></i>`);
     $(event.target).val($(this).attr("mode"));
     $("#myIcon").hide();
-    $("#mySocial").modal("show");
+    // $("#mySocial").modal("show");
+    $("#mySocial").show();
   });
 }
 

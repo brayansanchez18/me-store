@@ -281,6 +281,8 @@ $(document).on("click", ".deleteItem", function () {
                   var rutaDir = "productos";
                 case "templates":
                   var rutaDir = "plantillas";
+                case "socials":
+                  var rutaDir = "redes-sociales";
                 default:
                   break;
               }
