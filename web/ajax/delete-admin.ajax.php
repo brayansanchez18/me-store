@@ -229,6 +229,41 @@ class DeleteController
     }
 
     /* ---------------------------- BORRAR PLANTILLAS --------------------------- */
+
+    /* -------------------------------------------------------------------------- */
+    /*                                BORRAR SLIDE                                */
+    /* -------------------------------------------------------------------------- */
+
+    if ($this->table == 'slides') {
+      $url = 'slides?select=id_slide';
+      $method = 'GET';
+      $fields = [];
+      $totalSlides = CurlController::request($url, $method, $fields)->total;
+
+      if ($totalSlides == 1) {
+        echo 'no-borrar';
+        return;
+      }
+
+      $select = 'id_slide,background_slide,img_png_slide';
+      $url = 'slides?linkTo=id_slide&equalTo=' . base64_decode($this->id) . '&select=' . $select;
+      $method = 'GET';
+      $fields = [];
+      $dataItem = CurlController::request($url, $method, $fields)->results[0];
+
+      /* ----------------------------- BORRAR IMAGENES ---------------------------- */
+      unlink('../views/assets/img/slide/' . $dataItem->id_slide . '/' . $dataItem->background_slide);
+
+      if ($dataItem->img_png_slide != null) {
+        unlink('../views/assets/img/slide/' . $dataItem->id_slide . '/' . $dataItem->img_png_slide);
+      }
+
+      /* ---------------------------- BORRAR DIRECTORIO --------------------------- */
+      rmdir('../views/assets/img/slide/' . $dataItem->id_slide);
+    }
+
+    /* ------------------------------ BORRAR SLIDE ------------------------------ */
+
     $url = $this->table . '?id=' . base64_decode($this->id) . '&nameId=' . $this->nameId . '&token=' . $this->token . '&table=admins&suffix=admin';
     $method = 'DELETE';
     $fields = [];

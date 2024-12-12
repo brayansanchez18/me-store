@@ -1,7 +1,7 @@
 // $("#tables").DataTable();
-/*=============================================
-Tabla para administradores
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                          TABLA DE ADMINISTRADORES                          */
+/* -------------------------------------------------------------------------- */
 
 if ($(".adminsTable").length > 0) {
   var url = "/ajax/data-admins.ajax.php";
@@ -18,9 +18,11 @@ if ($(".adminsTable").length > 0) {
   var order = [0, "desc"];
 }
 
-/*=============================================
-Tabla para plantillas
-=============================================*/
+/* ------------------------ TABLA DE ADMINISTRADORES ------------------------ */
+
+/* -------------------------------------------------------------------------- */
+/*                              TABLA PLANTILLAS                              */
+/* -------------------------------------------------------------------------- */
 
 if ($(".templatesTable").length > 0) {
   var url = "/ajax/data-templates.ajax.php";
@@ -39,9 +41,11 @@ if ($(".templatesTable").length > 0) {
   var order = [0, "desc"];
 }
 
-/*=============================================
-Tabla para categorias
-=============================================*/
+/* ---------------------------- TABLA PLANTILLAS ---------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                              TABLA CATEGORIAS                              */
+/* -------------------------------------------------------------------------- */
 
 if ($(".categoriesTable").length > 0) {
   var url = "/ajax/data-categories.ajax.php";
@@ -65,9 +69,11 @@ if ($(".categoriesTable").length > 0) {
   var order = [0, "desc"];
 }
 
-/*=============================================
-Tabla para subcategorias
-=============================================*/
+/* ---------------------------- TABLA CATEGORIAS ---------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                             TABLA SUBCATEGORIAS                            */
+/* -------------------------------------------------------------------------- */
 
 if ($(".subcategoriesTable").length > 0) {
   var url = "/ajax/data-subcategories.ajax.php";
@@ -90,9 +96,11 @@ if ($(".subcategoriesTable").length > 0) {
   var order = [0, "desc"];
 }
 
-/*=============================================
-Tabla para productos
-=============================================*/
+/* --------------------------- TABLA SUBCATEGORIAS -------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                               TABLA PRODUCTOS                              */
+/* -------------------------------------------------------------------------- */
 
 if ($(".productsTable").length > 0) {
   var url = "/ajax/data-products.ajax.php";
@@ -115,25 +123,29 @@ if ($(".productsTable").length > 0) {
   var order = [0, "desc"];
 }
 
-/*=============================================
-Tabla para slides
-=============================================*/
+/* ----------------------------- TABLA PRODUCTOS ---------------------------- */
 
-// if ($(".slidesTable").length > 0) {
-//   var url = "/ajax/data-slides.ajax.php";
+/* -------------------------------------------------------------------------- */
+/*                                TABLA SILIDES                               */
+/* -------------------------------------------------------------------------- */
 
-//   var columns = [
-//     { data: "id_slide" },
-//     { data: "status_slide" },
-//     { data: "background_slide" },
-//     { data: "direction_slide" },
-//     { data: "img_png_slide" },
-//     { data: "date_created_slide" },
-//     { data: "actions", orderable: false, searchable: false },
-//   ];
+if ($(".slidesTable").length > 0) {
+  var url = "/ajax/data-slides.ajax.php";
 
-//   var order = [0, "desc"];
-// }
+  var columns = [
+    { data: "id_slide" },
+    { data: "status_slide" },
+    { data: "background_slide" },
+    { data: "direction_slide" },
+    { data: "img_png_slide" },
+    { data: "date_created_slide" },
+    { data: "actions", orderable: false, searchable: false },
+  ];
+
+  var order = [0, "desc"];
+}
+
+/* ------------------------------ TABLA SILIDES ----------------------------- */
 
 /*=============================================
 Tabla para banners
@@ -182,9 +194,9 @@ Tabla para órdenes
 //   var order = [0, "desc"];
 // }
 
-/*=============================================
-Configuración global Datatable
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                       CONFIGURACION GLOBAL DATATABLE                       */
+/* -------------------------------------------------------------------------- */
 
 $("#tables").DataTable({
   responsive: true,
@@ -229,9 +241,11 @@ $("#tables").DataTable({
   },
 });
 
-/*=============================================
-Eliminar item
-=============================================*/
+/* --------------------- CONFIGURACION GLOBAL DATATABLE --------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                ELIMINAR ITEM                               */
+/* -------------------------------------------------------------------------- */
 
 $(document).on("click", ".deleteItem", function () {
   var idItem = $(this).attr("idItem");
@@ -283,6 +297,8 @@ $(document).on("click", ".deleteItem", function () {
                   var rutaDir = "plantillas";
                 case "socials":
                   var rutaDir = "redes-sociales";
+                case "slides":
+                  var rutaDir = "slides";
                 default:
                   break;
               }
@@ -320,9 +336,11 @@ $(document).on("click", ".deleteItem", function () {
   );
 });
 
-/*=============================================
-Suiche
-=============================================*/
+/* ------------------------------ ELIMINAR ITEM ----------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                                   SWITCH                                   */
+/* -------------------------------------------------------------------------- */
 
 $("#tables").on("draw.dt", function () {
   $("input[data-bootstrap-switch]").each(function () {
@@ -369,6 +387,8 @@ $("#tables").on("draw.dt", function () {
     });
   });
 });
+
+/* --------------------------------- SWITCH --------------------------------- */
 
 /*=============================================
 Rango de fechas

@@ -29,6 +29,7 @@
   } else {
     include_once 'modules/listado.php';
   }
-
   ?>
 </div>
+
+<script src="<?= $path ?>views/assets/js/slide/slide.js"></script>
