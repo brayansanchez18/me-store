@@ -1,70 +1,76 @@
-<link rel="stylesheet" href="<?= $path ?>views/assets/css/slide/slide.css">
-<div class="jd-slider">
-  <div class="slide-inner">
-    <ul class="slide-area">
-      <li>
-        <img src="<?= $path ?>/views/assets/img/slide/1/back_default.jpg" class="img-fluid">
+<?php
+$select = '*';
+$url = 'slides?linkTo=status_slide&equalTo=1';
+$method = 'GET';
+$fields = [];
+$slides = CurlController::request($url, $method, $fields);
 
-        <div class="slideOpt opt1">
-          <img src="<?= $path ?>views/assets/img/slide/1/calzado.png" style="top:15%; right:10%; width:45%">
+if ($slides->status == 200) {
+  $slides = $slides->results;
+} else {
+  $slides = [];
+}
+?>
 
-          <div class="slideText" style="top:20%; left:10%; width:40%">
-            <h1 class="text-uppercase" style="color:#333">Lorem Ipsum</h1>
-            <h2 class="text-uppercase" style="color:#777">Lorem ipsum dolor sit</h2>
-            <h3 class="text-uppercase" style="color:#888">Lorem ipsum dolor sit</h3>
+<?php if (!empty($slides)): ?>
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/slide/slide.css">
+  <div class="jd-slider">
+    <div class="slide-inner">
+      <ul class="slide-area">
+        <?php foreach ($slides as $key => $value): ?>
+          <li>
+            <img
+              src="<?= $path ?>views/assets/img/slide/<?= $value->id_slide ?>/<?= $value->background_slide ?>"
+              class="img-fluid">
 
-            <a href="<?= $path ?>calzado">
-              <button class="my-lg-3 btn text-uppercase templateColor border-0">
-                VER PRODUCTO
-              </button>
-            </a>
-          </div>
-        </div>
-      </li>
+            <?php if ($value->direction_slide != null): ?>
+              <div class="slideOpt <?= $value->direction_slide ?>">
+                <img
+                  src="<?= $path ?>views/assets/img/slide/<?= $value->id_slide ?>/<?= $value->img_png_slide ?>"
+                  style="<?= $value->coord_img_slide ?>">
 
-      <li>
-        <img src="<?= $path ?>views/assets/img/slide/2/fondo2.jpg" class="img-fluid">
+                <div class="slideText" style="<?= $value->coord_text_slide ?>">
+                  <h1
+                    class="text-uppercase"
+                    style="color:<?= json_decode($value->text_slide)[0]->color ?>"><?= json_decode($value->text_slide)[0]->text ?></h1>
+                  <h2
+                    class="text-uppercase"
+                    style="color:<?= json_decode($value->text_slide)[1]->color ?>"><?= json_decode($value->text_slide)[1]->text ?></h2>
+                  <h3
+                    class="text-uppercase"
+                    style="color:<?= json_decode($value->text_slide)[2]->color ?>"><?= json_decode($value->text_slide)[2]->text ?></h3>
 
-        <div class="slideOpt opt2">
-          <img src="<?= $path ?>views/assets/img/slide/2/iphone.png" style="bottom:0%; left:15%; width:28%">
+                  <a href="<?= $value->link_slide ?>">
+                    <button class="my-lg-3 btn text-uppercase templateColor border-0">
+                      <?= $value->text_btn_slide ?>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            <?php endif ?>
+          </li>
+        <?php endforeach ?>
+      </ul>
+    </div>
 
-          <div class="slideText" style="top:20%; right:15%; width:40%">
-            <h1 class="text-uppercase" style="color:#ffffff">Lorem Ipsum</h1>
-            <h2 class="text-uppercase" style="color:#e8e8e8">Lorem ipsum dolor sit</h2>
-            <h3 class="text-uppercase" style="color:#d6d6d6">Lorem ipsum dolor sit</h3>
+    <a class="prev d-none d-lg-block" href="#">
+      <i class="fas fa-angle-left text-white px-3 py-5 rounded-right" style="background: rgba(0,0,0,.5);"></i>
+    </a>
+    <a class="next d-none d-lg-block" href="#">
+      <i class="fas fa-angle-right text-white px-3 py-5 rounded-left" style="background: rgba(0,0,0,.5);"></i>
+    </a>
 
-            <a href="<?= $path ?>no-found">
-              <button class="my-lg-3 btn text-uppercase templateColor border-0">
-                VER PRODUCTO
-              </button>
-            </a>
-          </div>
-        </div>
-      </li>
-
-
-      <li>
-        <img src="<?= $path ?>views/assets/img/slide/4/bg.jpg" class="img-fluid">
-      </li>
-    </ul>
+    <div class="controller py-2">
+      <div class="indicate-area"></div>
+    </div>
   </div>
 
-  <a class="prev d-none d-lg-block" href="#">
-    <i class="fas fa-angle-left text-white px-3 py-5 rounded-right" style="background: rgba(0,0,0,.5);"></i>
-  </a>
-  <a class="next d-none d-lg-block" href="#">
-    <i class="fas fa-angle-right text-white px-3 py-5 rounded-left" style="background: rgba(0,0,0,.5);"></i>
-  </a>
 
-  <div class="controller py-2">
-    <div class="indicate-area"></div>
+  <div class="d-flex justify-content-center">
+    <a id="btnSlide" class="btn border-0 rounded-0 templateColor py-2" style="width:200px">
+      <i class="fa fa-angle-up templateColor"></i>
+    </a>
   </div>
-</div>
 
-<div class="d-flex justify-content-center">
-  <a id="btnSlide" class="btn border-0 rounded-0 templateColor py-2" style="width:200px">
-    <i class="fa fa-angle-up templateColor"></i>
-  </a>
-</div>
-
-<script src="<?= $path ?>views/assets/js/slide/slide.js"></script>
+  <script src="<?= $path ?>views/assets/js/slide/slide.js"></script>
+<?php endif ?>
