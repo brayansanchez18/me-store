@@ -147,26 +147,28 @@ if ($(".slidesTable").length > 0) {
 
 /* ------------------------------ TABLA SILIDES ----------------------------- */
 
-/*=============================================
-Tabla para banners
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                                TABLA BANNERS                               */
+/* -------------------------------------------------------------------------- */
 
-// if ($(".bannersTable").length > 0) {
-//   var url = "/ajax/data-banners.ajax.php";
+if ($(".bannersTable").length > 0) {
+  var url = "/ajax/data-banners.ajax.php";
 
-//   var columns = [
-//     { data: "id_banner" },
-//     { data: "status_banner" },
-//     { data: "location_banner" },
-//     { data: "background_banner" },
-//     { data: "text_banner" },
-//     { data: "discount_banner" },
-//     { data: "end_banner" },
-//     { data: "actions", orderable: false, searchable: false },
-//   ];
+  var columns = [
+    { data: "id_banner" },
+    { data: "status_banner" },
+    { data: "location_banner" },
+    { data: "background_banner" },
+    { data: "text_banner" },
+    { data: "discount_banner" },
+    { data: "end_banner" },
+    { data: "actions", orderable: false, searchable: false },
+  ];
 
-//   var order = [0, "desc"];
-// }
+  var order = [0, "desc"];
+}
+
+/* ------------------------------ TABLA BANNERS ----------------------------- */
 
 /*=============================================
 Tabla para órdenes
@@ -299,6 +301,8 @@ $(document).on("click", ".deleteItem", function () {
                   var rutaDir = "redes-sociales";
                 case "slides":
                   var rutaDir = "slides";
+                case "banners":
+                  var rutaDir = "banners";
                 default:
                   break;
               }

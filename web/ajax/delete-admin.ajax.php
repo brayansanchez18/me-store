@@ -264,6 +264,27 @@ class DeleteController
 
     /* ------------------------------ BORRAR SLIDE ------------------------------ */
 
+    /* -------------------------------------------------------------------------- */
+    /*                               BORRAR BANNERS                               */
+    /* -------------------------------------------------------------------------- */
+
+    if ($this->table == 'banners') {
+
+      $select = 'id_banner,background_banner';
+      $url = 'banners?linkTo=id_banner&equalTo=' . base64_decode($this->id) . '&select=' . $select;
+      $method = 'GET';
+      $fields = [];
+      $dataItem = CurlController::request($url, $method, $fields)->results[0];
+
+      /* ------------------------------ BORRAR IMAGEN ----------------------------- */
+      unlink('../views/assets/img/banner/' . $dataItem->id_banner . '/' . $dataItem->background_banner);
+
+      /* ---------------------------- BORRAR DIRECTORIO --------------------------- */
+      rmdir('../views/assets/img/banner/' . $dataItem->id_banner);
+    }
+
+    /* ----------------------------- BORRAR BANNERS ----------------------------- */
+
     $url = $this->table . '?id=' . base64_decode($this->id) . '&nameId=' . $this->nameId . '&token=' . $this->token . '&table=admins&suffix=admin';
     $method = 'DELETE';
     $fields = [];

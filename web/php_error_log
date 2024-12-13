@@ -149,3 +149,13 @@ Stack trace:
 [07-Dec-2024 22:39:03 America/Mexico_City] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\perfil\modules\compras.php on line 142
 [10-Dec-2024 02:30:40 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\template.php on line 103
 [10-Dec-2024 02:30:44 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\template.php on line 103
+[12-Dec-2024 04:00:23 Europe/Berlin] PHP Warning:  include(modules/listado.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\me-store\web\views\pages\admin\banners\banners.php on line 31
+[12-Dec-2024 04:00:23 Europe/Berlin] PHP Warning:  include(): Failed opening 'modules/listado.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\me-store\web\views\pages\admin\banners\banners.php on line 31
+[12-Dec-2024 04:00:27 Europe/Berlin] PHP Warning:  include(modules/listado.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\me-store\web\views\pages\admin\banners\banners.php on line 31
+[12-Dec-2024 04:00:27 Europe/Berlin] PHP Warning:  include(): Failed opening 'modules/listado.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\me-store\web\views\pages\admin\banners\banners.php on line 31
+[13-Dec-2024 02:30:38 Europe/Berlin] PHP Warning:  Attempt to read property "lastId" on array in C:\xampp\htdocs\me-store\web\controllers\banners.controller.php on line 37
+[13-Dec-2024 02:31:39 Europe/Berlin] PHP Warning:  Undefined variable $createData in C:\xampp\htdocs\me-store\web\controllers\banners.controller.php on line 41
+[13-Dec-2024 02:31:39 Europe/Berlin] PHP Warning:  Attempt to read property "results" on null in C:\xampp\htdocs\me-store\web\controllers\banners.controller.php on line 41
+[13-Dec-2024 02:31:39 Europe/Berlin] PHP Warning:  Attempt to read property "lastId" on null in C:\xampp\htdocs\me-store\web\controllers\banners.controller.php on line 41
+[13-Dec-2024 02:48:59 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\banners.controller.php on line 31
+[13-Dec-2024 02:51:54 Europe/Berlin] PHP Warning:  unlink(../web/views/assets/img/banner/6/bg.png): Resource temporarily unavailable in C:\xampp\htdocs\me-store\web\controllers\banners.controller.php on line 35
