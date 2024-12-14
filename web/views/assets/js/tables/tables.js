@@ -170,31 +170,33 @@ if ($(".bannersTable").length > 0) {
 
 /* ------------------------------ TABLA BANNERS ----------------------------- */
 
-/*=============================================
-Tabla para órdenes
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                                TABLA ORDENES                               */
+/* -------------------------------------------------------------------------- */
 
-// if ($(".ordersTable").length > 0) {
-//   var url = "/ajax/data-orders.ajax.php";
+if ($(".ordersTable").length > 0) {
+  var url = "/ajax/data-orders.ajax.php";
 
-//   var columns = [
-//     { data: "id_order" },
-//     { data: "process_order" },
-//     { data: "media_variant" },
-//     { data: "name_product" },
-//     { data: "quantity_order" },
-//     { data: "price_order" },
-//     { data: "name_user" },
-//     { data: "uniqid_order" },
-//     { data: "method_order" },
-//     { data: "number_order" },
-//     { data: "track_order" },
-//     { data: "dates" },
-//     { data: "actions", orderable: false, searchable: false },
-//   ];
+  var columns = [
+    { data: "id_order" },
+    { data: "process_order" },
+    { data: "media_variant" },
+    { data: "name_product" },
+    { data: "quantity_order" },
+    { data: "price_order" },
+    { data: "name_user" },
+    { data: "uniqid_order" },
+    { data: "method_order" },
+    { data: "number_order" },
+    { data: "track_order" },
+    { data: "dates" },
+    { data: "actions", orderable: false, searchable: false },
+  ];
 
-//   var order = [0, "desc"];
-// }
+  var order = [0, "desc"];
+}
+
+/* ------------------------------ TABLA ORDENES ----------------------------- */
 
 /* -------------------------------------------------------------------------- */
 /*                       CONFIGURACION GLOBAL DATATABLE                       */

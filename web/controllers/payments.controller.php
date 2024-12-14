@@ -191,4 +191,44 @@ class PaymentsController
     }
   }
   /* ------------------ ACTUALIZAR DATOS Y PASARELAS DE PAGO ------------------ */
+
+  /* -------------------------------------------------------------------------- */
+  /*                              EDITAR UNA ORDEN                              */
+  /* -------------------------------------------------------------------------- */
+
+  public function editOrder()
+  {
+    if (isset($_POST['process_order'])) {
+
+      echo '<script>
+				fncSweetAlert("loading", "procesando...", "");
+			</script>';
+
+      $url = 'orders?id=' . base64_decode($_POST['idOrder']) . '&nameId=id_order&token=' . $_SESSION['admin']->token_admin . '&table=admins&suffix=admin';
+      $method = 'PUT';
+      $fields = 'process_order=' . $_POST['process_order'] . '&track_order=' . $_POST['track_order'] . '&start_date_order=' . $_POST['start_date_order'] . '&medium_date_order=' . $_POST['medium_date_order'] . '&end_date_order=' . $_POST['end_date_order'];
+      $updateOrder = CurlController::request($url, $method, $fields);
+
+      if ($updateOrder->status == 200) {
+        echo '<script>
+						fncFormatInputs();
+						fncSweetAlert("success","Sus datos han sido actualizados con éxito","/admin/pedidos");
+					</script>';
+      } else {
+        if ($updateOrder->status == 303) {
+          echo '<script>
+						fncFormatInputs();
+						fncSweetAlert("error","Token expirado, vuelva a iniciar sesión","/salir");
+					</script>';
+        } else {
+          echo '<script>
+						fncFormatInputs();
+						fncToastr("error","Ocurrió un error mientras se guardaban los datos, intente de nuevo");
+					</script>';
+        }
+      }
+    }
+  }
+
+  /* ---------------------------- EDITAR UNA ORDEN ---------------------------- */
 }

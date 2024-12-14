@@ -1,5 +1,6 @@
 <?php
 $endAt = 16;
+$locationBanner = null;
 
 if (isset($routesArray[1]) && !empty($routesArray[1])) {
   $startAt = ($routesArray[1] - 1) * $endAt;

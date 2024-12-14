@@ -180,3 +180,4 @@ Stack trace:
   thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 273
 [14-Dec-2024 22:59:43 Europe/Berlin] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\product\product.php on line 287
 [14-Dec-2024 22:59:47 Europe/Berlin] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\product\product.php on line 287
+[14-Dec-2024 23:20:26 Europe/Berlin] PHP Warning:  Undefined variable $locationBanner in C:\xampp\htdocs\me-store\web\views\pages\products\modules\banner.php on line 3
