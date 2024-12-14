@@ -276,10 +276,26 @@ if (!empty($product)) {
           <?= $product->info_product ?>
         </div>
         <!-- ------------------------- DESCIPCION DEL PRODUCTO ------------------------ -->
+
+        <!-- ------------------------------ LINK WHATSAPP ----------------------------- -->
+        <!-- <div class="text-center">
+          <a
+            href=""
+            class="questionProduct btn btn-default bg-transparent my-4 rounded-pill font-weight-bold"
+            target="_blank"
+            name="<?= $product->name_product ?>"
+            phone="<?= $phone ?>">
+            ¿Tiene dudas acerca de este producto? ¡haz clic acá! <i class="fab fa-whatsapp ml-1"></i>
+          </a>
+        </div>
+      </div> -->
+        <!-- ----------------------------- BLOQUE PRODUCTO ---------------------------- -->
       </div>
-      <!-- ----------------------------- BLOQUE PRODUCTO ---------------------------- -->
     </div>
   </div>
-</div>
 
-<script src="<?= $path ?>views/assets/js/product/product.js"></script>
+  <?php
+  include_once 'modules/wp.php';
+  ?>
+
+  <script src="<?= $path ?>views/assets/js/product/product.js"></script>

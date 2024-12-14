@@ -30,6 +30,7 @@ if ($totalProducts->status == 200) {
   $method = 'GET';
   $fields = [];
   $products = CurlController::request($url, $method, $fields)->results;
+  $locationBanner = 'CATEGORÍA';
 
   /* ------------------ PRODUCTOS RELACIONADOS CON CATEGORIAS ----------------- */
 } else {
@@ -51,11 +52,12 @@ if ($totalProducts->status == 200) {
       </script>';
     }
 
-    $select = 'id_product,name_product,url_product,description_product,date_created_product,id_category_product';
+    $select = 'id_product,name_product,url_product,description_product,date_created_product,id_subcategory_product';
     $url = 'relations?rel=products,subcategories&type=product,subcategory&linkTo=url_subcategory&equalTo=' . $routesArray[0] . '&select=' . $select . '&startAt=' . $startAt . '&endAt=' . $endAt . '&orderBy=id_product&orderMode=DESC';
     $method = 'GET';
     $fields = [];
     $products = CurlController::request($url, $method, $fields)->results;
+    $locationBanner = 'SUBCATEGORÍA';
 
     /* ---------------- PRODUCTOS RELACIONADOS CON SUBCATEGORIAS ---------------- */
   } else {
@@ -239,6 +241,7 @@ if (!empty($products)) {
 
 /* -------------- TRAEMOS LA PRIMERA VARIANTE DE LOS PRODUCTOS -------------- */
 
+include_once 'modules/banner.php';
 
 ?>
 

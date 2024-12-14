@@ -159,3 +159,24 @@ Stack trace:
 [13-Dec-2024 02:31:39 Europe/Berlin] PHP Warning:  Attempt to read property "lastId" on null in C:\xampp\htdocs\me-store\web\controllers\banners.controller.php on line 41
 [13-Dec-2024 02:48:59 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\banners.controller.php on line 31
 [13-Dec-2024 02:51:54 Europe/Berlin] PHP Warning:  unlink(../web/views/assets/img/banner/6/bg.png): Resource temporarily unavailable in C:\xampp\htdocs\me-store\web\controllers\banners.controller.php on line 35
+[14-Dec-2024 22:51:11 Europe/Berlin] PHP Warning:  Undefined variable $locationBanner in C:\xampp\htdocs\me-store\web\views\pages\products\modules\banner.php on line 3
+[14-Dec-2024 22:51:11 Europe/Berlin] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 273
+[14-Dec-2024 22:51:11 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:273
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(464): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 273
+[14-Dec-2024 22:51:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_subcategory_product in C:\xampp\htdocs\me-store\web\views\pages\products\modules\banner.php on line 15
+[14-Dec-2024 22:54:44 Europe/Berlin] PHP Warning:  Undefined variable $locationBanner in C:\xampp\htdocs\me-store\web\views\pages\products\modules\banner.php on line 3
+[14-Dec-2024 22:54:44 Europe/Berlin] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 273
+[14-Dec-2024 22:54:44 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:273
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(464): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 273
+[14-Dec-2024 22:59:43 Europe/Berlin] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\product\product.php on line 287
+[14-Dec-2024 22:59:47 Europe/Berlin] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\product\product.php on line 287

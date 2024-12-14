@@ -1,22 +1,29 @@
 <?php
-
 $select = '*';
-$url = 'banners?linkTo=location_banner,status_banner&equalTo=HOME,1&select=' . $select;
+$url = 'banners?linkTo=location_banner,status_banner&equalTo=' . $locationBanner . ',1&select=' . $select;
 $method = 'GET';
 $fields = [];
-$banner = CurlController::request($url, $method, $fields);
+$banners = CurlController::request($url, $method, $fields);
+$banner = null;
 
-if ($banner->status == 200) {
-  $banner = $banner->results[0];
+if ($banners->status == 200) {
+  foreach ($banners->results as $key => $value) {
+    if ($locationBanner == 'CATEGORÍA'  && $value->id_category_banner == $products[0]->id_category_product) {
+      $banner = $value;
+    }
+
+    if ($locationBanner == 'SUBCATEGORÍA'  && $value->id_subcategory_banner == $products[0]->id_subcategory_product) {
+      $banner = $value;
+    }
+  }
 } else {
   $banner = null;
 }
+
 ?>
 
 <?php if (!empty($banner) && $banner->end_banner > date('Y-m-d')): ?>
-  <div
-    class="container-fluid banner p-0"
-    style="position:relative; background: url('<?= $path ?>views/assets/img/banner/<?= $banner->id_banner ?>/<?= $banner->background_banner ?>');background-size:cover;background-position: center; background-repeat: no-repeat;">
+  <div class="container-fluid banner" style="position:relative; background: url('<?= $path ?>views/assets/img/banner/<?= $banner->id_banner ?>/<?= $banner->background_banner ?>');background-size:cover;background-position: center; background-repeat: no-repeat;">
     <div class="container-fluid" style="background-color: rgba(0,0,0,.5);">
       <div class="container text-right p-5">
         <?php if ($banner->text_banner != null): ?>
