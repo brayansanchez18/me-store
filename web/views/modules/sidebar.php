@@ -1,3 +1,21 @@
+<?php
+
+/* --------------------------------- PEDIDOS -------------------------------- */
+$select = 'id_order';
+$url = 'orders?linkTo=process_order&equalTo=0&select=' . $select;
+$method = 'GET';
+$fields = [];
+$orders = CurlController::request($url, $method, $fields);
+
+//TODO: ARREGLAR PROCESO DE ENVIO PARA PRODUCTOS VIRUTALIES
+// var_dump($orders);
+
+if ($orders->status == 200) {
+  $orders = $orders->total;
+} else {
+  $orders = 0;
+}
+?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="/admin" class="brand-link">
@@ -122,7 +140,7 @@
             <p>
               Ventas
               <i class="right fas fa-angle-left"></i>
-              <span class="right badge badge-warning mr-1">7</span>
+              <span class="right badge badge-warning mr-1"><?= $orders ?></span>
             </p>
           </a>
           <ul class="nav nav-treeview">
@@ -130,7 +148,7 @@
               <a href="/admin/pedidos" class="nav-link ">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Pedidos</p>
-                <span class="right badge badge-success">7</span>
+                <span class="right badge badge-success"><?= $orders ?></span>
               </a>
             </li>
             <li class="nav-item">

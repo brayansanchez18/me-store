@@ -139,7 +139,12 @@ if ($shopping->status == 200) {
                     ?>
 
                     <?php if ($warrantyDate >= date('Y-m-d')): ?>
-                      <a href="" target="_blank" class="ml-1 py-2 px-3 bg-warning rounded-pill small getRefund" phone="<?= $phone ?>" order="<?= $value->uniqid_order ?>">Fecha límite reembolso: <?= TemplateController::formatDate(1, $warrantyDate) ?></a>
+                      <a
+                        href=""
+                        target="_blank"
+                        class="ml-1 py-2 px-3 bg-warning rounded-pill small getRefund"
+                        phone="<?= $phone ?>"
+                        order="<?= $value->uniqid_order ?>">Fecha límite reembolso: <?= TemplateController::formatDate(1, $warrantyDate) ?></a>
                     <?php else: ?>
 
                       <a

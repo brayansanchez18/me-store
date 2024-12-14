@@ -181,3 +181,10 @@ Stack trace:
 [14-Dec-2024 22:59:43 Europe/Berlin] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\product\product.php on line 287
 [14-Dec-2024 22:59:47 Europe/Berlin] PHP Warning:  Undefined variable $phone in C:\xampp\htdocs\me-store\web\views\pages\product\product.php on line 287
 [14-Dec-2024 23:20:26 Europe/Berlin] PHP Warning:  Undefined variable $locationBanner in C:\xampp\htdocs\me-store\web\views\pages\products\modules\banner.php on line 3
+[15-Dec-2024 00:19:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in C:\xampp\htdocs\me-store\web\views\modules\sidebar.php:10
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(415): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\modules\sidebar.php on line 10
