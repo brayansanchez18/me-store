@@ -293,18 +293,25 @@ $(document).on("click", ".deleteItem", function () {
                   break;
                 case "categories":
                   var rutaDir = "categorias";
+                  break;
                 case "subcategories":
                   var rutaDir = "subcategorias";
+                  break;
                 case "products":
                   var rutaDir = "productos";
+                  break;
                 case "templates":
                   var rutaDir = "plantillas";
+                  break;
                 case "socials":
                   var rutaDir = "redes-sociales";
+                  break;
                 case "slides":
                   var rutaDir = "slides";
+                  break;
                 case "banners":
                   var rutaDir = "banners";
+                  break;
                 default:
                   break;
               }

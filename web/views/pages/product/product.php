@@ -218,11 +218,19 @@ if (!empty($product)) {
         <!-- ---------------------------------- STOCK --------------------------------- -->
 
         <?php if ($product->variants[0]->type_variant == "gallery"): ?>
-          <div class="blockStock">
-            <p class="lead font-weight-bold">
-              Unidades disponibles: <?= $product->variants[0]->stock_variant ?>
-            </p>
-          </div>
+          <?php if ($product->variants[0]->stock_variant > 0): ?>
+            <div class="blockStock">
+              <p class="lead font-weight-bold">
+                Unidades disponibles: <?= $product->variants[0]->stock_variant ?>
+              </p>
+            </div>
+          <?php else: ?>
+            <div class="blockStock">
+              <p class="lead font-weight-bold text-danger">
+                Sin unidades disponibles
+              </p>
+            </div>
+          <?php endif ?>
         <?php endif ?>
 
         <!-- ---------------------------------- STOCK --------------------------------- -->
@@ -254,6 +262,7 @@ if (!empty($product)) {
                 idProduct="<?= $product->id_product ?>"
                 idVariant="<?= $product->variants[0]->id_variant ?>"
                 priceVariant="<?= ($product->variants[0]->offer_variant > 0) ? $product->variants[0]->offer_variant : $product->variants[0]->price_variant ?>"
+                stockVariant="<?= $product->variants[0]->stock_variant ?>"
                 quantity="1">AGREGAR AL CARRITO</button>
             </div>
           <?php else: ?>
@@ -297,5 +306,5 @@ if (!empty($product)) {
   <?php
   include_once 'modules/wp.php';
   ?>
-
-  <script src="<?= $path ?>views/assets/js/product/product.js"></script>
+</div>
+<script src="<?= $path ?>views/assets/js/product/product.js"></script>

@@ -100,6 +100,9 @@ class TemplatesController
         $method = 'POST';
         $createData = CurlController::request($url, $method, $fields);
 
+        // var_dump($createData);
+        // return;
+
         if ($createData->status == 200) {
 
           /* ----------------------- VALIDAR Y GUARDAR LOGOTIPO ----------------------- */

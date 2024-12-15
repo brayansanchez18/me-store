@@ -212,6 +212,8 @@ $(document).on("change", ".changeVariant", function () {
       } else {
         $(addCart[i]).attr("priceVariant", variant.price_variant);
       }
+
+      $(addCart[i]).attr("stockVariant", variant.stock_variant);
     });
   }
 
@@ -255,40 +257,50 @@ $(document).on("click", ".addCart", function () {
   var idVariant = $(this).attr("idVariant");
   var quantity = $(this).attr("quantity");
   var priceVariant = $(this).attr("priceVariant");
+  var stockVariant = $(this).attr("stockVariant");
 
-  var data = new FormData();
-  data.append("token", localStorage.getItem("token-user"));
-  data.append("idProductCart", idProduct);
-  data.append("idVariantCart", idVariant);
-  data.append("quantityCart", quantity);
+  if (stockVariant == 0) {
+    fncSweetAlert(
+      "error",
+      "No hay unidades disponibles para este producto",
+      ""
+    );
+  } else {
+    var data = new FormData();
+    data.append("token", localStorage.getItem("token-user"));
+    data.append("idProductCart", idProduct);
+    data.append("idVariantCart", idVariant);
+    data.append("quantityCart", quantity);
 
-  $.ajax({
-    url: "/ajax/forms.ajax.php",
-    method: "POST",
-    data: data,
-    contentType: false,
-    cache: false,
-    processData: false,
-    success: function (response) {
-      if (response == 200) {
-        var shoppingBasket = $("#shoppingBasket").html();
-        var totalShop = $("#totalShop").html();
+    $.ajax({
+      url: "/ajax/forms.ajax.php",
+      method: "POST",
+      data: data,
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function (response) {
+        if (response == 200) {
+          var shoppingBasket = $("#shoppingBasket").html();
+          var totalShop = $("#totalShop").html();
 
-        $("#shoppingBasket").html(Number(shoppingBasket) + Number(quantity));
-        $("#totalShop").html(
-          (Number(totalShop) + Number(quantity) * Number(priceVariant)).toFixed(
-            2
-          )
-        );
+          $("#shoppingBasket").html(Number(shoppingBasket) + Number(quantity));
+          $("#totalShop").html(
+            (
+              Number(totalShop) +
+              Number(quantity) * Number(priceVariant)
+            ).toFixed(2)
+          );
 
-        fncSweetAlert(
-          "footer",
-          "Producto agregado a tu carrito de compras",
-          "/carrito"
-        );
-      }
-    },
-  });
+          fncSweetAlert(
+            "footer",
+            "Producto agregado a tu carrito de compras",
+            "/carrito"
+          );
+        }
+      },
+    });
+  }
 });
 
 /* ---------------------- AGREGAR AL CARRITO DE COMPRAS --------------------- */
