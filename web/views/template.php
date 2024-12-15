@@ -228,6 +228,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- https://mdbootstrap.com/docs/standard/extended/timeline/ -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/timeline/timeline.css">
 
+  <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/daterangepicker/daterangepicker.css">
+
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/plugins/adminlte/adminlte.min.css">
   <link rel="stylesheet" href="<?= $path ?>views/assets/css/template/template.css">
@@ -348,6 +350,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- https://github.com/RobinHerbots/Inputmask -->
   <script src="<?= $path ?>views/assets/js/plugins/input-mask/moment.min.js"></script>
   <script src="<?= $path ?>views/assets/js/plugins/input-mask/jquery.inputmask.min.js"></script>
+
+  <script src="<?= $path ?>views/assets/js/plugins/moment/moment.min.js"></script>
+  <script src="<?= $path ?>views/assets/js/plugins/daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment-with-locales.min.js"></script>
 
   <!-- sticky -->
   <!-- https://rgalus.github.io/sticky-js/ -->

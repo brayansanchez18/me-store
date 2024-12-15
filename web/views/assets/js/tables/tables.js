@@ -396,64 +396,66 @@ $("#tables").on("draw.dt", function () {
 
 /* --------------------------------- SWITCH --------------------------------- */
 
-/*=============================================
-Rango de fechas
-=============================================*/
+/* -------------------------------------------------------------------------- */
+/*                               RANGO DE FECHAS                              */
+/* -------------------------------------------------------------------------- */
 
-// $("#daterange-btn").daterangepicker(
-//   {
-//     locale: {
-//       format: "YYYY-MM-DD",
-//       separator: " - ",
-//       applyLabel: "Aplicar",
-//       cancelLabel: "Cancelar",
-//       fromLabel: "Desde",
-//       toLabel: "Hasta",
-//       customRangeLabel: "Rango Personalizado",
-//       daysOfWeek: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
-//       monthNames: [
-//         "Enero",
-//         "Febrero",
-//         "Marzo",
-//         "Abril",
-//         "Mayo",
-//         "Junio",
-//         "Julio",
-//         "Agosto",
-//         "Septiembre",
-//         "Octubre",
-//         "Noviembre",
-//         "Diciembre",
-//       ],
-//       firstDay: 1,
-//     },
-//     ranges: {
-//       Hoy: [moment(), moment()],
-//       Ayer: [moment().subtract(1, "days"), moment().subtract(1, "days")],
-//       "Últimos 7 días": [moment().subtract(6, "days"), moment()],
-//       "Últimos 30 días": [moment().subtract(29, "days"), moment()],
-//       "Este Mes": [moment().startOf("month"), moment().endOf("month")],
-//       "Último Mes": [
-//         moment().subtract(1, "month").startOf("month"),
-//         moment().subtract(1, "month").endOf("month"),
-//       ],
-//       "Este Año": [moment().startOf("year"), moment().endOf("year")],
-//       "Último Año": [
-//         moment().subtract(1, "year").startOf("year"),
-//         moment().subtract(1, "year").endOf("year"),
-//       ],
-//     },
-//     startDate: moment($("#between1").val()),
-//     endDate: moment($("#between2").val()),
-//   },
-//   function (start, end) {
-//     var page = $("#page").val();
-//     window.location =
-//       "/" +
-//       page +
-//       "?start=" +
-//       start.format("YYYY-MM-DD") +
-//       "&end=" +
-//       end.format("YYYY-MM-DD");
-//   }
-// );
+$("#daterange-btn").daterangepicker(
+  {
+    locale: {
+      format: "YYYY-MM-DD",
+      separator: " - ",
+      applyLabel: "Aplicar",
+      cancelLabel: "Cancelar",
+      fromLabel: "Desde",
+      toLabel: "Hasta",
+      customRangeLabel: "Rango Personalizado",
+      daysOfWeek: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
+      monthNames: [
+        "Enero",
+        "Febrero",
+        "Marzo",
+        "Abril",
+        "Mayo",
+        "Junio",
+        "Julio",
+        "Agosto",
+        "Septiembre",
+        "Octubre",
+        "Noviembre",
+        "Diciembre",
+      ],
+      firstDay: 1,
+    },
+    ranges: {
+      Hoy: [moment(), moment()],
+      Ayer: [moment().subtract(1, "days"), moment().subtract(1, "days")],
+      "Últimos 7 días": [moment().subtract(6, "days"), moment()],
+      "Últimos 30 días": [moment().subtract(29, "days"), moment()],
+      "Este Mes": [moment().startOf("month"), moment().endOf("month")],
+      "Último Mes": [
+        moment().subtract(1, "month").startOf("month"),
+        moment().subtract(1, "month").endOf("month"),
+      ],
+      "Este Año": [moment().startOf("year"), moment().endOf("year")],
+      "Último Año": [
+        moment().subtract(1, "year").startOf("year"),
+        moment().subtract(1, "year").endOf("year"),
+      ],
+    },
+    startDate: moment($("#between1").val()),
+    endDate: moment($("#between2").val()),
+  },
+  function (start, end) {
+    var page = $("#page").val();
+    window.location =
+      "/" +
+      page +
+      "?start=" +
+      start.format("YYYY-MM-DD") +
+      "&end=" +
+      end.format("YYYY-MM-DD");
+  }
+);
+
+/* ----------------------------- RANGO DE FECHAS ---------------------------- */
