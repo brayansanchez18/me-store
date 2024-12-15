@@ -355,6 +355,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="<?= $path ?>views/assets/js/plugins/daterangepicker/daterangepicker.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment-with-locales.min.js"></script>
 
+  <!-- ChartJS -->
+  <script src="<?= $path ?>views/assets/js/plugins/chart.js/Chart.min.js"></script>
+
   <!-- sticky -->
   <!-- https://rgalus.github.io/sticky-js/ -->
   <script src="<?= $path ?>views/assets/js/plugins/sticky/sticky.min.js"></script>

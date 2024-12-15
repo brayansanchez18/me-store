@@ -188,3 +188,21 @@ Stack trace:
 #2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
 #3 {main}
   thrown in C:\xampp\htdocs\me-store\web\views\modules\sidebar.php on line 10
+[14-Dec-2024 20:29:50 America/Mexico_City] PHP Warning:  Undefined variable $between1 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:29:50 America/Mexico_City] PHP Warning:  Undefined variable $between2 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:31:15 America/Mexico_City] PHP Warning:  Undefined variable $between1 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:31:15 America/Mexico_City] PHP Warning:  Undefined variable $between2 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:31:26 America/Mexico_City] PHP Warning:  Undefined variable $between1 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:31:26 America/Mexico_City] PHP Warning:  Undefined variable $between2 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:31:37 America/Mexico_City] PHP Warning:  Undefined variable $between1 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:31:37 America/Mexico_City] PHP Warning:  Undefined variable $between2 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:32:03 America/Mexico_City] PHP Warning:  Undefined variable $between1 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:32:03 America/Mexico_City] PHP Warning:  Undefined variable $between2 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:32:30 America/Mexico_City] PHP Warning:  Undefined variable $between1 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:32:30 America/Mexico_City] PHP Warning:  Undefined variable $between2 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:32:45 America/Mexico_City] PHP Warning:  Undefined variable $between1 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:32:45 America/Mexico_City] PHP Warning:  Undefined variable $between2 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:32:58 America/Mexico_City] PHP Warning:  Undefined variable $between1 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:32:58 America/Mexico_City] PHP Warning:  Undefined variable $between2 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:33:06 America/Mexico_City] PHP Warning:  Undefined variable $between1 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
+[14-Dec-2024 20:33:06 America/Mexico_City] PHP Warning:  Undefined variable $between2 in C:\xampp\htdocs\me-store\web\views\pages\admin\tablero\modules\sales-chart.php on line 9
