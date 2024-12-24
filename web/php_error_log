@@ -16,3 +16,51 @@ Stack trace:
 #2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
 #3 {main}
   thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[24-Dec-2024 13:04:34 America/Mexico_City] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php:42
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\pasarelas.php(41): PaymentsController->payment()
+#1 C:\xampp\htdocs\me-store\web\views\pages\checkout\checkout.php(41): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\views\template.php(436): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 42
+[24-Dec-2024 13:23:25 America/Mexico_City] PHP Warning:  Attempt to read property "name_product" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 53
+[24-Dec-2024 13:26:10 America/Mexico_City] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php:56
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\pasarelas.php(41): PaymentsController->payment()
+#1 C:\xampp\htdocs\me-store\web\views\pages\checkout\checkout.php(41): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\views\template.php(436): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 56
+[24-Dec-2024 13:30:38 America/Mexico_City] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php:56
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\pasarelas.php(41): PaymentsController->payment()
+#1 C:\xampp\htdocs\me-store\web\views\pages\checkout\checkout.php(41): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\views\template.php(436): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 56
+[24-Dec-2024 13:31:16 America/Mexico_City] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 56
+[24-Dec-2024 13:32:00 America/Mexico_City] PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 56
+[24-Dec-2024 13:32:17 America/Mexico_City] PHP Warning:  Undefined array key 2 in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 56
+[24-Dec-2024 14:34:54 America/Mexico_City] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 76
+[24-Dec-2024 14:34:54 America/Mexico_City] PHP Warning:  Attempt to read property "token_admin" on null in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 76
+[24-Dec-2024 14:34:54 America/Mexico_City] PHP Warning:  Attempt to read property "status" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 82
+[24-Dec-2024 14:34:54 America/Mexico_City] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 76
+[24-Dec-2024 14:34:54 America/Mexico_City] PHP Warning:  Attempt to read property "token_admin" on null in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 76
+[24-Dec-2024 14:34:54 America/Mexico_City] PHP Warning:  Attempt to read property "status" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 82
+[24-Dec-2024 14:38:24 America/Mexico_City] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 76
+[24-Dec-2024 14:38:24 America/Mexico_City] PHP Warning:  Attempt to read property "token_admin" on null in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 76
+[24-Dec-2024 14:38:24 America/Mexico_City] PHP Warning:  Attempt to read property "status" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 82
+[24-Dec-2024 14:38:24 America/Mexico_City] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 76
+[24-Dec-2024 14:38:24 America/Mexico_City] PHP Warning:  Attempt to read property "token_admin" on null in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 76
+[24-Dec-2024 14:38:24 America/Mexico_City] PHP Warning:  Attempt to read property "status" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 82
+[24-Dec-2024 14:39:22 America/Mexico_City] PHP Warning:  Attempt to read property "status" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 78
+[24-Dec-2024 14:39:22 America/Mexico_City] PHP Warning:  Attempt to read property "status" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 78
+[24-Dec-2024 14:39:56 America/Mexico_City] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 70
+[24-Dec-2024 14:41:04 America/Mexico_City] PHP Warning:  Attempt to read property "status" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 81
+[24-Dec-2024 14:41:04 America/Mexico_City] PHP Warning:  Attempt to read property "status" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 81

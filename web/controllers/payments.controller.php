@@ -41,9 +41,49 @@ class PaymentsController
 
         /* ------------------------ TRAER CARRITO DE COMPRAS ------------------------ */
 
+        /* -------------------------------------------------------------------------- */
+        /*                            ACTUALIZAMOS EL STOK                            */
+        /* -------------------------------------------------------------------------- */
+
+        /* -------------------------- ACTUALIZAMOS EL STOCK ------------------------- */
+
         if ($carts->status == 200) {
           $carts = $carts->results;
           $totalCart = 0;
+
+          /* ---------------------------- ACTUALIZAR STOCK ---------------------------- */
+          for ($i = 0; $i < count($carts); $i++) {
+            // var_dump($carts[$i]);
+            // echo 'id_variant_cart';
+            // var_dump($carts[$i]->id_variant_cart);
+            // echo 'quantity_variant';
+            // var_dump($carts[$i]->quantity_cart);
+            // echo 'id_product_variant';
+            // var_dump($carts[$i]->id_product_variant);
+            // echo 'stock_variant';
+            // var_dump($carts[$i]->stock_variant);
+
+            $stockVariant = $carts[$i]->stock_variant;
+            $cantidad = $carts[$i]->quantity_cart;
+            $nuevoStock = $stockVariant - $cantidad;
+
+            // var_dump($_SESSION['user']->token_user);
+            // return;
+
+            $fields = 'id_product_variant=' . $carts[$i]->id_product_variant . '&stock_variant=' . $nuevoStock;
+
+            $url = 'variants?id=' . $carts[$i]->id_variant_cart . '&nameId=id_variant&token=' . $_SESSION['user']->token_user . '&table=users&suffix=user';
+            $method = 'PUT';
+
+
+            $editVariant = CurlController::request($url, $method, $fields);
+
+            // var_dump($editVariant->status);
+          }
+          /* ------------------------- CALCULAR TOTAL CARRITO ------------------------- */
+
+          // return;
+
 
           foreach ($carts as $key => $value) {
             if ($value->offer_variant == 0) {
