@@ -21,7 +21,7 @@
               <th>Palabras Claves</th>
               <th>Categoría</th>
               <th>Subcategoría</th>
-              <th>Visitas</th>
+              <th>Ordenes</th>
               <th>Último cambio</th>
               <th>Acciones</th>
             </tr>

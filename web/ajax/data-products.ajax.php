@@ -60,7 +60,7 @@ class DatatableController
       /*                              SELECCIONAR DATOS                             */
       /* -------------------------------------------------------------------------- */
 
-      $select = 'id_product,status_product,name_product,url_product,image_product,description_product,keywords_product,name_category,name_subcategory,views_product,date_updated_product';
+      $select = 'id_product,status_product,name_product,url_product,image_product,description_product,keywords_product,name_category,name_subcategory,sales_product,date_updated_product';
 
       /* ---------------------------- BUSQUEDA DE DATOS --------------------------- */
 
@@ -168,7 +168,7 @@ class DatatableController
         }
         $name_category = $value->name_category;
         $name_subcategory = $value->name_subcategory;
-        $views_product = "<span class='badge badge-warning rounded-pill px-3 py-1'><i class='fas fa-eye'></i> " . $value->views_product . "</span>";
+        $views_product = "<span class='badge badge-info rounded-pill px-3 py-1'><i class='fas fa-box'></i> " . $value->sales_product . "</span>";
         $date_updated_product = $value->date_updated_product;
 
         /* --------------------------------- TEXTOS --------------------------------- */
