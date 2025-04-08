@@ -78,7 +78,17 @@ class PaymentsController
 
             $editVariant = CurlController::request($url, $method, $fields);
 
-            // var_dump($editVariant->status);
+            /* -------------------------------------------------------------------------- */
+            /*                       AUMENTAMOS EL NUMERO DE COMPRA                       */
+            /* -------------------------------------------------------------------------- */
+
+            $fields_order = 'id_product=' . $carts[$i]->id_product_variant . '&sales_product=' . $cantidad;
+            $url_order = 'products?id=' . $carts[$i]->id_product_variant . '&nameId=id_product&token=' . $_SESSION['user']->token_user . '&table=users&suffix=user';
+            $method_order = 'PUT';
+
+            $edit_order = CurlController::request($url_order, $method_order, $fields_order);
+
+            // var_dump($edit_order->status);
           }
           /* ------------------------- CALCULAR TOTAL CARRITO ------------------------- */
 
@@ -124,6 +134,11 @@ class PaymentsController
 
             $paypal = CurlController::paypal($url, $method, $fields);
 
+            // echo "<pre>";
+            // print_r($paypal);
+            // echo "</pre>";
+            // exit;
+
             if ($paypal->status == 'PAYER_ACTION_REQUIRED') {
               $count = 0;
 
@@ -159,6 +174,11 @@ class PaymentsController
 						}';
 
             $dlocal = CurlController::dlocal($url, $method, $fields);
+
+            // echo "<pre>";
+            // print_r($dlocal);
+            // echo "</pre>";
+            // exit;
 
             if ($dlocal->status == 'PENDING') {
               $count = 0;
@@ -205,6 +225,11 @@ class PaymentsController
             }';
 
             $mercadoPago = CurlController::mercadoPago($url, $method, $fields);
+
+            // echo "<pre>";
+            // print_r($mercadoPago);
+            // echo "</pre>";
+            // exit;
 
             if ($mercadoPago->auto_return == 'approved') {
 

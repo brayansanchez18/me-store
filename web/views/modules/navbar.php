@@ -1,5 +1,5 @@
 <?php
-$select = 'id_category,name_category,url_category,icon_category';
+$select = 'id_category,name_category,url_category,icon_category,status_category';
 $url = 'categories?select=' . $select;
 $method = 'GET';
 $fields = [];
@@ -61,7 +61,7 @@ if (isset($_SESSION['user'])) {
         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
           <?php foreach ($dataCategories as $key => $value): ?>
             <?php
-            $select = 'name_subcategory,url_subcategory';
+            $select = 'name_subcategory,url_subcategory,status_subcategory';
             $url = 'subcategories?linkTo=id_category_subcategory&equalTo=' . $value->id_category . '&select=' . $select;
             $method = 'GET';
             $fields = [];
@@ -73,41 +73,48 @@ if (isset($_SESSION['user'])) {
               $dataSubcategories = [];
             }
             ?>
-            <li class="dropdown-submenu dropdown-hover">
-              <a
-                id="dropdownSubMenu<?= $key ?>"
-                href="/<?= $value->url_category ?>"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                class="dropdown-item dropdown-toggle text-uppercase"
-                onclick="redirect('/<?= $value->url_category ?>')">
-                <i class="<?= $value->icon_category ?> pe-2 fa-xs"></i> <?= $value->name_category ?>
-              </a>
+            <?php if ($value->status_category != 0) : ?>
+              <li class="dropdown-submenu dropdown-hover">
+                <a
+                  id="dropdownSubMenu<?= $key ?>"
+                  href="/<?= $value->url_category ?>"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  class="dropdown-item dropdown-toggle text-uppercase"
+                  onclick="redirect('/<?= $value->url_category ?>')">
+                  <i class="<?= $value->icon_category ?> pe-2 fa-xs"></i> <?= $value->name_category ?>
+                </a>
 
-              <ul class="border-0 shadow py-3 ps-3 d-block d-lg-none">
-                <?php foreach ($dataSubcategories as $index => $item): ?>
-                  <li>
-                    <a
-                      tabindex="-1"
-                      href="/<?= $item->url_subcategory ?>"
-                      class="dropdown-item"><?= $item->name_subcategory ?></a>
-                  </li>
-                <?php endforeach ?>
-              </ul>
+                <ul class="border-0 shadow py-3 ps-3 d-block d-lg-none">
+                  <?php foreach ($dataSubcategories as $index => $item): ?>
+                    <?php if ($item->status_subcategory != 0) : ?>
+                      <li>
+                        <a
+                          tabindex="-1"
+                          href="/<?= $item->url_subcategory ?>"
+                          class="dropdown-item"><?= $item->name_subcategory ?></a>
+                      </li>
+                    <?php endif ?>
+                  <?php endforeach ?>
+                </ul>
 
-              <ul aria-labelledby="dropdownSubMenu0" class="dropdown-menu border-0 shadow menuSubcategory">
-                <?php foreach ($dataSubcategories as $index => $item): ?>
-                  <li>
-                    <a
-                      tabindex="-1"
-                      href="/<?= $item->url_subcategory ?>"
-                      class="dropdown-item"><?= $item->name_subcategory ?></a>
-                  </li>
-                <?php endforeach ?>
-              </ul>
-            </li>
+                <ul aria-labelledby="dropdownSubMenu0" class="dropdown-menu border-0 shadow menuSubcategory">
+                  <?php foreach ($dataSubcategories as $index => $item): ?>
+                    <?php if ($item->status_subcategory != 0) : ?>
+                      <li>
+                        <a
+                          tabindex="-1"
+                          href="/<?= $item->url_subcategory ?>"
+                          class="dropdown-item"><?= $item->name_subcategory ?></a>
+                      </li>
+                    <?php endif ?>
+                  <?php endforeach ?>
+                </ul>
+              </li>
+
+            <?php endif ?>
           <?php endforeach ?>
         </ul>
       </div>

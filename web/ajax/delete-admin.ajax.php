@@ -113,9 +113,46 @@ class DeleteController
 
       $dataItem = CurlController::request($url, $method, $fields)->results[0];
 
+      $url = "relations?rel=variants,products&type=variant,product&linkTo=id_product&equalTo=" . base64_decode($this->id) . "&select=id_variant,type_variant,media_variant,url_product";
+      $method = "GET";
+      $fields = array();
+      $variants = CurlController::request($url, $method, $fields)->results;
+
+      // print_r($variants);
+      // return;
+
+      foreach ($variants as $variant) {
+        /* -------------- Borrar archivos de la variante (tipo galería) ------------- */
+
+        if ($variant->type_variant == "gallery") {
+          foreach (json_decode($variant->media_variant) as $file) {
+            unlink('../views/assets/img/products/' . $variant->url_product . '/' . $file);
+            // print_r($file);
+          }
+        }
+
+        $url = "variants?id=" . $variant->id_variant . "&nameId=id_variant&token=" . $this->token . "&table=admins&suffix=admin";
+        $method = "DELETE";
+        $fields = array();
+        $dataVariant = CurlController::request($url, $method, $fields);
+      }
+
+      // print_r($dataVariant);
+
+      // return;
+
+
+
       /* ------------------------------ Borrar Imagen ----------------------------- */
 
       unlink('../views/assets/img/products/' . $dataItem->url_product . '/' . $dataItem->image_product);
+
+      $files = glob('../views/assets/img/products/' . $variant->url_product . '/*'); //obtenemos todos los nombres de los ficheros
+      foreach ($files as $file2) {
+        if (file_exists($file2) && is_file($file2)) {
+          unlink($file2); //elimino el fichero
+        }
+      }
 
       /* ---------------------------- Borrar Directorio --------------------------- */
 
@@ -290,6 +327,7 @@ class DeleteController
     $fields = [];
     $delete = CurlController::request($url, $method, $fields);
     echo $delete->status;
+    // print_r($delete);
     // echo $url;
   }
 }

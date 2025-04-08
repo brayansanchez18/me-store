@@ -1,7 +1,7 @@
 <?php
 
 $select = 'id_product,name_product,url_product,type_variant,media_variant,date_created_product,price_variant,offer_variant,end_offer_variant,stock_variant,views_product,description_product';
-$url = 'relations?rel=variants,products&type=variant,product&linkTo=views_product&between1=1&between2=1000&startAt=0&endAt=4&orderBy=views_product&orderMode=DESC&select=' . $select;
+$url = 'relations?rel=variants,products&type=variant,product&orderBy=id_product&orderMode=DESC&select=' . $select;
 $method = 'GET';
 $fields = [];
 
@@ -61,7 +61,7 @@ if (!empty($viewsProducts)) {
 <div class="container-fluid bg-white">
   <div class="container">
     <div class="clearfix pt-3 pb-0 px-2">
-      <h4 class="float-start text-uppercase pt-2">Artículos más vistos</h4>
+      <h4 class="float-start text-uppercase pt-2">Artículos Recientes</h4>
 
       <span class="float-end">
         <a href="/most-seen" class="btn btn-default templateColor">

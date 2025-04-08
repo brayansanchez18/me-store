@@ -25,10 +25,11 @@ if ($slides->status == 200) {
 
             <?php if ($value->direction_slide != null): ?>
               <div class="slideOpt <?= $value->direction_slide ?>">
-                <img
-                  src="<?= $path ?>views/assets/img/slide/<?= $value->id_slide ?>/<?= $value->img_png_slide ?>"
-                  style="<?= $value->coord_img_slide ?>">
-
+                <?php if ($value->img_png_slide != ''):  ?>
+                  <img
+                    src="<?= $path ?>views/assets/img/slide/<?= $value->id_slide ?>/<?= $value->img_png_slide ?>"
+                    style="<?= $value->coord_img_slide ?>">
+                <?php endif ?>
                 <div class="slideText" style="<?= $value->coord_text_slide ?>">
                   <h1
                     class="text-uppercase"

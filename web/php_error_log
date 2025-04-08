@@ -64,3 +64,414 @@ Stack trace:
 [24-Dec-2024 14:39:56 America/Mexico_City] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 70
 [24-Dec-2024 14:41:04 America/Mexico_City] PHP Warning:  Attempt to read property "status" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 81
 [24-Dec-2024 14:41:04 America/Mexico_City] PHP Warning:  Attempt to read property "status" on array in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 81
+[24-Dec-2024 21:58:07 Europe/Berlin] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[24-Dec-2024 21:58:07 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:274
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(474): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[24-Dec-2024 15:36:46 America/Mexico_City] PHP Parse error:  syntax error, unexpected token "endif" in C:\xampp\htdocs\me-store\web\views\pages\home\modules\slide.php on line 51
+[25-Dec-2024 23:25:02 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\views\pages\admin\productos\modules\gestion.php on line 396
+[25-Dec-2024 23:25:02 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\me-store\web\views\pages\admin\productos\modules\gestion.php on line 400
+[29-Dec-2024 05:02:20 Europe/Berlin] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[29-Dec-2024 05:02:20 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:274
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(461): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[29-Dec-2024 05:16:00 Europe/Berlin] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[29-Dec-2024 05:16:00 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:274
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(461): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[29-Dec-2024 05:16:08 Europe/Berlin] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[29-Dec-2024 05:16:08 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:274
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(461): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:18:30 Europe/Berlin] PHP Warning:  Attempt to read property "status_category" on array in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:06 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:06 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:06 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:06 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:06 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:07 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:25 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:26 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:26 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:26 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:26 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:26 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 76
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:19:58 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$status_category in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 77
+[29-Dec-2024 05:29:47 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:29:47 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:29:47 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:29:47 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:29:48 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:29:48 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:29:48 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:29:48 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:29:49 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:29:49 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:33:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:33:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:33:44 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:33:44 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:33:44 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:33:44 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:01 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:01 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:17 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:17 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:18 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:18 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:18 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:18 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:19 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:19 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:19 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:19 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:21 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:21 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:21 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:21 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:37 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:37 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:37 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:37 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:37 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:37 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:37 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:37 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:38 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:38 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:34:38 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:34:38 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:00 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:01 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:01 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:01 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:01 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:06 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:06 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:06 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:06 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:07 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:09 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:15 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:15 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:15 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:15 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:15 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:15 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:42 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:42 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:42 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:42 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:42 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:42 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:43 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:50 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:51 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:51 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:51 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:51 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:51 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:51 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:51 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:51 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:54 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:54 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:54 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:54 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:54 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:54 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:54 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:54 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:35:55 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:13 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:13 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:13 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:13 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:13 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:14 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:20 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:20 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:20 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:20 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:20 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:21 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:21 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:21 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:21 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:22 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:22 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:22 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:22 Europe/Berlin] PHP Warning:  Attempt to read property "status_subcategory" on int in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 105
+[29-Dec-2024 05:37:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:44 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:45 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:45 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:45 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:45 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:52 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:53 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:53 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:53 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:37:53 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:21 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 05:38:23 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$tatus_subcategory in C:\xampp\htdocs\me-store\web\views\modules\navbar.php on line 92
+[29-Dec-2024 20:37:39 Europe/Berlin] PHP Warning:  Undefined variable $products in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[29-Dec-2024 20:37:39 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in C:\xampp\htdocs\me-store\web\views\pages\products\products.php:274
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\template.php(474): include_once()
+#1 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#3 {main}
+  thrown in C:\xampp\htdocs\me-store\web\views\pages\products\products.php on line 274
+[31-Dec-2024 04:09:19 Europe/Berlin] PHP Warning:  Attempt to read property "status" on null in C:\xampp\htdocs\me-store\web\views\template.php on line 104
+[03-Apr-2025 22:47:33 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * int in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php:92
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\pasarelas.php(41): PaymentsController->payment()
+#1 C:\xampp\htdocs\me-store\web\views\pages\checkout\checkout.php(41): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\views\template.php(436): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 92
+[03-Apr-2025 22:48:25 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * int in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php:92
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\pasarelas.php(41): PaymentsController->payment()
+#1 C:\xampp\htdocs\me-store\web\views\pages\checkout\checkout.php(41): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\views\template.php(436): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 92
+[03-Apr-2025 22:49:58 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * int in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php:92
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\pasarelas.php(41): PaymentsController->payment()
+#1 C:\xampp\htdocs\me-store\web\views\pages\checkout\checkout.php(41): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\views\template.php(436): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 92
+[03-Apr-2025 22:52:08 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$auto_return in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 209
+[03-Apr-2025 22:52:26 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$status in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 163
+[03-Apr-2025 22:53:26 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$status in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 127
+[03-Apr-2025 22:53:34 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$status in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 163
+[03-Apr-2025 22:53:39 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$auto_return in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 209
+[03-Apr-2025 22:56:37 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$status in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 173
+[03-Apr-2025 23:02:57 America/Mexico_City] PHP Warning:  Undefined property: stdClass::$auto_return in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 219
+[03-Apr-2025 23:05:00 America/Mexico_City] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string * int in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php:92
+Stack trace:
+#0 C:\xampp\htdocs\me-store\web\views\pages\checkout\modules\pasarelas.php(41): PaymentsController->payment()
+#1 C:\xampp\htdocs\me-store\web\views\pages\checkout\checkout.php(41): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\me-store\web\views\template.php(436): include_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\me-store\web\controllers\template.controller.php(14): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\me-store\web\index.php(31): TemplateController->index()
+#5 {main}
+  thrown in C:\xampp\htdocs\me-store\web\controllers\payments.controller.php on line 92
