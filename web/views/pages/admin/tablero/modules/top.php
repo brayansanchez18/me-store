@@ -3,10 +3,13 @@
 /* ----------------------------- TOTAL DE VENTAS ---------------------------- */
 $totalSales = 0;
 $select = 'price_order';
-$url = 'orders?linkTo=process_order&equalTo=2&select=' . $select;
+$url = 'orders?linkTo=process_order&select=' . $select;
 $method = 'GET';
 $fields = [];
 $sales = CurlController::request($url, $method, $fields);
+
+// var_dump($sales);
+// return;
 
 if ($sales->status == 200) {
   $sales = $sales->results;
@@ -100,18 +103,16 @@ if ($totalVisits->status == 200) {
     <!-- ./col -->
     <div class="col-lg-3 col-6">
       <!-- small box -->
-      <div class="small-box bg-gray-dark text-white">
+      <div class="small-box bg-olive text-white">
         <div class="inner">
-          <h3 class="bg-gray-dark disabled"><?php echo $totalVisits ?></h3>
+          <h3 class="bg-olive disabled"><?php echo $orders ?></h3>
 
-          <p>Visitas</p>
+          <p>Ordenes</p>
         </div>
         <div class="icon">
-          <i class="fas fa-map-marker-alt"></i>
+          <i class="fas fa-cubes"></i>
         </div>
-        <a target="_blank" class="small-box-footer">
-          <p style="display: none;">Más info <i class="fas fa-arrow-circle-right"></i></p>
-        </a>
+        <a href="/admin/pedidos" class="small-box-footer">Más info <i class="fas fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->

@@ -2,7 +2,7 @@
 
 /* ------------------------ VISUALIZACIONES ARTICULOS ----------------------- */
 $select = '*';
-$url = 'products?linkTo=date_updated_product&between1=' . $between1 . '+00%3A00%3A00&between2=' . $between2 . '+23%3A59%3A59&select=' . $select . '&orderBy=sales_product&orderMode=DESC&startAt=0&endAt=5';
+$url = 'products?linkTo=date_updated_product&between1=' . $between1 . '+00%3A00%3A00&between2=' . $between2 . '+23%3A59%3A59&select=' . $select . '&orderBy=sales_product&orderMode=DESC&startAt=0&endAt=10';
 $method = 'GET';
 $fields = [];
 $salesProducts = CurlController::request($url, $method, $fields);
