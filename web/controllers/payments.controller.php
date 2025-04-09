@@ -39,6 +39,9 @@ class PaymentsController
 
         $carts = CurlController::request($url, $method, $fields);
 
+        // var_dump($carts);
+        // return;
+
         /* ------------------------ TRAER CARRITO DE COMPRAS ------------------------ */
 
         /* -------------------------------------------------------------------------- */
@@ -67,6 +70,9 @@ class PaymentsController
             $cantidad = $carts[$i]->quantity_cart;
             $nuevoStock = $stockVariant - $cantidad;
 
+            $sales_prodcut = $carts[$i]->sales_product;
+            $new_sales_producto = $sales_prodcut + $cantidad;
+
             // var_dump($_SESSION['user']->token_user);
             // return;
 
@@ -82,7 +88,7 @@ class PaymentsController
             /*                       AUMENTAMOS EL NUMERO DE COMPRA                       */
             /* -------------------------------------------------------------------------- */
 
-            $fields_order = 'id_product=' . $carts[$i]->id_product_variant . '&sales_product=' . $cantidad;
+            $fields_order = 'id_product=' . $carts[$i]->id_product_variant . '&sales_product=' . $new_sales_producto;
             $url_order = 'products?id=' . $carts[$i]->id_product_variant . '&nameId=id_product&token=' . $_SESSION['user']->token_user . '&table=users&suffix=user';
             $method_order = 'PUT';
 

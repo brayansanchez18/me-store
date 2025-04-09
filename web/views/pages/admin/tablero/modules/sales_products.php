@@ -32,7 +32,7 @@ if ($salesProducts->status == 200) {
       <thead>
         <tr>
           <th>Productos</th>
-          <th>Órdenes</th>
+          <th>Ventas</th>
           <th>Ver</th>
         </tr>
       </thead>
